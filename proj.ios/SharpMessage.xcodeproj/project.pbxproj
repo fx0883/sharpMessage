@@ -22,6 +22,12 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		8386BE311AE3CFFF003D78C8 /* localLanguage_cn in Resources */ = {isa = PBXBuildFile; fileRef = 8386BE301AE3CFFF003D78C8 /* localLanguage_cn */; };
+		8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */; };
+		8386BE381AE3D2CD003D78C8 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */; };
+		8386BE3B1AE3D2E7003D78C8 /* FSUserCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */; };
+		8386BE3E1AE3D340003D78C8 /* FSBookRankingList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */; };
+		8386BE401AE3D7C7003D78C8 /* tabbar_function in Resources */ = {isa = PBXBuildFile; fileRef = 8386BE3F1AE3D7C7003D78C8 /* tabbar_function */; };
 		B01A293A1994C6D200D42BA0 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B01A29391994C6D200D42BA0 /* sqlite3.c */; };
 		B01F71671951682600BA07A6 /* source_material in Resources */ = {isa = PBXBuildFile; fileRef = B01F71661951682600BA07A6 /* source_material */; };
 		B034086E19921255005DB179 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B034085819921255005DB179 /* libwebsockets.a */; };
@@ -115,6 +121,16 @@
 		1D6058910D05DD3D006BFB54 /* SharpMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharpMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8386BE301AE3CFFF003D78C8 /* localLanguage_cn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = localLanguage_cn; sourceTree = "<group>"; };
+		8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainTabBarController.cpp; path = ../Classes/MainTabBarController.cpp; sourceTree = "<group>"; };
+		8386BE341AE3D0ED003D78C8 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = ../Classes/MainTabBarController.h; sourceTree = "<group>"; };
+		8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBooklibrary.cpp; path = ../Classes/FSBooklibrary.cpp; sourceTree = "<group>"; };
+		8386BE371AE3D2CD003D78C8 /* FSBooklibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSBooklibrary.h; path = ../Classes/FSBooklibrary.h; sourceTree = "<group>"; };
+		8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSUserCenter.cpp; path = ../Classes/FSUserCenter.cpp; sourceTree = "<group>"; };
+		8386BE3A1AE3D2E7003D78C8 /* FSUserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUserCenter.h; path = ../Classes/FSUserCenter.h; sourceTree = "<group>"; };
+		8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBookRankingList.cpp; path = ../Classes/FSBookRankingList.cpp; sourceTree = "<group>"; };
+		8386BE3D1AE3D340003D78C8 /* FSBookRankingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSBookRankingList.h; path = ../Classes/FSBookRankingList.h; sourceTree = "<group>"; };
+		8386BE3F1AE3D7C7003D78C8 /* tabbar_function */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tabbar_function; sourceTree = "<group>"; };
 		B00CC60D19792FF800A62E4C /* CrossAppExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossAppExt.h; sourceTree = "<group>"; };
 		B01A29391994C6D200D42BA0 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		B01F71661951682600BA07A6 /* source_material */ = {isa = PBXFileReference; lastKnownFileType = folder; path = source_material; sourceTree = "<group>"; };
@@ -322,6 +338,14 @@
 				B0AD93E519207CA300EA40BB /* AppMacros.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
+				8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */,
+				8386BE341AE3D0ED003D78C8 /* MainTabBarController.h */,
+				8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */,
+				8386BE371AE3D2CD003D78C8 /* FSBooklibrary.h */,
+				8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */,
+				8386BE3A1AE3D2E7003D78C8 /* FSUserCenter.h */,
+				8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */,
+				8386BE3D1AE3D340003D78C8 /* FSBookRankingList.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -379,6 +403,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8386BE3F1AE3D7C7003D78C8 /* tabbar_function */,
+				8386BE301AE3CFFF003D78C8 /* localLanguage_cn */,
 				B0621E251AC3ECEC005EBCA7 /* r */,
 				B0621BDB1AC3B871005EBCA7 /* fonts */,
 				B01F71661951682600BA07A6 /* source_material */,
@@ -560,6 +586,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 24VV37C9GM;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SharpMessage" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -606,8 +637,10 @@
 				B01F71671951682600BA07A6 /* source_material in Resources */,
 				B0621BE51AC3B871005EBCA7 /* fonts in Resources */,
 				B04C0C051901207A009854FD /* json_internalarray.inl in Resources */,
+				8386BE401AE3D7C7003D78C8 /* tabbar_function in Resources */,
 				B04C0C0B1901207A009854FD /* sconscript in Resources */,
 				B04C0C061901207A009854FD /* json_internalmap.inl in Resources */,
+				8386BE311AE3CFFF003D78C8 /* localLanguage_cn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,14 +651,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8386BE3E1AE3D340003D78C8 /* FSBookRankingList.cpp in Sources */,
 				B04C0C071901207A009854FD /* json_reader.cpp in Sources */,
 				B04822BE19FA41F70019F1A7 /* CABrightness_iOS.mm in Sources */,
 				B04C0C041901207A009854FD /* DictionaryHelper.cpp in Sources */,
 				B04C0C031901207A009854FD /* CSContentJsonDictionary.cpp in Sources */,
+				8386BE3B1AE3D2E7003D78C8 /* FSUserCenter.cpp in Sources */,
 				B0CA5A301A77A80B00BECD89 /* Reachability.m in Sources */,
 				B04C0C0A1901207A009854FD /* json_writer.cpp in Sources */,
+				8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */,
 				B01A293A1994C6D200D42BA0 /* sqlite3.c in Sources */,
 				B0621E211AC3ECB0005EBCA7 /* FirstViewController.cpp in Sources */,
+				8386BE381AE3D2CD003D78C8 /* FSBooklibrary.cpp in Sources */,
 				B04C0C081901207A009854FD /* json_value.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
 				B0405FF319CC03A100947287 /* LocalStorage.cpp in Sources */,
@@ -668,8 +705,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Danyi Feng (VE83T3M7CV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danyi Feng (VE83T3M7CV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -717,8 +754,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Danyi Feng (VE83T3M7CV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Danyi Feng (VE83T3M7CV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "RootWindow.h"
+#include "MainTabBarController.h"
 
 USING_NS_CC;
 
@@ -23,8 +24,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setOpenGLView(pEGLView);
 
     // run
-    pDirector->runWindow(RootWindow::create());
+//    pDirector->runWindow(RootWindow::create());
 
+    pDirector->runWindow(MainTabBarController::createWindow());
     return true;
 }
 
