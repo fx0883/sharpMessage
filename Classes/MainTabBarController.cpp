@@ -10,6 +10,7 @@
 #include "FSBooklibrary.h"
 #include "FSBookRankingList.h"
 #include "FSUserCenter.h"
+#include "CrossApp.h"
 
 MainTabBarController::MainTabBarController()
 {
@@ -23,6 +24,30 @@ MainTabBarController::~MainTabBarController()
 
 CAWindow* MainTabBarController::createWindow()
 {
+    
+//    std::string newsPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("news/local.plist");
+//    
+//    CrossApp::CCDictionary *plistdoc = CrossApp::CCDictionary::createWithContentsOfFileThreadSafe("news/local.plist");
+//    
+//CCArray* cal =    plistdoc->allKeys();
+//    
+//    for (unsigned int i = 0; i <cal->count(); ++i)
+//    {
+//        CCString* pObj=(CCString*)cal->objectAtIndex(i);
+//        CCLog("item is = %s",pObj->getCString());
+//        int j=i+i;
+//    }
+    
+//    CCDictionary *plistdoc = CCDictionary::create();
+    
+//    plistdoc->setObject(new CCString("123"), "123");
+//    CCLog("newsPath = %s",newsPath.c_str());
+//    
+//    const char *title = plistdoc->valueForKey("Music")->getCString();
+//    CCLog("title = %s",title);
+//    std::string strTitle(title);
+//    CAUserDefault::sharedUserDefault()->setStringForKey("title", strTitle);
+    
     
     FSBooklibrary* fsbooklibrary = new FSBooklibrary();
     fsbooklibrary->init();
