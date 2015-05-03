@@ -26,7 +26,7 @@ public:
     ~FSloadResBase();
     
 public:
-    CC_SYNTHESIZE_PASS_BY_REF(string, m_dbName, DBName)
+//    CC_SYNTHESIZE_PASS_BY_REF(string, m_dbName, DBName)
 public:
     virtual void loadNewsList()=0;
     virtual bool init();

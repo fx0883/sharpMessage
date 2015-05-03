@@ -53,6 +53,37 @@ static CrossApp::CCSize designResolutionSize = CrossApp::CCSizeMake(2048, 1536);
 // The font size 24 is designed for small resolution, so we should change it to fit for current design resolution
 #define TITLE_FONT_SIZE  (CrossApp::EGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)
 
-#define DBNAME "newsdb.db"
+
+#define DBName "newsdb.db"
+
+
+
+//单例模式宏
+#define SINGLETON(_CLASS_)                  \
+public:                                     \
+inline static _CLASS_& GetInstance()    \
+{                                       \
+    static _CLASS_ s_instance;              \
+    return s_instance;                      \
+}                                       \
+private:                                    \
+_CLASS_();                              \
+_CLASS_(_CLASS_ const&){}               \
+_CLASS_& operator= (_CLASS_ const&){}   \
+~_CLASS_();                             \
+
+//单例模式默认构造函数与析构函数（配合单例模式宏使用）
+#define SINGLETON_C_D(_CLASS_)      \
+_CLASS_::_CLASS_(){}            \
+_CLASS_::~_CLASS_(){}           \
+
+//删除当前对象
+#define DELETECLASS(anyObject)  \
+if(anyObject)   \
+{   \
+    delete anyObject;   \
+    anyObject = NULL;   \
+}   \
+
 
 #endif /* __APPMACROS_H__ */

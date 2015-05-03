@@ -18,7 +18,7 @@
 bool FSloadResBase::init()
 {
     _sqlite3 = NULL;
-    this->setDBName(DBNAME);
+//    this->setDBName(DBNAME);
     return true;
 }
 

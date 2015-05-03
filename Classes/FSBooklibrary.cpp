@@ -8,6 +8,10 @@
 
 #include "FSBooklibrary.h"
 #include <string>
+#include "FSDataManager.h"
+#include "PublicHeader.h"
+#include "NewsInfo.h"
+#include "FSNewsManager.h"
 using namespace std;
 
 
@@ -36,8 +40,21 @@ void FSBooklibrary::viewDidLoad()
     label->setFontSize(_px(72));
     
     std::string fileTitle = CAUserDefault::sharedUserDefault()->getStringForKey("title");
-    CCLog("fileTitle = %s",fileTitle.c_str());
-    label->setText(fileTitle);
+    
+    
+    
+    for (int i=0; i<FSDataManager::GetInstance().getNewsManager().arynewsList.count(); i++) {
+        
+        
+        NewsInfo *newsInfo = (NewsInfo*)FSDataManager::GetInstance().getNewsManager().arynewsList.objectAtIndex(i);
+        
+        label->setText(newsInfo->getNewsTitle().c_str());
+
+    }
+    
+    
+//    CCLog("fileTitle = %s",fileTitle.c_str());
+//    label->setText(fileTitle);
   //  label->setText("Hello World!");
     label->setColor(CAColor_white);
     this->getView()->insertSubview(label, 1);

@@ -247,7 +247,36 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCEGLView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
+ jni/../../Classes/model/FSDataManager.h jni/../../Classes/AppMacros.h \
+ jni/../../Classes/model/FSNewsManager.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/CrossAppExt.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpRequest.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpResponse.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpRequest.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpClient.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpResponse.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/DownloadManager.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/CSContentJsonDictionary.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/json_lib.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/autolink.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/config.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/value.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/forwards.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/reader.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/features.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/writer.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/DictionaryHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/CSContentJsonDictionary.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
+ jni/../../Classes/PublicHeader.h jni/../../Classes/AppMacros.h \
+ jni/../../Classes/FSContext.h jni/../../Classes/model/NewsInfo.h \
+ jni/../../Classes/model/FSNewsManager.h
 
 jni/../../Classes/FSBooklibrary.h:
 
@@ -746,3 +775,67 @@ jni/../../Classes/FSBooklibrary.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
+
+jni/../../Classes/model/FSDataManager.h:
+
+jni/../../Classes/AppMacros.h:
+
+jni/../../Classes/model/FSNewsManager.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/CrossAppExt.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpRequest.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpResponse.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpRequest.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpClient.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpResponse.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/DownloadManager.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/CSContentJsonDictionary.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/json_lib.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/autolink.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/config.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/value.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/forwards.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/reader.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/features.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/lib_json/writer.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/DictionaryHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/CSContentJsonDictionary.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h:
+
+jni/../../Classes/PublicHeader.h:
+
+jni/../../Classes/AppMacros.h:
+
+jni/../../Classes/FSContext.h:
+
+jni/../../Classes/model/NewsInfo.h:
+
+jni/../../Classes/model/FSNewsManager.h:

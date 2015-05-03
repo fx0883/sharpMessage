@@ -22,6 +22,10 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		8366F2C41AF500D4006C9BB5 /* FSContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8366F2C21AF500D4006C9BB5 /* FSContext.cpp */; };
+		837449881AF4CC3900CE34F5 /* NewsInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837449861AF4CC3900CE34F5 /* NewsInfo.cpp */; };
+		8374498B1AF4CF2200CE34F5 /* FSDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837449891AF4CF2200CE34F5 /* FSDataManager.cpp */; };
+		8374498E1AF4CFD300CE34F5 /* FSNewsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */; };
 		837DC9941AEF7E1200210D3F /* news in Resources */ = {isa = PBXBuildFile; fileRef = 837DC9921AEF7E1200210D3F /* news */; };
 		8386BE311AE3CFFF003D78C8 /* localLanguage_cn in Resources */ = {isa = PBXBuildFile; fileRef = 8386BE301AE3CFFF003D78C8 /* localLanguage_cn */; };
 		8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */; };
@@ -128,6 +132,15 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		831C011D1AEA4DCD00F5F291 /* SharpMessageComom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharpMessageComom.h; sourceTree = "<group>"; };
+		8366F2C21AF500D4006C9BB5 /* FSContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSContext.cpp; path = ../Classes/FSContext.cpp; sourceTree = "<group>"; };
+		8366F2C31AF500D4006C9BB5 /* FSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSContext.h; path = ../Classes/FSContext.h; sourceTree = "<group>"; };
+		8366F2C51AF50271006C9BB5 /* PublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PublicHeader.h; path = ../Classes/PublicHeader.h; sourceTree = "<group>"; };
+		837449861AF4CC3900CE34F5 /* NewsInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewsInfo.cpp; sourceTree = "<group>"; };
+		837449871AF4CC3900CE34F5 /* NewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInfo.h; sourceTree = "<group>"; };
+		837449891AF4CF2200CE34F5 /* FSDataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDataManager.cpp; sourceTree = "<group>"; };
+		8374498A1AF4CF2200CE34F5 /* FSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDataManager.h; sourceTree = "<group>"; };
+		8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsManager.cpp; sourceTree = "<group>"; };
+		8374498D1AF4CFD300CE34F5 /* FSNewsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsManager.h; sourceTree = "<group>"; };
 		837DC9921AEF7E1200210D3F /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
 		8386BE301AE3CFFF003D78C8 /* localLanguage_cn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = localLanguage_cn; sourceTree = "<group>"; };
 		8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainTabBarController.cpp; path = ../Classes/MainTabBarController.cpp; sourceTree = "<group>"; };
@@ -347,6 +360,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				837449851AF4CBAC00CE34F5 /* model */,
 				831C011D1AEA4DCD00F5F291 /* SharpMessageComom.h */,
 				B0621E1D1AC3ECB0005EBCA7 /* FirstViewController.cpp */,
 				B0621E1E1AC3ECB0005EBCA7 /* FirstViewController.h */,
@@ -369,6 +383,9 @@
 				839051981AF0799100DD87A2 /* FSloadResBase.h */,
 				8390519A1AF07ABF00DD87A2 /* FSloadRes.cpp */,
 				8390519B1AF07ABF00DD87A2 /* FSloadRes.h */,
+				8366F2C21AF500D4006C9BB5 /* FSContext.cpp */,
+				8366F2C31AF500D4006C9BB5 /* FSContext.h */,
+				8366F2C51AF50271006C9BB5 /* PublicHeader.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -437,6 +454,20 @@
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		837449851AF4CBAC00CE34F5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				837449861AF4CC3900CE34F5 /* NewsInfo.cpp */,
+				837449871AF4CC3900CE34F5 /* NewsInfo.h */,
+				837449891AF4CF2200CE34F5 /* FSDataManager.cpp */,
+				8374498A1AF4CF2200CE34F5 /* FSDataManager.h */,
+				8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */,
+				8374498D1AF4CFD300CE34F5 /* FSNewsManager.h */,
+			);
+			name = model;
+			path = ../Classes/model;
 			sourceTree = "<group>";
 		};
 		B00CC60E19792FF800A62E4C /* studio */ = {
@@ -697,12 +728,15 @@
 				B0405FF319CC03A100947287 /* LocalStorage.cpp in Sources */,
 				B04822BD19FA41F70019F1A7 /* CAAlbumController.mm in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				8374498E1AF4CFD300CE34F5 /* FSNewsManager.cpp in Sources */,
 				B0A030061A8E07050005CB8F /* CABlueTooth.mm in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
+				837449881AF4CC3900CE34F5 /* NewsInfo.cpp in Sources */,
 				B04822BC19FA41F70019F1A7 /* CAAddress.mm in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				B04822C119FA41F70019F1A7 /* CALocation.mm in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
+				8374498B1AF4CF2200CE34F5 /* FSDataManager.cpp in Sources */,
 				B04822C019FA41F70019F1A7 /* CADevice.mm in Sources */,
 				B0CA5A291A77A77B00BECD89 /* CAStudioViewParser.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
@@ -715,6 +749,7 @@
 				B047B92319E91CFA00F24BE6 /* DownloadManager.cpp in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				B0621E221AC3ECB0005EBCA7 /* RootWindow.cpp in Sources */,
+				8366F2C41AF500D4006C9BB5 /* FSContext.cpp in Sources */,
 				1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */,
 				B04822BF19FA41F70019F1A7 /* CACameraController.mm in Sources */,
 				B0405FF419CC03A100947287 /* LocalStorageAndroid.cpp in Sources */,

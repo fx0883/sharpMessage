@@ -24,8 +24,8 @@ public:
 private:
     void loadData();
     void loadLanguagePath();
-    void _insertNews(sqlite3_stmt *_sqlite_stmt_insertnews,CCDictionary* dic);
-    void _insertChapter(sqlite3_stmt *_sqlite_stmt_insertchapter,CCDictionary* dic);
+    int _insertNews(sqlite3_stmt *_sqlite_stmt_insertnews,CCDictionary* dic);
+    void _insertChapter(int newsID,sqlite3_stmt *_sqlite_stmt_insertchapter,CCDictionary* dic);
 
 };
 
