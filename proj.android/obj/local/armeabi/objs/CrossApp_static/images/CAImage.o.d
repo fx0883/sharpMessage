@@ -114,7 +114,17 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//tiff/prebuilt/android/../../include/android/tiffvers.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//webp/prebuilt/android/../../include/android/decode.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//webp/prebuilt/android/../../include/android/./types.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/etc1.h
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/etc1.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/unistd.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/select.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/capability.h \
+ /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pathconf.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib_private.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
@@ -345,3 +355,23 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//webp/prebuilt/android/../../include/android/./types.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/etc1.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/unistd.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/select.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/capability.h:
+
+/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pathconf.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib_private.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h:
