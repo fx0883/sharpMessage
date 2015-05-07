@@ -27,7 +27,6 @@
 		8374498B1AF4CF2200CE34F5 /* FSDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837449891AF4CF2200CE34F5 /* FSDataManager.cpp */; };
 		8374498E1AF4CFD300CE34F5 /* FSNewsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */; };
 		837DC9941AEF7E1200210D3F /* news in Resources */ = {isa = PBXBuildFile; fileRef = 837DC9921AEF7E1200210D3F /* news */; };
-		8386BE311AE3CFFF003D78C8 /* localLanguage_cn in Resources */ = {isa = PBXBuildFile; fileRef = 8386BE301AE3CFFF003D78C8 /* localLanguage_cn */; };
 		8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */; };
 		8386BE381AE3D2CD003D78C8 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */; };
 		8386BE3B1AE3D2E7003D78C8 /* FSUserCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */; };
@@ -142,7 +141,6 @@
 		8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsManager.cpp; sourceTree = "<group>"; };
 		8374498D1AF4CFD300CE34F5 /* FSNewsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsManager.h; sourceTree = "<group>"; };
 		837DC9921AEF7E1200210D3F /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
-		8386BE301AE3CFFF003D78C8 /* localLanguage_cn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = localLanguage_cn; sourceTree = "<group>"; };
 		8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainTabBarController.cpp; path = ../Classes/MainTabBarController.cpp; sourceTree = "<group>"; };
 		8386BE341AE3D0ED003D78C8 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = ../Classes/MainTabBarController.h; sourceTree = "<group>"; };
 		8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBooklibrary.cpp; path = ../Classes/FSBooklibrary.cpp; sourceTree = "<group>"; };
@@ -447,7 +445,6 @@
 				839051941AF072F300DD87A2 /* en */,
 				837DC9921AEF7E1200210D3F /* news */,
 				8386BE3F1AE3D7C7003D78C8 /* tabbar_function */,
-				8386BE301AE3CFFF003D78C8 /* localLanguage_cn */,
 				B0621E251AC3ECEC005EBCA7 /* r */,
 				B0621BDB1AC3B871005EBCA7 /* fonts */,
 				B01F71661951682600BA07A6 /* source_material */,
@@ -698,7 +695,6 @@
 				B04C0C0B1901207A009854FD /* sconscript in Resources */,
 				B04C0C061901207A009854FD /* json_internalmap.inl in Resources */,
 				839051961AF072F300DD87A2 /* en in Resources */,
-				8386BE311AE3CFFF003D78C8 /* localLanguage_cn in Resources */,
 				837DC9941AEF7E1200210D3F /* news in Resources */,
 				839051951AF072F300DD87A2 /* cn in Resources */,
 			);

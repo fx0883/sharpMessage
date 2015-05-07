@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A06FE79A-0BF6-4490-9C4F-E25366B23443</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SharpMessage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E53169099E46709BB9B3245137E7AFF8D047592C</key>
+		<string>https://github.com/fx0883/sharpMessage.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.ios/SharpMessage.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E53169099E46709BB9B3245137E7AFF8D047592C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fx0883/sharpMessage.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E53169099E46709BB9B3245137E7AFF8D047592C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E53169099E46709BB9B3245137E7AFF8D047592C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sharpMessage</string>
+		</dict>
+	</array>
+</dict>
+</plist>
