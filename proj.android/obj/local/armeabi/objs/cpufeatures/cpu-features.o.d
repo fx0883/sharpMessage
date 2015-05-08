@@ -1,182 +1,173 @@
 obj/local/armeabi/objs/cpufeatures/cpu-features.o: \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/android/cpufeatures/cpu-features.c \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/android/cpufeatures/cpu-features.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/android/api-level.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdint.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/_types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/_types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/_wchar_limits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/dlfcn.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/errno.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/errno.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/errno.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/fcntl.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/posix_types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/stddef.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/compiler.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/posix_types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/fcntl.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/fcntl.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/unistd.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/select.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/time.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/time.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/signal.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/limits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/limits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/limits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/internal_types.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/limits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/syslimits.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/page.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/string.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/malloc.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/signal.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/siginfo.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/ucontext.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/user.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/capability.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pathconf.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pthread.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/time.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sched.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdio.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdlib.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/alloca.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/strings.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/memory.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/system_properties.h
+ /Library/Android/android-ndk-r9d/sources/android/cpufeatures/cpu-features.c \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/system_properties.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/cdefs.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/android/api-level.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/pthread.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/time.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/time.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdint.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/_types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/_types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/_wchar_limits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/posix_types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/stddef.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/compiler.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/posix_types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/kernel.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/time.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/siginfo.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/signal.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/limits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/limits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/limits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/internal_types.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/limits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/syslimits.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/page.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/string.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/malloc.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/signal.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sched.h \
+ /Library/Android/android-ndk-r9d/sources/android/cpufeatures/cpu-features.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdio.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdlib.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/fcntl.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/fcntl.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/fcntl.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/unistd.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/select.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/capability.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/pathconf.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/errno.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/errno.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/errno.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/android/cpufeatures/cpu-features.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/system_properties.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/cdefs.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/android/api-level.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/android/api-level.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdint.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/pthread.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/_types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/time.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/_types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/time.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/_wchar_limits.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/dlfcn.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdint.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/errno.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/_types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/errno.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/_types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/errno.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/_wchar_limits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/posix_types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/stddef.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/fcntl.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/compiler.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/posix_types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/posix_types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/stddef.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/compiler.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/kernel.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/posix_types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/time.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/siginfo.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/kernel.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysmacros.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/signal.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/fcntl.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/limits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/fcntl.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/limits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/limits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/unistd.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/internal_types.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/select.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/limits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/time.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/syslimits.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/time.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/page.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/signal.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/string.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/limits.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/malloc.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/limits.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/signal.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/limits.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/internal_types.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/limits.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sched.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/syslimits.h:
+/Library/Android/android-ndk-r9d/sources/android/cpufeatures/cpu-features.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/page.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdio.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/string.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/malloc.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/signal.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/signal.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/sigcontext.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/fcntl.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm/siginfo.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/fcntl.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/asm-generic/siginfo.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/fcntl.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/ucontext.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/fcntl.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/user.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/unistd.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/select.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/linux/capability.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/sys/sysconf.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pathconf.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/capability.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/pthread.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/pathconf.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/time.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/errno.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sched.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/linux/errno.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdio.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm/errno.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdlib.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/errno.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/alloca.h:
-
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/strings.h:
-
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/memory.h:
-
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/sys/system_properties.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/asm-generic/errno-base.h:

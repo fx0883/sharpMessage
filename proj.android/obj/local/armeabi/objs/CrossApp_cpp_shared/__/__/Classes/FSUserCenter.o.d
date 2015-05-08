@@ -1,6 +1,6 @@
 obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  jni/../../Classes/FSUserCenter.cpp jni/../../Classes/FSUserCenter.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/iostream \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/CrossApp.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccConfig.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformConfig.h \
@@ -10,24 +10,24 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccConfig.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformConfig.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCPlatformDefine.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/android/log.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/android/log.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformMacros.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/math.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdlib.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/alloca.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/strings.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/memory.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/math.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdlib.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAGeometry.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAObject.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/deque \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/deque \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/KHR/khrplatform.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2ext.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAApplication.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAGeometry.h \
@@ -35,7 +35,7 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/utility.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypeInfo.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformMacros.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/typeinfo \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccMacros.h \
@@ -47,7 +47,7 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/vec2.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/vec3.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/assert.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/assert.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/mat3.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/mat4.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/quaternion.h \
@@ -61,17 +61,17 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAResponder.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CATouch.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASTLContainer.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/map \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/list \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDictionary.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/data_support/uthash.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/inttypes.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/inttypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/data_support/ccCArray.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/functional \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/functional \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAAutoreleasePool.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CACamera.h \
@@ -83,14 +83,14 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAIndexPath.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAThread.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/queue \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/set \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
@@ -169,16 +169,16 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/memory \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/memory \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/ft2build.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftheader.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/freetype.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftconfig.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftoption.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftstdlib.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/setjmp.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/setjmp.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftsystem.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftimage.h \
@@ -220,10 +220,10 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/user_default/CAUserDefault.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCVertex.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/tinyxml2/tinyxml2.h \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/climits \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
- /Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/climits \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdio \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstring \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdarg \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/md5.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/base64.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h \
@@ -251,7 +251,7 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSUserCenter.o: \
 
 jni/../../Classes/FSUserCenter.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/iostream:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/CrossApp.h:
 
@@ -271,21 +271,21 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCPlatformDefine.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/android/log.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/android/log.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformMacros.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/math.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/math.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/stdlib.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/stdlib.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/alloca.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/strings.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/memory.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h:
 
@@ -293,19 +293,19 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAObject.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/deque:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/deque:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2platform.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/KHR/khrplatform.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/GLES2/gl2ext.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/GLES2/gl2ext.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAApplication.h:
 
@@ -321,7 +321,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformMacros.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/typeinfo:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h:
 
@@ -345,7 +345,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/vec3.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/assert.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/assert.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/mat3.h:
 
@@ -373,11 +373,11 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASTLContainer.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/map:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/list:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h:
 
@@ -385,7 +385,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/data_support/uthash.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/inttypes.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/inttypes.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h:
 
@@ -393,7 +393,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/functional:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/functional:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
@@ -417,7 +417,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/queue:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h:
 
@@ -431,7 +431,7 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/set:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h:
 
@@ -589,9 +589,9 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/sstream:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/memory:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/memory:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/ft2build.h:
 
@@ -605,9 +605,9 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftstdlib.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/setjmp.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/setjmp.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h:
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttypes.h:
 
@@ -691,13 +691,13 @@ jni/../../Classes/FSUserCenter.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/tinyxml2/tinyxml2.h:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/climits:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/climits:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdio:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstring:
 
-/Users/fengxuan/Library/Android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg:
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdarg:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/md5.h:
 
