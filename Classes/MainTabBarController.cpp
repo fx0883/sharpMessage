@@ -7,7 +7,7 @@
 //
 
 #include "MainTabBarController.h"
-#include "FSBooklibrary.h"
+#include "FSBooklibrary/FSBooklibrary.h"
 #include "FSBookRankingList.h"
 #include "FSUserCenter.h"
 #include "CrossApp.h"
@@ -25,36 +25,20 @@ MainTabBarController::~MainTabBarController()
 CAWindow* MainTabBarController::createWindow()
 {
     
-//    std::string newsPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("news/local.plist");
-//    
-//    CrossApp::CCDictionary *plistdoc = CrossApp::CCDictionary::createWithContentsOfFileThreadSafe("news/local.plist");
-//    
-//CCArray* cal =    plistdoc->allKeys();
-//    
-//    for (unsigned int i = 0; i <cal->count(); ++i)
-//    {
-//        CCString* pObj=(CCString*)cal->objectAtIndex(i);
-//        CCLog("item is = %s",pObj->getCString());
-//        int j=i+i;
-//    }
-    
-//    CCDictionary *plistdoc = CCDictionary::create();
-    
-//    plistdoc->setObject(new CCString("123"), "123");
-//    CCLog("newsPath = %s",newsPath.c_str());
-//    
-//    const char *title = plistdoc->valueForKey("Music")->getCString();
-//    CCLog("title = %s",title);
-//    std::string strTitle(title);
-//    CAUserDefault::sharedUserDefault()->setStringForKey("title", strTitle);
     
     
     FSBooklibrary* fsbooklibrary = new FSBooklibrary();
-    fsbooklibrary->init();
-    fsbooklibrary->setTabBarItem(CATabBarItem::create("library",
-                                                        CAImage::create("tabbar_function/booklibrary_1.png"),
-                                                        CAImage::create("tabbar_function/booklibrary_2.png")));
+
     
+//    CANavigationController *navBooklibrary = CANavigationController.initWithRootViewController
+    
+    CANavigationController* navBooklibrary = new CANavigationController();
+    navBooklibrary->initWithRootViewController(fsbooklibrary);
+    navBooklibrary->getView()->setColor(CAColor_clear);
+    fsbooklibrary->init();
+    navBooklibrary->setTabBarItem(CATabBarItem::create("library",
+                                                       CAImage::create("tabbar_function/booklibrary_1.png"),
+                                                       CAImage::create("tabbar_function/booklibrary_2.png")));
     
     FSBookRankingList* fsbookrankinglist = new FSBookRankingList();
     fsbookrankinglist->init();
@@ -70,8 +54,10 @@ CAWindow* MainTabBarController::createWindow()
                                                         CAImage::create("tabbar_function/userCenter_2.png")));
     
     
+
+    
     std::vector<CAViewController*> controllerItem;
-    controllerItem.push_back(fsbooklibrary);
+    controllerItem.push_back(navBooklibrary);
     controllerItem.push_back(fsbookrankinglist);
     controllerItem.push_back(fsusercenter);
     

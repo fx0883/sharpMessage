@@ -14,6 +14,8 @@
 		15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8B1682F8A6002FB0C5 /* CocosDenshion.m */; };
 		15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */; };
 		15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */; };
+		182F30BB1AFB5D55000A3D83 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */; };
+		182F30BE1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */; };
 		1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB87033175E0A84005D39BF /* WebSocket.cpp */; };
 		1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624316D4A1E8000847F2 /* AppController.mm */; };
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
@@ -28,7 +30,6 @@
 		8374498E1AF4CFD300CE34F5 /* FSNewsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8374498C1AF4CFD300CE34F5 /* FSNewsManager.cpp */; };
 		837DC9941AEF7E1200210D3F /* news in Resources */ = {isa = PBXBuildFile; fileRef = 837DC9921AEF7E1200210D3F /* news */; };
 		8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */; };
-		8386BE381AE3D2CD003D78C8 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */; };
 		8386BE3B1AE3D2E7003D78C8 /* FSUserCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */; };
 		8386BE3E1AE3D340003D78C8 /* FSBookRankingList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */; };
 		8386BE401AE3D7C7003D78C8 /* tabbar_function in Resources */ = {isa = PBXBuildFile; fileRef = 8386BE3F1AE3D7C7003D78C8 /* tabbar_function */; };
@@ -115,6 +116,10 @@
 		15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		15A3DA8D1682F8A6002FB0C5 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBooklibrary.cpp; sourceTree = "<group>"; };
+		182F30BA1AFB5D55000A3D83 /* FSBooklibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBooklibrary.h; sourceTree = "<group>"; };
+		182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBooklibraryCell.cpp; sourceTree = "<group>"; };
+		182F30BD1AFB5EA3000A3D83 /* FSBooklibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBooklibraryCell.h; sourceTree = "<group>"; };
 		1AB87033175E0A84005D39BF /* WebSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebSocket.cpp; sourceTree = "<group>"; };
 		1AB87034175E0A84005D39BF /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
 		1AC3624216D4A1E8000847F2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = SOURCE_ROOT; };
@@ -143,8 +148,6 @@
 		837DC9921AEF7E1200210D3F /* news */ = {isa = PBXFileReference; lastKnownFileType = folder; path = news; sourceTree = "<group>"; };
 		8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainTabBarController.cpp; path = ../Classes/MainTabBarController.cpp; sourceTree = "<group>"; };
 		8386BE341AE3D0ED003D78C8 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = ../Classes/MainTabBarController.h; sourceTree = "<group>"; };
-		8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBooklibrary.cpp; path = ../Classes/FSBooklibrary.cpp; sourceTree = "<group>"; };
-		8386BE371AE3D2CD003D78C8 /* FSBooklibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSBooklibrary.h; path = ../Classes/FSBooklibrary.h; sourceTree = "<group>"; };
 		8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSUserCenter.cpp; path = ../Classes/FSUserCenter.cpp; sourceTree = "<group>"; };
 		8386BE3A1AE3D2E7003D78C8 /* FSUserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUserCenter.h; path = ../Classes/FSUserCenter.h; sourceTree = "<group>"; };
 		8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBookRankingList.cpp; path = ../Classes/FSBookRankingList.cpp; sourceTree = "<group>"; };
@@ -358,6 +361,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				182F30B81AFB5D21000A3D83 /* FSBooklibrary */,
 				837449851AF4CBAC00CE34F5 /* model */,
 				831C011D1AEA4DCD00F5F291 /* SharpMessageComom.h */,
 				B0621E1D1AC3ECB0005EBCA7 /* FirstViewController.cpp */,
@@ -369,8 +373,6 @@
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				8386BE331AE3D0ED003D78C8 /* MainTabBarController.cpp */,
 				8386BE341AE3D0ED003D78C8 /* MainTabBarController.h */,
-				8386BE361AE3D2CD003D78C8 /* FSBooklibrary.cpp */,
-				8386BE371AE3D2CD003D78C8 /* FSBooklibrary.h */,
 				8386BE391AE3D2E7003D78C8 /* FSUserCenter.cpp */,
 				8386BE3A1AE3D2E7003D78C8 /* FSUserCenter.h */,
 				8386BE3C1AE3D33F003D78C8 /* FSBookRankingList.cpp */,
@@ -387,6 +389,18 @@
 			);
 			name = Classes;
 			path = ../classes;
+			sourceTree = "<group>";
+		};
+		182F30B81AFB5D21000A3D83 /* FSBooklibrary */ = {
+			isa = PBXGroup;
+			children = (
+				182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */,
+				182F30BA1AFB5D55000A3D83 /* FSBooklibrary.h */,
+				182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */,
+				182F30BD1AFB5EA3000A3D83 /* FSBooklibraryCell.h */,
+			);
+			name = FSBooklibrary;
+			path = ../Classes/FSBooklibrary;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -718,12 +732,12 @@
 				8386BE351AE3D0ED003D78C8 /* MainTabBarController.cpp in Sources */,
 				B01A293A1994C6D200D42BA0 /* sqlite3.c in Sources */,
 				B0621E211AC3ECB0005EBCA7 /* FirstViewController.cpp in Sources */,
-				8386BE381AE3D2CD003D78C8 /* FSBooklibrary.cpp in Sources */,
 				B04C0C081901207A009854FD /* json_value.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
 				B0405FF319CC03A100947287 /* LocalStorage.cpp in Sources */,
 				B04822BD19FA41F70019F1A7 /* CAAlbumController.mm in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				182F30BE1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp in Sources */,
 				8374498E1AF4CFD300CE34F5 /* FSNewsManager.cpp in Sources */,
 				B0A030061A8E07050005CB8F /* CABlueTooth.mm in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
@@ -735,6 +749,7 @@
 				8374498B1AF4CF2200CE34F5 /* FSDataManager.cpp in Sources */,
 				B04822C019FA41F70019F1A7 /* CADevice.mm in Sources */,
 				B0CA5A291A77A77B00BECD89 /* CAStudioViewParser.cpp in Sources */,
+				182F30BB1AFB5D55000A3D83 /* FSBooklibrary.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				83C643CE1AEF757C004C7DC1 /* FSUtilCPlus.cpp in Sources */,
 				8390519C1AF07ABF00DD87A2 /* FSloadRes.cpp in Sources */,
@@ -801,7 +816,8 @@
 					"\"$(SRCROOT)/../../../extensions/libwebsockets/ios/lib\"",
 					"\"$(SRCROOT)/../../../CrossApp/the_third_party/curl/prebuilt/ios\"",
 				);
-				OTHER_CFLAGS = "-O2";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = SharpMessage;
 				PROVISIONING_PROFILE = "";

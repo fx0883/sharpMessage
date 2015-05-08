@@ -89,7 +89,7 @@ if(anyObject)   \
 #define CC_SYNTHESIZE_PASS_BY_REF2(varType, varName, funName)\
 protected: varType varName;\
 public: inline virtual varType& get##funName(void) { return varName; }\
-public: virtual void set##funName(const varType& var){ varName = var; }
+public: virtual void set##funName(varType& var){ varName = var; }
 
 
 #endif /* __APPMACROS_H__ */

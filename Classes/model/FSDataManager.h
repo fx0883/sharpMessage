@@ -36,7 +36,7 @@
 class FSDataManager:public CAObject
 {
     SINGLETON(FSDataManager)
-    CC_SYNTHESIZE_PASS_BY_REF2(FSNewsManager, *m_NewsManager, NewsManager)
+    CC_SYNTHESIZE_PASS_BY_REF2(FSNewsManager*, m_NewsManager, NewsManager)
 };
 
 #endif /* defined(__SharpMessage__FSDataManager__) */

@@ -34,10 +34,6 @@ void FSNewsManager::loadNewsList()
 {
     
     int ret = 0;
-    
-    
-    
-    
 //    CCLog("fullPath = %s",DBPATH);
     
     ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
@@ -48,17 +44,12 @@ void FSNewsManager::loadNewsList()
     int r,c;
     //查询数据
     sqlite3_get_table(_sqlite3,"select * from newslist",&re,&r,&c,NULL);
-    CCLog("row is %d,column is %d",r,c);
+//    CCLog("row is %d,column is %d",r,c);
     //将查询出的数据通过log输出
     for(int i=1;i<=r;i++)
     {
         NewsInfo *newsInfo = new NewsInfo();
         
-//        for(int j=0;j<c;j++)
-//        {
-//            CCLog("%s",re[i*c+j]);
-//            
-//        }
         int newsId = atoi(re[i*c+0]);
         newsInfo->setNewsID(newsId);
         newsInfo->setNewsTitle(re[i*c+1]);

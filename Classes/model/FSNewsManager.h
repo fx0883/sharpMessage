@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "CrossApp.h"
 #include "CrossAppExt.h"
+#include "AppMacros.h"
 
 class FSNewsManager:public CAObject
 {
@@ -21,8 +22,7 @@ public:
     bool init();
     ~FSNewsManager();
 public:
-    CCArray arynewsList;
-    
+    CC_SYNTHESIZE_PASS_BY_REF2(CCArray, arynewsList, ArynewsList);
 private:
     void loadNewsList();
 protected:
