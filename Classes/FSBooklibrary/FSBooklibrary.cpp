@@ -36,6 +36,7 @@ void FSBooklibrary::viewDidLoad()
     p_Conllection->setCollectionViewDelegate(this);
     p_Conllection->setCollectionViewDataSource(this);
     p_Conllection->setScrollViewDelegate(this);
+    
 
     p_Conllection->setHoriInterval(_px(40));
     p_Conllection->setVertInterval(_px(40));
@@ -149,7 +150,8 @@ unsigned int FSBooklibrary::numberOfItemsInRowsInSection(CACollectionView *colle
 
 unsigned int FSBooklibrary::collectionViewHeightForRowAtIndexPath(CACollectionView* collectionView, unsigned int section, unsigned int row)
 {
-    return (this->getView()->getBounds().size.width - _px(40) * 4) / 3;
+    return ((this->getView()->getBounds().size.width - _px(40) * 4) / 3)*4/3 *5/4;
+  //  return 60;
 }
 
 

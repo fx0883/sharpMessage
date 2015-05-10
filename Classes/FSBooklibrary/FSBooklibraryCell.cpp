@@ -51,19 +51,19 @@ void FSBooklibraryCell::initWithSize(CADipSize& cellSize)
 //    itemImage->addSubview(itemText);
     
     
-    CAImageView* itemImage = CAImageView::createWithFrame(CADipRect(0, 0, _size.width, _size.height));
+    CAImageView* itemImage = CAImageView::createWithFrame(CADipRect(0, 0, _size.width, _size.height*4/5));
     itemImage->setTag(99);
     this->addSubview(itemImage);
     
     CADipSize itemSize = itemImage->getBounds().size;
-    CALabel* itemText = CALabel::createWithCenter(CADipRect(itemSize.width*0.5, itemSize.height*0.5, 150, 40));
+    CALabel* itemText = CALabel::createWithCenter(CADipRect(itemSize.width*0.5, itemSize.height+20, 150, 40));
     itemText->setTag(100);
     itemText->setFontSize(_px(29));
     itemText->setTextAlignment(CATextAlignmentCenter);
     itemText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
     itemImage->addSubview(itemText);
     
-    
+    this->setControlCanSelected(false);
 }
 
 
