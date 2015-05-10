@@ -88,7 +88,7 @@ void FSBooklibraryCell::setNewsInfo(NewsInfo *newsinfo)
 //    itemImage->setImage(image);
     
     CAImageView *itemImage = (CAImageView*)this->getSubviewByTag(99);
-    CAImage* image=CAImage::create("news/112.png");
+    CAImage* image=CAImage::create(strImage);
     itemImage->setImage(image);
     CALabel* itemText = (CALabel*)this->getSubviewByTag(99)->getSubviewByTag(100);
     itemText->setText(newsinfo->getNewsTitle());
