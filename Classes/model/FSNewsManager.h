@@ -13,6 +13,7 @@
 #include "CrossApp.h"
 #include "CrossAppExt.h"
 #include "AppMacros.h"
+#include "ChapterInfo.h"
 
 class FSNewsManager:public CAObject
 {
@@ -23,8 +24,18 @@ public:
     ~FSNewsManager();
 public:
     CC_SYNTHESIZE_PASS_BY_REF2(CCArray, arynewsList, ArynewsList);
+    CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, curChapterInfo, CurChapterInfo);
+    CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicChapterInfo, DicChapterInfo);
+    
+public:
+    int getCurChapterID(int newsID);
+    void setCurChapterID(int newsID,int chapterID);
+
 private:
     void loadNewsList();
+    void loadCurChapterInfo(int newsID,int chapterNubmer);
+    void loadChapterDic(int newsID);
+    
 protected:
     sqlite3 *_sqlite3;
     
