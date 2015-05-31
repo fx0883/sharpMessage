@@ -25,7 +25,7 @@ public:
     static FSNewsViewCell* create(const std::string& identifier, const CADipRect& _rect = CADipRectZero);
     
 public:
-    void initWithCell();
+    void updateWithCell();
 //    void cellBtnCallback(CAControl* btn, CCPoint point);
     void setContent(const std::string& strContext);
     
@@ -34,7 +34,7 @@ protected:
     virtual void highlightedTableViewCell();
     virtual void selectedTableViewCell();
     virtual void disabledTableViewCell();
-    CALabel* cellText;
+   // CALabel* cellText;
 
     
 private:

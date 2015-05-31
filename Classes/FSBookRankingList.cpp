@@ -28,11 +28,11 @@ void FSBookRankingList::viewDidLoad()
     imageView->setFrame(winRect);
     this->getView()->addSubview(imageView);
     
-    CALabel* label = CALabel::createWithCenter(CCRect(winRect.size.width*0.5, winRect.size.height*0.5-270, winRect.size.width, 200));
+    CALabel* label = CALabel::createWithCenter(CCRect(winRect.size.width*0.5, winRect.size.height*0.5-270, winRect.size.width, 150));
     label->setTextAlignment(CATextAlignmentCenter);
     label->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
-    label->setFontSize(_px(72));
-    label->setText("Hello World!");
+    label->setFontSize(_px(30));
+    label->setText("我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额，我是一个斌来自老白电费份额份额份额份额份额份额份额份额份额份额阿道夫啊阿飞份额================================================================>");
     label->setColor(CAColor_white);
     this->getView()->insertSubview(label, 1);
 }

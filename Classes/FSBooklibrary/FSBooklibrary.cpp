@@ -13,6 +13,7 @@
 #include "NewsInfo.h"
 #include "FSNewsManager.h"
 #include "FSBooklibraryCell.h"
+#include "FSNewsView2.h"
 
 using namespace std;
 
@@ -50,6 +51,21 @@ void FSBooklibrary::viewDidUnload()
 
 void FSBooklibrary::collectionViewDidSelectCellAtIndexPath(CACollectionView *collectionView, unsigned int section, unsigned int row, unsigned int item)
 {
+//    CCLog("row %d",row);
+//    CCLog("item %d",item);
+    
+    int index =row * 3 + item;
+    CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getArynewsList();
+    NewsInfo *newsinfo = (NewsInfo*)ary.objectAtIndex(index);
+    FSNewsView2 *fsnewsview2 = new FSNewsView2();
+    fsnewsview2->init();
+    FSDataManager::GetInstance().getNewsManager()->loadChapterDic(newsinfo->getNewsID());
+    FSDataManager::GetInstance().getNewsManager()->loadCurChapterInfo(newsinfo->getNewsID());
+    ChapterInfo *chapterInfo =  FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
+    
+    fsnewsview2->setChapterInfo(chapterInfo);
+    
+    this->getNavigationController()->pushViewController(fsnewsview2, true);
     
 }
 
@@ -123,6 +139,7 @@ CACollectionViewCell* FSBooklibrary::collectionCellAtIndex(CACollectionView *col
     NewsInfo *newsinfo = (NewsInfo*)ary.objectAtIndex(index);
     p_Cell->setNewsInfo(newsinfo);
 //p_Cell->setNewsInfo(NULL);
+    
     return p_Cell;
 }
 

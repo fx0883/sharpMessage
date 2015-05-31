@@ -30,6 +30,12 @@ FSNewsManager::~FSNewsManager()
     }
 }
 
+void FSNewsManager::loadCurChapterInfo(int newsID)
+{
+    int chapterNumber = getCurChapterID(newsID);
+    loadCurChapterInfo(newsID, chapterNumber);
+}
+
 void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 {
     char strNewsID[20];
@@ -38,7 +44,7 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
     this->loadChapterDic(newsID);
     
     CAObject *obj = dicChapterInfo.objectForKey(strNewsID);
-    if (obj!=NULL) {
+    if (obj==NULL) {
         return;
     }
     CCArray* aryChapterInfo = (CCArray*)obj;
@@ -67,7 +73,7 @@ void FSNewsManager::loadChapterDic(int newsID)
     int r,c;
     
     char sql[256];
-    snprintf( sql , 32 , "select chapterID,newsID,chapterTitle,imageSrc,chapterContent,href from chapterlist WHERE newsID='%d' ORDER by chapterID" , newsID );
+    snprintf( sql , 256 , "select chapterID,newsID,chapterTitle,imageSrc,chapterContent,href from chapterlist WHERE newsID='%d' ORDER by chapterID" , newsID );
     
 //    string strSql = "select * from chapterlist WHERE newsID='%d' ORDER by chapterID desc"
     
@@ -158,7 +164,7 @@ int FSNewsManager::getCurChapterID(int newsID)
     char strNewsID[20];
     sprintf(strNewsID, "%d", newsID);
     
-    ret = CAUserDefault::sharedUserDefault()->getIntegerForKey(strNewsID);
+    ret = CAUserDefault::sharedUserDefault()->getIntegerForKey(strNewsID,0);
     return ret;
 }
 void FSNewsManager::setCurChapterID(int newsID,int chapterID)

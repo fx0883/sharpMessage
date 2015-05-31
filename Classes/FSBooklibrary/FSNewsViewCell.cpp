@@ -24,6 +24,7 @@ FSNewsViewCell* FSNewsViewCell::create(const std::string& identifier, const CADi
     if(tableViewCell&&tableViewCell->initWithReuseIdentifier(identifier))
     {
         tableViewCell->setFrame(_rect);
+        tableViewCell->setColor(CAColor_green);
         tableViewCell->autorelease();
         return tableViewCell;
     }
@@ -33,28 +34,47 @@ FSNewsViewCell* FSNewsViewCell::create(const std::string& identifier, const CADi
 
 void FSNewsViewCell::setContent(const std::string& strContext)
 {
+    
+    
+    
+    CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
     cellText->setText(strContext);
+  //  cellText->sizeToFit();
     
-
+//    CCLOG("1======%d",(int)strContext.size());
+//    
+//    
+//    
+//    string str = "我是一个好人，我是一个好人，我是一个好人，";
+//    
+//        CCLOG("2======%d",(int)str.size());
+//    cellText->setText("我是一个好人，我是一个好人，我是一个好人，");
 }
 
-void FSNewsViewCell::initWithCell()
+void FSNewsViewCell::updateWithCell()
 {
-//    CADipSize m_size = this->getFrame().size;
-    
-    cellText = CALabel::createWithFrame(this->getFrame());
+
+    CADipSize size = this->getBounds().size;
+    CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
+    if(cellText==NULL)
+    {
+        cellText = CALabel::createWithCenter(CCRect(size.width*0.5, size.height*0.5, size.width, size.height));
+        this->addSubview(cellText);
+        //cellText->setColor(<#const CAColor4B &color#>)
+    }
+    else
+    {
+        cellText->setFrame(CCRect(0, 0, size.width, size.height));
+    }
     cellText->setTag(100);
-    cellText->setFontSize(_px(30));
-    cellText->setTextAlignment(CATextAlignmentCenter);
-    cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
-    this->addSubview(cellText);
+    cellText->setFontSize(_px(38));
+    //cellText->setColor(new CAColor4B(100,100,100,1));
+    cellText->setTextAlignment(CATextAlignmentLeft);
+   // cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
     
-//    CAButton* btnOnCell = CAButton::createWithCenter(CADipRect(m_size.width*0.85, m_size.height*0.5, m_size.width*0.2, m_size.height*0.7), CAButtonTypeRoundedRect);
-//    btnOnCell->setTag(102);
-//    btnOnCell->setTitleForState(CAControlStateAll, "Touch");
-//    btnOnCell->addTarget(this, CAControl_selector(FSNewsViewCell::cellBtnCallback), CAControlEventTouchUpInSide);
-//    this->addSubview(btnOnCell);
+    
 }
+
 
 //void FSNewsViewCell::cellBtnCallback(CAControl* btn, CCPoint point)
 //{

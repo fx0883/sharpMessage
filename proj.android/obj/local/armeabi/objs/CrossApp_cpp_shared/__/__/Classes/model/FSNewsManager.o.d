@@ -305,9 +305,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/model/FSNewsManager.o: 
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
- jni/../../Classes/AppMacros.h jni/../../Classes/model/newsInfo.h \
- jni/../../Classes/PublicHeader.h jni/../../Classes/AppMacros.h \
- jni/../../Classes/FSContext.h
+ jni/../../Classes/AppMacros.h jni/../../Classes/model/ChapterInfo.h \
+ jni/../../Classes/model/newsInfo.h jni/../../Classes/PublicHeader.h \
+ jni/../../Classes/AppMacros.h jni/../../Classes/FSContext.h
 
 jni/../../Classes/model/FSNewsManager.h:
 
@@ -920,6 +920,8 @@ jni/../../Classes/model/FSNewsManager.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h:
 
 jni/../../Classes/AppMacros.h:
+
+jni/../../Classes/model/ChapterInfo.h:
 
 jni/../../Classes/model/newsInfo.h:
 

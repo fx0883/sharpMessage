@@ -31,9 +31,10 @@ public:
     int getCurChapterID(int newsID);
     void setCurChapterID(int newsID,int chapterID);
 
-private:
+public:
     void loadNewsList();
     void loadCurChapterInfo(int newsID,int chapterNubmer);
+    void loadCurChapterInfo(int newsID);
     void loadChapterDic(int newsID);
     
 protected:
