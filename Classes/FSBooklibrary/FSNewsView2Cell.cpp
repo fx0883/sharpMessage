@@ -1,5 +1,5 @@
 #include "FSNewsView2Cell.h"
-
+#include "AppMacros.h"
 FSNewsView2Cell::FSNewsView2Cell()
 {
 
@@ -30,6 +30,12 @@ void FSNewsView2Cell::initWithCell()
 //		_size.height*0.5,
 //		_size.width,
 //		_size.height));
+    
+    
+    CAView *view = CAView::createWithFrame(this->getBounds());
+    view->setTag(99);
+    this->addSubview(view);
+    
     CALabel* test = CALabel::createWithFrame(this->getBounds());
 	test->setTextAlignment(CATextAlignmentLeft);
 //	test->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
@@ -56,12 +62,34 @@ void FSNewsView2Cell::updateWithCell()
         cellText->CALabel::createWithFrame(this->getBounds());
     }
     cellText->setTag(100);
-    cellText->setFontSize(_px(45));
+    
+    float width1 = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width;
+    
+    CCLog("width1==============width1================%f",width1);
+
+    
+    float width2 = CrossApp::CCEGLView::sharedOpenGLView()->getFrameSize().width;
+    
+    CCLog("width2==============width2================%f",width2);
+    
+    
+    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
+    
+    CCLog("curFontSize==============curFontSize================%f",curFontSize);
+    
+    
+    float curRatio = CAApplication::getApplication()->getAdaptationRatio();
+    CCLog("curRatio==============curRatio================%f",curRatio);
+//    cellText->setFontSize(_px(curFontSize));
+       cellText->setFontSize(curFontSize);
     //cellText->setColor(new CAColor4B(100,100,100,1));
     cellText->setTextAlignment(CATextAlignmentLeft);
     cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
     
     
+    CAView *view = (CAView*)this->getSubviewByTag(99);
+    //view->setColor(new CAColor4B(100,100,100,1));
+    view->setColor(ccc4(151,212,255,255));
 }
 
 void FSNewsView2Cell::setContent(const std::string& strContext)

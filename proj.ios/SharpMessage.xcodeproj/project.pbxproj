@@ -22,6 +22,8 @@
 		182F30BB1AFB5D55000A3D83 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */; };
 		182F30BE1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */; };
 		1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1851A6141B01831800BEDFD8 /* ChapterInfo.cpp */; };
+		18EA428B1B203F1F0099A9DC /* web in Resources */ = {isa = PBXBuildFile; fileRef = 18EA428A1B203F1F0099A9DC /* web */; };
+		18EA428E1B203F5C0099A9DC /* FSNewsView3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */; };
 		1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB87033175E0A84005D39BF /* WebSocket.cpp */; };
 		1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624316D4A1E8000847F2 /* AppController.mm */; };
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
@@ -147,6 +149,9 @@
 		1851A6151B01831800BEDFD8 /* ChapterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterInfo.h; sourceTree = "<group>"; };
 		18810B241B0C6E8E00B87FD8 /* TestCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18810B381B0C6E8E00B87FD8 /* TestCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EA428A1B203F1F0099A9DC /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsView3.cpp; sourceTree = "<group>"; };
+		18EA428D1B203F5C0099A9DC /* FSNewsView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsView3.h; sourceTree = "<group>"; };
 		1AB87033175E0A84005D39BF /* WebSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebSocket.cpp; sourceTree = "<group>"; };
 		1AB87034175E0A84005D39BF /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
 		1AC3624216D4A1E8000847F2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = SOURCE_ROOT; };
@@ -457,6 +462,8 @@
 				180CF8CB1B087DA30026720D /* FSNewsViewCell.h */,
 				180776EE1B1AEDA60037CD28 /* FSNewsView2.cpp */,
 				180776EF1B1AEDA60037CD28 /* FSNewsView2.h */,
+				18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */,
+				18EA428D1B203F5C0099A9DC /* FSNewsView3.h */,
 			);
 			name = FSBooklibrary;
 			path = ../Classes/FSBooklibrary;
@@ -516,6 +523,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18EA428A1B203F1F0099A9DC /* web */,
 				839051931AF072F300DD87A2 /* cn */,
 				839051941AF072F300DD87A2 /* en */,
 				837DC9921AEF7E1200210D3F /* news */,
@@ -831,6 +839,7 @@
 				B04C0C0B1901207A009854FD /* sconscript in Resources */,
 				B04C0C061901207A009854FD /* json_internalmap.inl in Resources */,
 				839051961AF072F300DD87A2 /* en in Resources */,
+				18EA428B1B203F1F0099A9DC /* web in Resources */,
 				837DC9941AEF7E1200210D3F /* news in Resources */,
 				839051951AF072F300DD87A2 /* cn in Resources */,
 			);
@@ -861,6 +870,7 @@
 				B04C0C071901207A009854FD /* json_reader.cpp in Sources */,
 				B04822BE19FA41F70019F1A7 /* CABrightness_iOS.mm in Sources */,
 				180776F01B1AEDA60037CD28 /* FSNewsView2.cpp in Sources */,
+				18EA428E1B203F5C0099A9DC /* FSNewsView3.cpp in Sources */,
 				B04C0C041901207A009854FD /* DictionaryHelper.cpp in Sources */,
 				B04C0C031901207A009854FD /* CSContentJsonDictionary.cpp in Sources */,
 				8386BE3B1AE3D2E7003D78C8 /* FSUserCenter.cpp in Sources */,

@@ -18,7 +18,7 @@
 FSNewsView2::FSNewsView2()
 //: m_lineNumber(666)
 {
-    m_PagingRule.lineNumber = 14;
+    m_PagingRule.lineNumber = 12;
     m_PagingRule.lineTextNumber = 14;
     
 
@@ -79,7 +79,19 @@ void FSNewsView2::viewDidUnload()
 
 void FSNewsView2::listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index)
 {
-    
+//    static bool s = true;
+//    
+//    CAWindow* window = CAApplication::getApplication()->getRootWindow();
+//
+//    CANavigationController* nav = this->getNavigationController();
+//    CATabBarController* tab = (CATabBarController*)window->getRootViewController();
+//    nav->setNavigationBarHidden(!s, true);
+//    tab->setTabBarHidden(!s, true);
+//    
+//    
+//    
+//    s = !s;
+//    return;
 }
 
 void FSNewsView2::listViewDidDeselectCellAtIndex(CAListView *listView, unsigned int index)
@@ -108,7 +120,7 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
     if (!cell)
     {
         cell = FSNewsView2Cell::create("FSNewsView2Cell", CADipRect(0, 0, _size.width, _size.height));
-//        cell->initWithCell();
+        cell->initWithCell();
     }
     char idx[10] = "";
     sprintf(idx,"list%d",index);

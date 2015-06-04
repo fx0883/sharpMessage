@@ -1,0 +1,46 @@
+html {width:100%; height:100%;}
+
+body {
+    padding: 0;
+    margin:15px 0 20px 0;
+    width: 100%;
+    height: expression(screen.height - 40 + "px");
+    font-family: source-sans-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content
+{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    height: 100%;
+
+    /* 横向分栏 */
+    -webkit-column-gap:0px;
+    -webkit-column-width:320px;
+    column-gap:0px;
+    column-width:320px;
+}
+
+h3
+{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify:inter-ideograph;
+    text-indent:2em;
+}
+
+.chapter
+{
+    padding-left:10px;
+    padding-right:10px;
+    
+    /* 段落缩进与对齐 */
+    text-align:justify;
+    text-justify:inter-ideograph;
+    text-indent:2em;
+}
