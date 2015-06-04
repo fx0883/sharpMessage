@@ -16,6 +16,11 @@
 #include "AppMacros.h"
 #include "ChapterInfo.h"
 
+struct PagingRule
+{
+    int lineNumber;
+    int lineTextNumber;
+}PAGINGRULE;
 
 class FSNewsView2 :public CAViewController,CAListViewDelegate,CAListViewDataSource
 {
@@ -25,6 +30,7 @@ public:
 public:
     CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, m_chapterInfo, ChapterInfo)
     CC_SYNTHESIZE_PASS_BY_REF(int,m_lineNumber,LinNumber)
+    
 public:
     virtual void listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index);
     virtual void listViewDidDeselectCellAtIndex(CAListView *listView, unsigned int index);
@@ -38,6 +44,7 @@ protected:
     void loadData();
 protected:
     ListViewEx *listView;
+    PagingRule m_PagingRule;
 private:
     CADipSize size;
 
