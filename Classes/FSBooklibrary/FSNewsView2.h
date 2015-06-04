@@ -20,7 +20,7 @@ struct PagingRule
 {
     int lineNumber;
     int lineTextNumber;
-}PAGINGRULE;
+};
 
 class FSNewsView2 :public CAViewController,CAListViewDelegate,CAListViewDataSource
 {

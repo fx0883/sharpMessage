@@ -27,6 +27,7 @@ obj/local/armeabi/objs/CrossApp_static/controller/CABarItem.o: \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccMacros.h \
@@ -119,6 +120,8 @@ obj/local/armeabi/objs/CrossApp_static/controller/CABarItem.o: \
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h:
 
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
 

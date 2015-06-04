@@ -63,6 +63,7 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/ray2.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAProtocols.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h \
@@ -74,21 +75,52 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/functional \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/memory \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/ft2build.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftheader.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/freetype.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftconfig.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftoption.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftstdlib.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/setjmp.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttypes.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftsystem.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftimage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fterrors.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftmoderr.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fterrdef.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftglyph.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftoutln.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttrigon.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWindow.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPullToRefreshView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDispatcher.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h \
@@ -221,6 +253,8 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h:
@@ -243,13 +277,79 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/memory:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/ft2build.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftheader.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/freetype.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftconfig.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftoption.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/config/ftstdlib.h:
+
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/setjmp.h:
+
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/machine/setjmp.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttypes.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftsystem.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftimage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fterrors.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftmoderr.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fterrdef.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftglyph.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftoutln.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttrigon.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWindow.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h:
-
-/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h:
 
@@ -258,8 +358,6 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h:
-
-/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h:
 
@@ -270,8 +368,6 @@ obj/local/armeabi/objs/CrossApp_static/dispatcher/CATouchDispatcher.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h:
-
-/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h:
 

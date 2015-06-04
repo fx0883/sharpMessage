@@ -18,8 +18,8 @@
 FSNewsView2::FSNewsView2()
 //: m_lineNumber(666)
 {
-    m_PagingRule.lineNumber = 13;
-    m_PagingRule.lineTextNumber = 13;
+    m_PagingRule.lineNumber = 14;
+    m_PagingRule.lineTextNumber = 14;
     
 
 }
@@ -131,7 +131,9 @@ void FSNewsView2::loadData()
     curPagingRule.lineNumber = 0;
     curPagingRule.lineTextNumber = 0;
     
+    const int countbyte=3;
     
+    int curCountByte = 0;
     const char* str = m_chapterInfo->getChapterContent().c_str();
     std::string s;
     int index=0;
@@ -139,24 +141,54 @@ void FSNewsView2::loadData()
     {
         
         //文字字节数，这个为utf-8 ，一个占用3个字节
-        if ((i>0 && index == m_PagingRule.lineTextNumber) || i == n)
+        if ((i>0 && curPagingRule.lineNumber == m_PagingRule.lineNumber) || i == n )
         {
             m_aryContent.push_back(s);
             s.clear();
             
-            index=0;
-            string             stt = "老儿.";
-            int size = (int)stt.size();
-            size++;
+//            index=0;
+            curPagingRule.lineNumber = 0;
+            curPagingRule.lineTextNumber = 0;
             
         }
         
         
             
         s += str[i];
-        if(str[i]!='\n' && str[i]!=' '&&str[i]!='.')
+        if(str[i] == '\n')
         {
-            index++;
+            curPagingRule.lineTextNumber = 0;
+            curPagingRule.lineNumber++;
+        }
+        else if(str[i] ==' ' || str[i]=='.')
+        {
+            curCountByte = 0;
+            curPagingRule.lineTextNumber++;
+            
+            if (curPagingRule.lineTextNumber == m_PagingRule.lineTextNumber) {
+                curPagingRule.lineTextNumber = 0;
+                curPagingRule.lineNumber++;
+                
+            }
+
+        }
+        else
+        {
+            curCountByte++;
+            if(countbyte==curCountByte)
+            {
+                curCountByte = 0;
+                curPagingRule.lineTextNumber++;
+                
+                if (curPagingRule.lineTextNumber == m_PagingRule.lineTextNumber) {
+                    curPagingRule.lineTextNumber = 0;
+                    curPagingRule.lineNumber++;
+
+                }
+                
+                
+            }
+            
         }
         
         

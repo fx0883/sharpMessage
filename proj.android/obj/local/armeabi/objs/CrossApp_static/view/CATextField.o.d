@@ -52,6 +52,7 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAGeometry.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAResponder.h \
@@ -72,6 +73,7 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
@@ -104,11 +106,14 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCPlatformMacros.h \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/typeinfo \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCAction.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCEGLView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/locale \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAClipboard.h
 
@@ -216,6 +221,8 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h:
@@ -255,6 +262,8 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h:
 
@@ -320,6 +329,10 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCAction.h:
@@ -329,6 +342,8 @@ obj/local/armeabi/objs/CrossApp_static/view/CATextField.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h:
 
 /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/locale:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h:
 

@@ -26,6 +26,7 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDictionary.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/data_support/uthash.h \
@@ -78,7 +79,17 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/list \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
@@ -101,6 +112,8 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftglyph.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/ftoutln.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttrigon.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/image_support/TGAlib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//png/prebuilt/android/../../include/android/png.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//png/prebuilt/android/../../include/android/pnglibconf.h \
@@ -119,7 +132,202 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib_private.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/GifUtils.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/CrossApp.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccMacros.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/animation/CAAnimation.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAScheduler.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/animation/CAViewAnimation.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAApplication.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAAutoreleasePool.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CACamera.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAFPSImages.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAObject.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAResponder.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAScheduler.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASTLContainer.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAIndexPath.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAThread.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/queue \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/set \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAProgress.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CARenderImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASwitch.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASlider.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAPageControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAStepper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPullToRefreshView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CADrawerController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CATouch.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CATouchDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCSet.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAProtocols.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWindow.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CABatchView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CARenderImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAClippingView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAListView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAIndexPath.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CACollectionView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAAlertView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAClippingView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPickerView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInstant.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCAction.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionCamera.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADatePickerView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPickerView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPullToRefreshView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWebView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADrawingPrimitives.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADrawView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAFlashView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/image.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_config.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/../compatibility_include.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/dlmalloc.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_types.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/container.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/utility.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_math.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_swap.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/container.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/weak_ptr.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/smart_ptr.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc_singlethreaded_refcount.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/weak_ptr.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_player.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/utility.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_loadlib.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_object.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_value.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_environment.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_types.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_types.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_player.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_root.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_action.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/membuf.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_log.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_character.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_function.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_mutex.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_config.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_listener.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_types.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_impl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_movie_def.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_root.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_abc.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_avm2.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_jit.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_render.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDictionary.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCSet.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCNS.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../mat4.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../vec3.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CATransformation.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAGLProgram.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/ccGLStateCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/ccShaders.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUtils.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CANotificationCenter.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCPointExtension.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCProfiling.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/user_default/CAUserDefault.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCVertex.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/tinyxml2/tinyxml2.h \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/climits \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdio \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstring \
+ /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdarg \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/md5.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/base64.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCSAXParser.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/platform.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerRender.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerDecoder.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAThread.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASlider.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/script_support/CCScriptSupport.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCAccelerometer.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/script_support/JSViewController.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCAccelerometer.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCApplication.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCApplicationProtocol.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCEGLView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/jni/JniHelper.h \
+ /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/jni.h
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
@@ -172,6 +380,8 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h:
 
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h:
 
@@ -277,7 +487,27 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h:
 
-/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h:
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h:
 
@@ -323,6 +553,10 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//freetype/prebuilt/android/../../include/android/freetype/fttrigon.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/image_support/TGAlib.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/the_third_party//png/prebuilt/android/../../include/android/png.h:
@@ -360,3 +594,393 @@ obj/local/armeabi/objs/CrossApp_static/images/CAImage.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_hash.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/GifUtils.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/CrossApp.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccMacros.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/animation/CAAnimation.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAScheduler.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/animation/CAViewAnimation.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAApplication.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAAutoreleasePool.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CACamera.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAFPSImages.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAObject.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAResponder.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAScheduler.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASTLContainer.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAIndexPath.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAThread.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/queue:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CASyncQueue.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/set:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAProgress.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CARenderImage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASwitch.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASlider.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASegmentedControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAPageControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAStepper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CABarItem.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CABar.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPullToRefreshView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CADrawerController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CATouch.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CATouchDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCSet.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAKeypadDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAProtocols.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImageCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWindow.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/controller/CAViewController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CALabel.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CABatchView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CARenderImage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAClippingView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAListView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScrollView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAIndexPath.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CACollectionView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAAlertView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAClippingView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPickerView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATableView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInstant.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCAction.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionCamera.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/actions/CCActionInterval.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADatePickerView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPickerView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAActivityIndicatorView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAPullToRefreshView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAWebView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADrawingPrimitives.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CADrawView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAFlashView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/image.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_config.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/../compatibility_include.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/dlmalloc.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_types.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/container.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/utility.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_math.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_swap.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/container.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/weak_ptr.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/smart_ptr.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc_singlethreaded_refcount.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_gc.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/weak_ptr.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_player.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/utility.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_loadlib.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_object.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_value.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_environment.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_types.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_types.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_player.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_root.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_action.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/membuf.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_log.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_character.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_function.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_mutex.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/../base/tu_config.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_listener.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_types.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_impl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_movie_def.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_root.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_abc.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_avm2.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_jit.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/gameswf/gameswf/gameswf_render.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDictionary.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCArray.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCSet.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCNS.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../mat4.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../vec3.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CATransformation.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAGLProgram.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/ccGLStateCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/CAShaderCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/shaders/ccShaders.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUtils.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CANotificationCenter.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCPointExtension.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCProfiling.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/user_default/CAUserDefault.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/CCVertex.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/tinyxml2/tinyxml2.h:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/climits:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdio:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstring:
+
+/Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/cstdarg:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/md5.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/base64.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCSAXParser.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/platform.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerRender.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/video/CAVideoPlayerDecoder.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAThread.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CASlider.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAButton.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/script_support/CCScriptSupport.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCAccelerometer.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/script_support/JSViewController.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCAccelerometer.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCApplication.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCApplicationProtocol.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCEGLView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/jni/JniHelper.h:
+
+/Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/jni.h:

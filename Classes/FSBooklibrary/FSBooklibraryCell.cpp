@@ -63,7 +63,7 @@ void FSBooklibraryCell::initWithSize(CADipSize& cellSize)
     itemText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
     itemImage->addSubview(itemText);
     
-    this->setControlCanSelected(false);
+   // this->setControlCanSelected(false);
 }
 
 

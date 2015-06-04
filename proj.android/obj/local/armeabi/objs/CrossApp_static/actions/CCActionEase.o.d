@@ -48,6 +48,7 @@ obj/local/armeabi/objs/CrossApp_static/actions/CCActionEase.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/ccTypes.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAGeometry.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCCommon.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAResponder.h \
@@ -162,6 +163,8 @@ obj/local/armeabi/objs/CrossApp_static/actions/CCActionEase.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/basics/CAGeometry.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCAccelerometerDelegate.h:
 

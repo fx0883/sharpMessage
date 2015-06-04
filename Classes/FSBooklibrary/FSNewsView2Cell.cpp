@@ -44,17 +44,17 @@ void FSNewsView2Cell::updateWithCell()
     CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
     if(cellText==NULL)
     {
-        cellText = CALabel::createWithCenter(CCRect(size.width*0.5, size.height*0.5, size.width, size.height));
+        cellText = CALabel::createWithCenter(CCRect(size.width*0.5, size.height*0.5, size.width-6, size.height));
         this->addSubview(cellText);
         //cellText->setColor(<#const CAColor4B &color#>)
     }
     else
     {
         //cellText->setFrame(CCRect(0, 0, size.width, size.height));
-        cellText->setCenter(CCRect(size.width*0.5, size.height*0.5, size.width, size.height));
+        cellText->setCenter(CCRect(size.width*0.5, size.height*0.5, size.width-6, size.height));
     }
     cellText->setTag(100);
-    cellText->setFontSize(_px(38));
+    cellText->setFontSize(_px(45));
     //cellText->setColor(new CAColor4B(100,100,100,1));
     cellText->setTextAlignment(CATextAlignmentLeft);
     cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);

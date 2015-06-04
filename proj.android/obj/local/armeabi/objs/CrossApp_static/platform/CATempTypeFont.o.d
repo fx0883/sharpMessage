@@ -30,6 +30,7 @@ obj/local/armeabi/objs/CrossApp_static/platform/CATempTypeFont.o: \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/alloca.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/map \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/memory \
@@ -93,9 +94,21 @@ obj/local/armeabi/objs/CrossApp_static/platform/CATempTypeFont.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
  /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/functional \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CATempTypeFont.h:
 
@@ -156,6 +169,8 @@ obj/local/armeabi/objs/CrossApp_static/platform/CATempTypeFont.o: \
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/strings.h:
 
 /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/memory.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/gif_lib/gif_lib.h:
 
 /Library/Android/android-ndk-r9d/sources/cxx-stl/gnu-libstdc++/4.6/include/map:
 
@@ -283,8 +298,32 @@ obj/local/armeabi/objs/CrossApp_static/platform/CATempTypeFont.o: \
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/images/CAImage.h:
 
-/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h:
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextField.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDispatcher.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/dispatcher/CAIMEDelegate.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/control/CAControl.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CAScale9ImageView.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/view/CATextEditHelper.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ccUTF8.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFTFontCache.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CAFreeTypeFont.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/support/ConvertUTF.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCFileUtils.h:
