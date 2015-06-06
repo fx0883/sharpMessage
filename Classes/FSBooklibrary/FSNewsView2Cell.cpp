@@ -65,21 +65,21 @@ void FSNewsView2Cell::updateWithCell()
     
     float width1 = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width;
     
-    CCLog("width1==============width1================%f",width1);
+    //CCLog("width1==============width1================%f",width1);
 
     
     float width2 = CrossApp::CCEGLView::sharedOpenGLView()->getFrameSize().width;
     
-    CCLog("width2==============width2================%f",width2);
+    //CCLog("width2==============width2================%f",width2);
     
     
     float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
     
-    CCLog("curFontSize==============curFontSize================%f",curFontSize);
+   // CCLog("curFontSize==============curFontSize================%f",curFontSize);
     
     
     float curRatio = CAApplication::getApplication()->getAdaptationRatio();
-    CCLog("curRatio==============curRatio================%f",curRatio);
+//    CCLog("curRatio==============curRatio================%f",curRatio);
 //    cellText->setFontSize(_px(curFontSize));
        cellText->setFontSize(curFontSize);
     //cellText->setColor(new CAColor4B(100,100,100,1));

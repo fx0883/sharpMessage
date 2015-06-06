@@ -32,11 +32,11 @@ CAWindow* MainTabBarController::createWindow()
     
 //    CANavigationController *navBooklibrary = CANavigationController.initWithRootViewController
     
-    CANavigationController* navBooklibrary = new CANavigationController();
-    navBooklibrary->initWithRootViewController(fsbooklibrary);
-    navBooklibrary->getView()->setColor(CAColor_clear);
+//    CANavigationController* navBooklibrary = new CANavigationController();
+//    navBooklibrary->initWithRootViewController(fsbooklibrary);
+//    navBooklibrary->getView()->setColor(CAColor_clear);
     fsbooklibrary->init();
-    navBooklibrary->setTabBarItem(CATabBarItem::create("library",
+    fsbooklibrary->setTabBarItem(CATabBarItem::create("library",
                                                        CAImage::create("tabbar_function/booklibrary_1.png"),
                                                        CAImage::create("tabbar_function/booklibrary_2.png")));
     
@@ -57,7 +57,7 @@ CAWindow* MainTabBarController::createWindow()
 
     
     std::vector<CAViewController*> controllerItem;
-    controllerItem.push_back(navBooklibrary);
+    controllerItem.push_back(fsbooklibrary);
     controllerItem.push_back(fsbookrankinglist);
     controllerItem.push_back(fsusercenter);
     
@@ -65,9 +65,9 @@ CAWindow* MainTabBarController::createWindow()
     p_Funtion->initWithViewControllers(controllerItem);
     p_Funtion->showTabBarSelectedIndicator();
     
-//    CANavigationController* navigationController = new CANavigationController();
-//    navigationController->initWithRootViewController(p_Funtion);
-//    navigationController->getView()->setColor(CAColor_clear);
+    CANavigationController* navigationController = new CANavigationController();
+    navigationController->initWithRootViewController(p_Funtion);
+    navigationController->getView()->setColor(CAColor_clear);
     
     CAWindow* p_Window = CAWindow::create();
 //    float winWidth = p_Window->getBounds().size.width;
@@ -76,7 +76,7 @@ CAWindow* MainTabBarController::createWindow()
 //    drawerController->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("background/1.jpg")));
 //    drawerController->autorelease();
     
-    p_Window->setRootViewController(p_Funtion);
+    p_Window->setRootViewController(navigationController);
     fsbooklibrary->release();
     fsbookrankinglist->release();
     fsusercenter->release();

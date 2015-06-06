@@ -334,7 +334,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  jni/../../Classes/FSBooklibrary/FSBooklibraryCell.h \
  jni/../../Classes/FSBooklibrary/FSNewsView2.h \
  jni/../../Classes/extend/ListViewEx.h \
- jni/../../Classes/model/ChapterInfo.h
+ jni/../../Classes/model/ChapterInfo.h \
+ jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h \
+ jni/../../Classes/FSBooklibrary/FSNewsBottomView.h
 
 jni/../../Classes/FSBooklibrary/FSBooklibrary.h:
 
@@ -1011,3 +1013,7 @@ jni/../../Classes/FSBooklibrary/FSNewsView2.h:
 jni/../../Classes/extend/ListViewEx.h:
 
 jni/../../Classes/model/ChapterInfo.h:
+
+jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h:
+
+jni/../../Classes/FSBooklibrary/FSNewsBottomView.h:

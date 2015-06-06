@@ -65,9 +65,12 @@ void FSBooklibrary::collectionViewDidSelectCellAtIndexPath(CACollectionView *col
     
     fsnewsview2->setChapterInfo(chapterInfo);
     
-    //this->getNavigationController()->pushViewController(fsnewsview2, true);
     
-    this->presentModalViewController(fsnewsview2, true);
+    CAWindow* window = CAApplication::getApplication()->getRootWindow();
+    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+    nav->pushViewController(fsnewsview2, true);
+    
+//    this->presentModalViewController(fsnewsview2, true);
     
 }
 

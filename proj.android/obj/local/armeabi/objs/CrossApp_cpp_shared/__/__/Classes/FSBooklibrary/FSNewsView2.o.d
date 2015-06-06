@@ -359,7 +359,8 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSNewsVie
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
  jni/../../Classes/AppMacros.h jni/../../Classes/model/ChapterInfo.h \
- jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h
+ jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h \
+ jni/../../Classes/FSBooklibrary/FSNewsBottomView.h
 
 jni/../../Classes/FSBooklibrary/FSNewsView2.h:
 
@@ -1082,3 +1083,5 @@ jni/../../Classes/AppMacros.h:
 jni/../../Classes/model/ChapterInfo.h:
 
 jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h:
+
+jni/../../Classes/FSBooklibrary/FSNewsBottomView.h:

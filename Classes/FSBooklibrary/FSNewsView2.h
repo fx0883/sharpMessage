@@ -16,6 +16,9 @@
 #include "AppMacros.h"
 #include "ChapterInfo.h"
 
+#include "FSNewsView2Cell.h"
+#include "FSNewsBottomView.h"
+
 struct PagingRule
 {
     int lineNumber;
@@ -42,11 +45,19 @@ protected:
     void viewDidLoad();
     void viewDidUnload();
     void loadData();
+    void reshapeViewRectDidFinish();
+    void addBottomView();
 protected:
     ListViewEx *listView;
     PagingRule m_PagingRule;
 private:
+    void bottomAnimation(bool bIsShow);
+    void bottomViewRefresh(bool bIsShow);
+private:
     CADipSize size;
+    
+    FSNewsView2Cell *m_CurCell;
+    FSNewsBottomView *m_FSNewsBottomView;
 
     
     vector<std::string> m_aryContent;
