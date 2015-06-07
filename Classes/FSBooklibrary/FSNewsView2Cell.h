@@ -18,6 +18,7 @@ public:
 	void initWithCell();
 	void cellBtnCallback(CAControl* btn, CCPoint point);
     void setContent(const std::string& strContext);
+    void setContent(const std::string& strContext,float percent);
     void updateWithCell();
 protected:
 	virtual void normalListViewCell();

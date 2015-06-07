@@ -1,5 +1,7 @@
 #include "FSNewsView2Cell.h"
 #include "AppMacros.h"
+
+#define bottomMargin 50
 FSNewsView2Cell::FSNewsView2Cell()
 {
 
@@ -25,23 +27,23 @@ FSNewsView2Cell* FSNewsView2Cell::create(const std::string& identifier, const CA
 
 void FSNewsView2Cell::initWithCell()
 {
-	CADipSize _size = this->getFrame().size;
-//	CALabel* test = CALabel::createWithCenter(CADipRect(_size.width*0.5,
-//		_size.height*0.5,
-//		_size.width,
-//		_size.height));
-    
-    
+	CADipSize _size = this->getBounds().size;
     CAView *view = CAView::createWithFrame(this->getBounds());
     view->setTag(99);
     this->addSubview(view);
     
-    CALabel* test = CALabel::createWithFrame(this->getBounds());
+    CALabel* test = CALabel::createWithFrame(CADipRectMake(0, 0, _size.width, _size.height-NEWSCELLBOTTOMHEIGHT));
 	test->setTextAlignment(CATextAlignmentLeft);
 //	test->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
-	test->setFontSize(_px(40));
+//	test->setFontSize(_px(40));
 	test->setTag(100);
 	this->addSubview(test);
+    
+
+    CALabel* bottomLabel = CALabel::createWithFrame(CADipRectMake(0, _size.height-NEWSCELLBOTTOMHEIGHT, _size.width-bottomMargin, NEWSCELLBOTTOMHEIGHT));
+    bottomLabel->setTag(101);
+    this->addSubview(bottomLabel);
+
 }
 
 void FSNewsView2Cell::updateWithCell()
@@ -52,14 +54,14 @@ void FSNewsView2Cell::updateWithCell()
     if(cellText==NULL)
     {
 //        cellText = CALabel::createWithCenter(CCRect(size.width*0.5, size.height*0.5, size.width-6, size.height));
-        cellText = CALabel::createWithFrame(this->getBounds());
+        cellText = CALabel::createWithFrame(CADipRectMake(0, 0, size.width, size.height-NEWSCELLBOTTOMHEIGHT));
         this->addSubview(cellText);
         //cellText->setColor(<#const CAColor4B &color#>)
     }
     else
     {
         //cellText->setFrame(CCRect(0, 0, size.width, size.height));
-        cellText->CALabel::createWithFrame(this->getBounds());
+        cellText->setFrame(CADipRectMake(0, 0, size.width, size.height-NEWSCELLBOTTOMHEIGHT));
     }
     cellText->setTag(100);
     
@@ -84,14 +86,22 @@ void FSNewsView2Cell::updateWithCell()
 //    int fontHeight = CAImage::getFontHeight(m_nfontName.c_str(), m_nfontSize);
 //    int defaultLineSpace = fontHeight / 4;
     
-    float curRatio = CAApplication::getApplication()->getAdaptationRatio();
+//    float curRatio = CAApplication::getApplication()->getAdaptationRatio();
 //    CCLog("curRatio==============curRatio================%f",curRatio);
 //    cellText->setFontSize(_px(curFontSize));
-       cellText->setFontSize(curFontSize);
+    cellText->setFontSize(curFontSize);
     //cellText->setColor(new CAColor4B(100,100,100,1));
     cellText->setTextAlignment(CATextAlignmentLeft);
     cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
     
+    
+    CALabel *bottomLabel = (CALabel*)this->getSubviewByTag(101);
+    bottomLabel->setFrame (CADipRectMake(0, size.height-NEWSCELLBOTTOMHEIGHT, size.width-bottomMargin, NEWSCELLBOTTOMHEIGHT));
+    float percentFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 18;
+    bottomLabel->setFontSize(percentFontSize);
+    bottomLabel->setTextAlignment(CATextAlignmentRight);
+    bottomLabel->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
+    bottomLabel->setTag(101);
     
     CAView *view = (CAView*)this->getSubviewByTag(99);
     //view->setColor(new CAColor4B(100,100,100,1));
@@ -108,14 +118,23 @@ void FSNewsView2Cell::setContent(const std::string& strContext)
 {
     CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
     cellText->setText(strContext);
-//    cellText->sizeToFit();
+
     
-//    CCLOG("1======%d",(int)strContext.size());
-//    CCLOG("2======%s",strContext.c_str());
-//    cellText->setText("我是一个好人，我是一个好人，我是一个好人，\n 那么问题来了\n 大家都认为我是好人嘛？\n我是一个好人，我是一个好人，我是一个好人，\n 那么问题来了\n 大家都认为我是好人嘛？\n");
-//    
-//    
-//    cellText->setText("\"\x88！\”陆高止说得一声：“关上门，别做声！”就闭上眼不言不语了。李沅芷究是将门之女，平时抡刀使枪惯了的，虽然惊慌，还是依言关上了门。\\343\200 {(_M_p = \"\x88！\”陆高止说得一声：“关上门，别做声！”就闭上眼不言不语了。李沅芷究是将门之女，平时抡刀使枪惯了的，虽然惊慌，还是依言关上了门。\n　\343\200)}");
+//    CALabel *bottomLabel = (CALabel*)this->getSubviewByTag(101);
+    
+    
+}
+
+void FSNewsView2Cell::setContent(const std::string& strContext,float percent)
+{
+    CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
+    cellText->setText(strContext);
+    percent = percent * 100;
+    
+    CALabel *bottomLabel = (CALabel*)this->getSubviewByTag(101);
+    char strPercent[50];
+    sprintf(strPercent, "%20.2f", percent);
+    bottomLabel->setText(string(strPercent)+"%");
 }
 
 

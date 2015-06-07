@@ -97,4 +97,7 @@ public: virtual void set##funName(varType& var){ varName = var; }
 
 typedef void (*FS)();
 
+//定义FSNewsView2Cell 底部进度label高度
+#define NEWSCELLBOTTOMHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)
+
 #endif /* __APPMACROS_H__ */

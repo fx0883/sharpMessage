@@ -14,6 +14,7 @@
 
 
 
+
 //静态数据成员的定义和初始化
 FSNewsView2* FSNewsView2::curFSNewsView2 = NULL;
 
@@ -49,6 +50,7 @@ void FSNewsView2::calcPagingRule()
     float screenHeight =  CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().height;
     CALabel *calcLabel = new CALabel();
     
+    screenHeight = screenHeight - NEWSCELLBOTTOMHEIGHT;
     
     float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
     calcLabel->setFontSize(curFontSize);
@@ -211,7 +213,7 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
 //    CALabel* test = (CALabel*)cell->getSubviewByTag(100);
 //    test->setText(idx);
     cell->updateWithCell();
-    cell->setContent(strContent);
+    cell->setContent(strContent,((float)(index+1))/m_aryContent.size());
     
 
     

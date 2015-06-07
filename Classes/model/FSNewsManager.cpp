@@ -38,7 +38,7 @@ void FSNewsManager::loadCurChapterInfo(int newsID)
 
 void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 {
-    char strNewsID[20];
+    char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
     
     this->loadChapterDic(newsID);
@@ -55,7 +55,7 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 
 CCArray* FSNewsManager::getChapterInfoAry(int newsID)
 {
-    char strNewsID[20];
+    char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
     
     this->loadChapterDic(newsID);
@@ -71,7 +71,7 @@ CCArray* FSNewsManager::getChapterInfoAry(int newsID)
 
 void FSNewsManager::loadChapterDic(int newsID)
 {
-    char strNewsID[20];
+    char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
     CAObject *obj = dicChapterInfo.objectForKey(strNewsID);
     if (obj!=NULL) {
@@ -191,7 +191,7 @@ NewsInfo* FSNewsManager::getNewsInfoByNewsId(int newsId)
 int FSNewsManager::getCurChapterID(int newsID)
 {
     int ret = -1;
-    char strNewsID[20];
+    char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
     
     ret = CAUserDefault::sharedUserDefault()->getIntegerForKey(strNewsID,0);
@@ -200,7 +200,7 @@ int FSNewsManager::getCurChapterID(int newsID)
 void FSNewsManager::setCurChapterID(int newsID,int chapterID)
 {
 
-    char strNewsID[20];
+    char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
     
     CAUserDefault::sharedUserDefault()->setIntegerForKey(strNewsID,chapterID);
