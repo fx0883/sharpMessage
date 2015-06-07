@@ -14,6 +14,7 @@
 #include "CrossAppExt.h"
 #include "AppMacros.h"
 #include "ChapterInfo.h"
+#include "NewsInfo.h"
 
 class FSNewsManager:public CAObject
 {
@@ -30,12 +31,17 @@ public:
 public:
     int getCurChapterID(int newsID);
     void setCurChapterID(int newsID,int chapterID);
-
+    CCArray* getChapterInfoAry(int newsID);
 public:
     void loadNewsList();
     void loadCurChapterInfo(int newsID,int chapterNubmer);
     void loadCurChapterInfo(int newsID);
     void loadChapterDic(int newsID);
+    
+public:
+    NewsInfo* getNewsInfoByNewsId(int newsId);
+    
+
     
 protected:
     sqlite3 *_sqlite3;

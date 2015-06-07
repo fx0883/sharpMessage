@@ -18,6 +18,7 @@
 
 #include "FSNewsView2Cell.h"
 #include "FSNewsBottomView.h"
+#include "BaseViewController.h"
 
 struct PagingRule
 {
@@ -25,7 +26,7 @@ struct PagingRule
     int lineTextNumber;
 };
 
-class FSNewsView2 :public CAViewController,CAListViewDelegate,CAListViewDataSource
+class FSNewsView2 :public BaseViewController,CAListViewDelegate,CAListViewDataSource
 {
 public:
     FSNewsView2();
@@ -44,9 +45,12 @@ public:
 protected:
     void viewDidLoad();
     void viewDidUnload();
+    void viewDidAppear();
     void loadData();
     void reshapeViewRectDidFinish();
     void addBottomView();
+    void calcPagingRule();
+    void refreshView();
 protected:
     ListViewEx *listView;
     PagingRule m_PagingRule;
@@ -61,6 +65,13 @@ private:
 
     
     vector<std::string> m_aryContent;
+    
+public:
+    void openCatalog();
+
+public:
+    static FSNewsView2* curFSNewsView2;
+    static void staticOpenCatalog();
 };
 
 

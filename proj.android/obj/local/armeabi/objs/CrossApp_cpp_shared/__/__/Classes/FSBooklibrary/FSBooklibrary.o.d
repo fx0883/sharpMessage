@@ -301,6 +301,7 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
+ jni/../../Classes/BaseClasses/BaseViewController.h \
  jni/../../Classes/model/FSDataManager.h jni/../../Classes/AppMacros.h \
  jni/../../Classes/model/FSNewsManager.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/CrossAppExt.h \
@@ -327,9 +328,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
- jni/../../Classes/model/ChapterInfo.h jni/../../Classes/PublicHeader.h \
- jni/../../Classes/AppMacros.h jni/../../Classes/FSContext.h \
- jni/../../Classes/model/NewsInfo.h \
+ jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h \
+ jni/../../Classes/PublicHeader.h jni/../../Classes/AppMacros.h \
+ jni/../../Classes/FSContext.h jni/../../Classes/model/NewsInfo.h \
  jni/../../Classes/model/FSNewsManager.h \
  jni/../../Classes/FSBooklibrary/FSBooklibraryCell.h \
  jni/../../Classes/FSBooklibrary/FSNewsView2.h \
@@ -940,6 +941,8 @@ jni/../../Classes/FSBooklibrary/FSBooklibrary.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
 
+jni/../../Classes/BaseClasses/BaseViewController.h:
+
 jni/../../Classes/model/FSDataManager.h:
 
 jni/../../Classes/AppMacros.h:
@@ -995,6 +998,8 @@ jni/../../Classes/model/FSNewsManager.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h:
 
 jni/../../Classes/model/ChapterInfo.h:
+
+jni/../../Classes/model/NewsInfo.h:
 
 jni/../../Classes/PublicHeader.h:
 

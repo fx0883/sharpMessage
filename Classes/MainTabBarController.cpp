@@ -11,6 +11,7 @@
 #include "FSBookRankingList.h"
 #include "FSUserCenter.h"
 #include "CrossApp.h"
+#include "FSContext.h"
 
 MainTabBarController::MainTabBarController()
 {
@@ -61,7 +62,7 @@ CAWindow* MainTabBarController::createWindow()
     controllerItem.push_back(fsbookrankinglist);
     controllerItem.push_back(fsusercenter);
     
-    MainTabBarController* p_Funtion = new MainTabBarController();
+    CATabBarController* p_Funtion = new MainTabBarController();
     p_Funtion->initWithViewControllers(controllerItem);
     p_Funtion->showTabBarSelectedIndicator();
     
@@ -77,6 +78,12 @@ CAWindow* MainTabBarController::createWindow()
 //    drawerController->autorelease();
     
     p_Window->setRootViewController(navigationController);
+    
+    
+    
+    FSContext::GetInstance().setMainNavController(navigationController);
+    FSContext::GetInstance().setMainTabBarController(p_Funtion);
+    
     fsbooklibrary->release();
     fsbookrankinglist->release();
     fsusercenter->release();

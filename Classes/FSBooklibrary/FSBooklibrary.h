@@ -11,10 +11,11 @@
 
 #include <iostream>
 #include "CrossApp.h"
+#include "BaseViewController.h"
 
 USING_NS_CC;
 
-class FSBooklibrary: public CAViewController, CACollectionViewDelegate, CACollectionViewDataSource, CAScrollViewDelegate
+class FSBooklibrary: public BaseViewController, CACollectionViewDelegate, CACollectionViewDataSource, CAScrollViewDelegate
 {
     
 public:
@@ -25,10 +26,11 @@ public:
     
 protected:
     
-    void viewDidLoad();
+     void viewDidLoad();
     
-    void viewDidUnload();
+     void viewDidUnload();
     
+     void viewDidAppear();
     
 public:
     virtual void collectionViewDidSelectCellAtIndexPath(CACollectionView *collectionView, unsigned int section, unsigned int row, unsigned int item);
@@ -44,7 +46,8 @@ public:
 private:
     CADipSize size;
     CACollectionView* p_Conllection;
-
+//    CANavigationBarItem* navBarItem;
+    
     
 };
 

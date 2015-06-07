@@ -50,6 +50,9 @@ private:
 //    CAButton *m_CataloguesButton;
 //    CAButton *m_ProgressButton;
 //    CAButton *m_SettingButton;
+    
+public:
+    FS openCatalog;
 };
 
 

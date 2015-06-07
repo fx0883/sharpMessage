@@ -20,12 +20,12 @@ using namespace std;
 
 FSBooklibrary::FSBooklibrary()
 {
-    
+//    BaseViewController::BaseViewController();
 }
 
 FSBooklibrary::~FSBooklibrary()
 {
-    
+//    BaseViewController::~BaseViewController();
 }
 
 void FSBooklibrary::viewDidLoad()
@@ -42,7 +42,34 @@ void FSBooklibrary::viewDidLoad()
     p_Conllection->setHoriInterval(_px(40));
     p_Conllection->setVertInterval(_px(40));
     this->getView()->addSubview(p_Conllection);
+    
+
+    
 }
+
+void FSBooklibrary::viewDidAppear()
+{
+    if(!m_NavBarItem)
+    {
+        m_NavBarItem = CANavigationBarItem::create("金庸小说");
+        this->getTabBarController()->setNavigationBarItem(m_NavBarItem);
+        
+        
+        
+    }
+
+//    this->getTabBarController()->getNavigationBarItem()->setTitle("小说");
+//    
+//    CAWindow* window = CAApplication::getApplication()->getRootWindow();
+//    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+////    nav->setNavigationBarHidden(true, false);
+//    nav->updateItem(this->getTabBarController());
+    
+}
+
+
+//CANavigationBarItem* item = CANavigationBarItem::create("ViewController2");
+//this->getTabBarController()->setNavigationBarItem(item);
 
 void FSBooklibrary::viewDidUnload()
 {

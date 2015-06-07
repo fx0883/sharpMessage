@@ -17,9 +17,13 @@
 class FSContext:CAObject
 {
     SINGLETON(FSContext)
-    
+
 public:
     string getFullDbPath();
+    CC_SYNTHESIZE_PASS_BY_REF2(CANavigationController*, m_MainNavController, MainNavController)
+    CC_SYNTHESIZE_PASS_BY_REF2(CATabBarController*, m_MainTabBarController, MainTabBarController)
+
+    
 };
 
 #endif /* defined(__SharpMessage__FSContext__) */

@@ -93,4 +93,8 @@ public: inline virtual varType& get##funName(void) { return varName; }\
 public: virtual void set##funName(varType& var){ varName = var; }
 
 
+//定义函数指针
+
+typedef void (*FS)();
+
 #endif /* __APPMACROS_H__ */

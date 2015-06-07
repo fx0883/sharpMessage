@@ -12,14 +12,8 @@
 
 
 FSNewsBottomView::FSNewsBottomView()
-//: m_pContentLabel(NULL)
-//, m_pTitleLabel(NULL)
-//, m_pCAlertBtnEvent(NULL)
-//, m_pCAlertTarget(NULL)
-//, m_pBtnTableView(NULL)
-//, m_sMsgFontName("")
-//, m_fAlertViewHeight(0.0)
-//, m_fAlertViewTitleHeight(0.0)
+: openCatalog(NULL)
+
 {
     
 }
@@ -71,6 +65,18 @@ bool FSNewsBottomView::init()
 void FSNewsBottomView::setTouchSelected(CrossApp::CAControl *control, CrossApp::CCPoint point)
 {
     int index = control->getTag();
+    switch (index) {
+        case 0:
+            if (openCatalog) {
+                openCatalog();
+            }
+            break;
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
 //    if (!m_sForbidSelectedIndexs.count(index))
 //    {
 //        this->setSelectedAtIndex(control->getTag());

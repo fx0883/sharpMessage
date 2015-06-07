@@ -14,6 +14,8 @@
 		15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8B1682F8A6002FB0C5 /* CocosDenshion.m */; };
 		15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */; };
 		15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */; };
+		180575B11B243A6E00FF1D67 /* FSNewsCatalog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180575AF1B243A6E00FF1D67 /* FSNewsCatalog.cpp */; };
+		180575B41B2445A700FF1D67 /* FSNewsCatalogCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */; };
 		180776ED1B1AB5240037CD28 /* ListViewEx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180776EB1B1AB5240037CD28 /* ListViewEx.cpp */; };
 		180776F01B1AEDA60037CD28 /* FSNewsView2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180776EE1B1AEDA60037CD28 /* FSNewsView2.cpp */; };
 		180776F31B1AEE840037CD28 /* FSNewsView2Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180776F11B1AEE840037CD28 /* FSNewsView2Cell.cpp */; };
@@ -25,6 +27,7 @@
 		1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1851A6141B01831800BEDFD8 /* ChapterInfo.cpp */; };
 		18EA428B1B203F1F0099A9DC /* web in Resources */ = {isa = PBXBuildFile; fileRef = 18EA428A1B203F1F0099A9DC /* web */; };
 		18EA428E1B203F5C0099A9DC /* FSNewsView3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */; };
+		18EC3E401B23EBB300C9308A /* BaseViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EC3E3E1B23EBB300C9308A /* BaseViewController.cpp */; };
 		1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB87033175E0A84005D39BF /* WebSocket.cpp */; };
 		1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624316D4A1E8000847F2 /* AppController.mm */; };
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
@@ -132,6 +135,10 @@
 		15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		15A3DA8D1682F8A6002FB0C5 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		180575AF1B243A6E00FF1D67 /* FSNewsCatalog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsCatalog.cpp; sourceTree = "<group>"; };
+		180575B01B243A6E00FF1D67 /* FSNewsCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsCatalog.h; sourceTree = "<group>"; };
+		180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsCatalogCell.cpp; sourceTree = "<group>"; };
+		180575B31B2445A700FF1D67 /* FSNewsCatalogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsCatalogCell.h; sourceTree = "<group>"; };
 		180776EB1B1AB5240037CD28 /* ListViewEx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ListViewEx.cpp; path = ../../Classes/extend/ListViewEx.cpp; sourceTree = "<group>"; };
 		180776EC1B1AB5240037CD28 /* ListViewEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewEx.h; path = ../../Classes/extend/ListViewEx.h; sourceTree = "<group>"; };
 		180776EE1B1AEDA60037CD28 /* FSNewsView2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsView2.cpp; sourceTree = "<group>"; };
@@ -155,6 +162,8 @@
 		18EA428A1B203F1F0099A9DC /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsView3.cpp; sourceTree = "<group>"; };
 		18EA428D1B203F5C0099A9DC /* FSNewsView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsView3.h; sourceTree = "<group>"; };
+		18EC3E3E1B23EBB300C9308A /* BaseViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseViewController.cpp; path = ../../Classes/BaseClasses/BaseViewController.cpp; sourceTree = "<group>"; };
+		18EC3E3F1B23EBB300C9308A /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ../../Classes/BaseClasses/BaseViewController.h; sourceTree = "<group>"; };
 		1AB87033175E0A84005D39BF /* WebSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebSocket.cpp; sourceTree = "<group>"; };
 		1AB87034175E0A84005D39BF /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
 		1AC3624216D4A1E8000847F2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = SOURCE_ROOT; };
@@ -410,6 +419,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18EC3E3D1B23EB9900C9308A /* BaseClasses */,
 				180776EA1B1AB50C0037CD28 /* extend */,
 				182F30B81AFB5D21000A3D83 /* FSBooklibrary */,
 				837449851AF4CBAC00CE34F5 /* model */,
@@ -469,9 +479,22 @@
 				18EA428D1B203F5C0099A9DC /* FSNewsView3.h */,
 				186200D71B214A4A00AD450B /* FSNewsBottomView.h */,
 				183DD9EF1B2266B100763815 /* FSNewsBottomView.cpp */,
+				180575AF1B243A6E00FF1D67 /* FSNewsCatalog.cpp */,
+				180575B01B243A6E00FF1D67 /* FSNewsCatalog.h */,
+				180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */,
+				180575B31B2445A700FF1D67 /* FSNewsCatalogCell.h */,
 			);
 			name = FSBooklibrary;
 			path = ../Classes/FSBooklibrary;
+			sourceTree = "<group>";
+		};
+		18EC3E3D1B23EB9900C9308A /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				18EC3E3E1B23EBB300C9308A /* BaseViewController.cpp */,
+				18EC3E3F1B23EBB300C9308A /* BaseViewController.h */,
+			);
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -906,14 +929,17 @@
 				B04822C019FA41F70019F1A7 /* CADevice.mm in Sources */,
 				B0CA5A291A77A77B00BECD89 /* CAStudioViewParser.cpp in Sources */,
 				182F30BB1AFB5D55000A3D83 /* FSBooklibrary.cpp in Sources */,
+				180575B41B2445A700FF1D67 /* FSNewsCatalogCell.cpp in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
 				83C643CE1AEF757C004C7DC1 /* FSUtilCPlus.cpp in Sources */,
+				18EC3E401B23EBB300C9308A /* BaseViewController.cpp in Sources */,
 				8390519C1AF07ABF00DD87A2 /* FSloadRes.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
 				839051991AF0799100DD87A2 /* FSloadResBase.cpp in Sources */,
 				1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
+				180575B11B243A6E00FF1D67 /* FSNewsCatalog.cpp in Sources */,
 				B047B92319E91CFA00F24BE6 /* DownloadManager.cpp in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				B0621E221AC3ECB0005EBCA7 /* RootWindow.cpp in Sources */,

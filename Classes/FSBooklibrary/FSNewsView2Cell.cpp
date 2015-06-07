@@ -75,8 +75,14 @@ void FSNewsView2Cell::updateWithCell()
     
     float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
     
-   // CCLog("curFontSize==============curFontSize================%f",curFontSize);
+    CCLog("curFontSize==============curFontSize================%f",curFontSize);
+    CCLog("curFontSize==============getBounds().size.height================%f",this->getBounds().size.height);
     
+    
+    
+    
+//    int fontHeight = CAImage::getFontHeight(m_nfontName.c_str(), m_nfontSize);
+//    int defaultLineSpace = fontHeight / 4;
     
     float curRatio = CAApplication::getApplication()->getAdaptationRatio();
 //    CCLog("curRatio==============curRatio================%f",curRatio);
@@ -90,6 +96,12 @@ void FSNewsView2Cell::updateWithCell()
     CAView *view = (CAView*)this->getSubviewByTag(99);
     //view->setColor(new CAColor4B(100,100,100,1));
     view->setColor(ccc4(151,212,255,255));
+    
+    
+    
+    
+    int lintFontHeihtItem = cellText->getLineFontHeight();
+    CCLog("lintFontHeihtItem================%d",lintFontHeihtItem);
 }
 
 void FSNewsView2Cell::setContent(const std::string& strContext)

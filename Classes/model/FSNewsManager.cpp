@@ -53,6 +53,22 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
     
 }
 
+CCArray* FSNewsManager::getChapterInfoAry(int newsID)
+{
+    char strNewsID[20];
+    sprintf(strNewsID, "%d", newsID);
+    
+    this->loadChapterDic(newsID);
+    
+    CAObject *obj = dicChapterInfo.objectForKey(strNewsID);
+    if (obj==NULL) {
+        return NULL;
+    }
+    CCArray* aryChapterInfo = (CCArray*)obj;
+    return aryChapterInfo;
+}
+
+
 void FSNewsManager::loadChapterDic(int newsID)
 {
     char strNewsID[20];
@@ -155,6 +171,20 @@ void FSNewsManager::loadNewsList()
 
     sqlite3_free_table(re);
     sqlite3_close(_sqlite3);
+}
+
+NewsInfo* FSNewsManager::getNewsInfoByNewsId(int newsId)
+{
+//        CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getArynewsList();
+    
+    for (int i=0; i<arynewsList.count(); i++) {
+        NewsInfo *newsinfo = (NewsInfo*)arynewsList.objectAtIndex(i);
+        if(newsinfo->getNewsID() == newsId)
+        {
+            return newsinfo;
+        }
+    }
+    return NULL;
 }
 
 

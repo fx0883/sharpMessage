@@ -360,7 +360,10 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSNewsVie
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
  jni/../../Classes/AppMacros.h jni/../../Classes/model/ChapterInfo.h \
  jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h \
- jni/../../Classes/FSBooklibrary/FSNewsBottomView.h
+ jni/../../Classes/FSBooklibrary/FSNewsBottomView.h \
+ jni/../../Classes/BaseClasses/BaseViewController.h \
+ jni/../../Classes/FSContext.h jni/../../Classes/AppMacros.h \
+ jni/../../Classes/FSBooklibrary/FSNewsCatalog.h
 
 jni/../../Classes/FSBooklibrary/FSNewsView2.h:
 
@@ -1085,3 +1088,11 @@ jni/../../Classes/model/ChapterInfo.h:
 jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h:
 
 jni/../../Classes/FSBooklibrary/FSNewsBottomView.h:
+
+jni/../../Classes/BaseClasses/BaseViewController.h:
+
+jni/../../Classes/FSContext.h:
+
+jni/../../Classes/AppMacros.h:
+
+jni/../../Classes/FSBooklibrary/FSNewsCatalog.h:

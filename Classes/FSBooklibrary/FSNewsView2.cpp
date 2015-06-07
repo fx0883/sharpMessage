@@ -7,22 +7,63 @@
 //
 
 #include "FSNewsView2.h"
-
+#include "FSContext.h"
+#include "FSNewsCatalog.h"
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
 
 
-
+//静态数据成员的定义和初始化
+FSNewsView2* FSNewsView2::curFSNewsView2 = NULL;
 
 FSNewsView2::FSNewsView2()
 : m_CurCell(NULL)
+
 {
-    m_PagingRule.lineNumber = 12;
+    m_PagingRule.lineNumber = 16;
     m_PagingRule.lineTextNumber = 14;
-    
+    curFSNewsView2 = this;
 
 }
+
+void FSNewsView2::staticOpenCatalog()
+{
+    curFSNewsView2->openCatalog();
+}
+
+
+void FSNewsView2::openCatalog()
+{
+    int curNewsId = this->getChapterInfo()->getNewsID();
+    FSNewsCatalog *fsnewscatalog = new FSNewsCatalog(curNewsId);
+    
+    CANavigationController *nav = FSContext::GetInstance().getMainNavController();
+    nav->pushViewController(fsnewscatalog, true);
+    
+}
+
+
+void FSNewsView2::calcPagingRule()
+{
+    float screenHeight =  CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().height;
+    CALabel *calcLabel = new CALabel();
+    
+    
+    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
+    calcLabel->setFontSize(curFontSize);
+    int lineFontHeihtItem = calcLabel->getLineFontHeight();
+    
+    m_PagingRule.lineNumber = screenHeight/lineFontHeihtItem;
+    
+    float preciseLineNumber = screenHeight/lineFontHeihtItem;
+    
+    if(preciseLineNumber-m_PagingRule.lineNumber <= 0.6)
+    {
+        m_PagingRule.lineNumber--;
+    }
+}
+
 
 FSNewsView2::~FSNewsView2()
 {
@@ -77,6 +118,7 @@ void FSNewsView2::viewDidLoad()
     
     
     
+    this->calcPagingRule();
     
     this->loadData();
     
@@ -103,6 +145,8 @@ void FSNewsView2::addBottomView()
     this->getView()->addSubview(m_FSNewsBottomView);
     m_FSNewsBottomView->initView();
     m_FSNewsBottomView->setVisible(false);
+    
+    m_FSNewsBottomView->openCatalog = &FSNewsView2::staticOpenCatalog;
 }
 
 void FSNewsView2::viewDidUnload()
@@ -312,6 +356,27 @@ void FSNewsView2::bottomViewRefresh(bool bIsShow)
 }
 
 
+
+void FSNewsView2::viewDidAppear()
+{
+//        if(!m_NavBarItem)
+//        {
+//            m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
+//        }
+//    this->setNavigationBarItem(m_NavBarItem);
+    this->refreshView();
+}
+
+void FSNewsView2::refreshView()
+{
+//    if(!m_NavBarItem)
+    {
+        m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
+    
+    }
+    this->setNavigationBarItem(m_NavBarItem);
+    //m_NavBarItem->autorelease();
+}
 
 
 
