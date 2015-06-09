@@ -13,6 +13,7 @@
 
 FSNewsBottomView::FSNewsBottomView()
 : openCatalog(NULL)
+,m_pageSlider(NULL)
 
 {
     
@@ -72,6 +73,10 @@ void FSNewsBottomView::setTouchSelected(CrossApp::CAControl *control, CrossApp::
             }
             break;
         case 1:
+            if(showPageSlider)
+            {
+                showPageSlider();
+            }
             break;
             
         default:
@@ -173,6 +178,9 @@ void FSNewsBottomView::initView()
         
     }
  
+//    addSlider();
+
+
     
     
   //  CCRectMake(startX, startY, 40, 40);
@@ -245,5 +253,42 @@ void FSNewsBottomView::initView()
     
     
 }
+
+
+//void FSNewsBottomView::addSlider()
+//{
+//    m_pageSlider = CASlider::createWithFrame(this->getBounds());
+//    
+////    CASlider* defaultSlider = CASlider::createWithCenter(CADipRect(size.width*0.5,size.height*0.2,size.width*0.7,20));
+////    defaultSlider->addTarget(this, CAControl_selector(SliderTest::defaultSliderValueChange));
+////    this->getView()->addSubview(defaultSlider);
+//    
+//
+//    m_pageSlider->setMinValue(0);
+//    m_pageSlider->addTarget(this, CAControl_selector(FSNewsBottomView::pageSliderValueChange));
+//    this->addSubview(m_pageSlider);
+//}
+
+
+//void FSNewsBottomView::pageSliderValueChange(CAControl* btn, CCPoint point)
+//{
+//    CASlider* p_Slider = (CASlider*)btn;
+////    sprintf(value, "%.02f%%", p_Slider->getValue() * 100);
+////    sliderValue->setText(value);
+//    if (changePage) {
+//        float pageNumber = p_Slider->getValue();
+//        int pageNumberInt = (int)pageNumber;
+////        if (pageNumber>pageNumberInt) {
+////            
+////        }
+//        if (pageNumber - pageNumberInt >0) {
+//            pageNumberInt++;
+//        }
+//        changePage(pageNumberInt);
+//    }
+//    
+//}
+
+
 
 

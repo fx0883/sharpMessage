@@ -361,9 +361,13 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSNewsVie
  jni/../../Classes/AppMacros.h jni/../../Classes/model/ChapterInfo.h \
  jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h \
  jni/../../Classes/FSBooklibrary/FSNewsBottomView.h \
+ jni/../../Classes/FSBooklibrary/FSPageSliderView.h \
  jni/../../Classes/BaseClasses/BaseViewController.h \
  jni/../../Classes/FSContext.h jni/../../Classes/AppMacros.h \
- jni/../../Classes/FSBooklibrary/FSNewsCatalog.h
+ jni/../../Classes/FSBooklibrary/FSNewsCatalog.h \
+ jni/../../Classes/model/FSDataManager.h \
+ jni/../../Classes/model/FSNewsManager.h \
+ jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h
 
 jni/../../Classes/FSBooklibrary/FSNewsView2.h:
 
@@ -1089,6 +1093,8 @@ jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h:
 
 jni/../../Classes/FSBooklibrary/FSNewsBottomView.h:
 
+jni/../../Classes/FSBooklibrary/FSPageSliderView.h:
+
 jni/../../Classes/BaseClasses/BaseViewController.h:
 
 jni/../../Classes/FSContext.h:
@@ -1096,3 +1102,11 @@ jni/../../Classes/FSContext.h:
 jni/../../Classes/AppMacros.h:
 
 jni/../../Classes/FSBooklibrary/FSNewsCatalog.h:
+
+jni/../../Classes/model/FSDataManager.h:
+
+jni/../../Classes/model/FSNewsManager.h:
+
+jni/../../Classes/model/ChapterInfo.h:
+
+jni/../../Classes/model/NewsInfo.h:

@@ -9,6 +9,7 @@
 #include "FSNewsView2.h"
 #include "FSContext.h"
 #include "FSNewsCatalog.h"
+#include "FSDataManager.h"
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
@@ -20,6 +21,7 @@ FSNewsView2* FSNewsView2::curFSNewsView2 = NULL;
 
 FSNewsView2::FSNewsView2()
 : m_CurCell(NULL)
+,m_FSPageSliderView(NULL)
 
 {
     m_PagingRule.lineNumber = 16;
@@ -33,17 +35,61 @@ void FSNewsView2::staticOpenCatalog()
     curFSNewsView2->openCatalog();
 }
 
-
 void FSNewsView2::openCatalog()
 {
     int curNewsId = this->getChapterInfo()->getNewsID();
     FSNewsCatalog *fsnewscatalog = new FSNewsCatalog(curNewsId);
+    
+    fsnewscatalog->loadChapter =   &FSNewsView2::staticLoadChapter;;
     
     CANavigationController *nav = FSContext::GetInstance().getMainNavController();
     nav->pushViewController(fsnewscatalog, true);
     
 }
 
+//static void staticLoadChapter(CAObject *chapterInfo);
+
+void FSNewsView2::staticLoadChapter(CAObject *chapterInfo)
+{
+    curFSNewsView2->loadCatalog(chapterInfo);
+}
+
+void FSNewsView2::loadCatalog(CAObject *chapterInfo)
+{
+    ChapterInfo *chpInfo = (ChapterInfo*)chapterInfo;
+    
+    this->setChapterInfo(chpInfo);
+    FSDataManager::GetInstance().getNewsManager()->setCurChapterInfo(chpInfo);
+    
+    
+    this->calcPagingRule();
+    this->loadData();
+    this->refreshView();
+    
+    this->listView->reloadData();
+    this->listView->setCurrPage(0, false);
+    
+}
+
+void FSNewsView2::staticChangePage(int pageNumber)
+{
+    curFSNewsView2->changePage(pageNumber);
+}
+
+void FSNewsView2::changePage(int pageNumber)
+{
+    this->listView->setCurrPage(pageNumber, false);
+}
+
+void FSNewsView2::staticShowChangeSlider()
+{
+    curFSNewsView2->showChangeSlider();
+}
+
+void FSNewsView2::showChangeSlider()
+{
+    m_FSPageSliderView->setVisible(true);
+}
 
 void FSNewsView2::calcPagingRule()
 {
@@ -69,8 +115,7 @@ void FSNewsView2::calcPagingRule()
 
 FSNewsView2::~FSNewsView2()
 {
-//    CADrawerController* drawer = (CADrawerController*)CAApplication::getApplication()->getRootWindow()->getRootViewController();
-//    drawer->setTouchMoved(true);
+
 }
 
 void FSNewsView2::viewDidLoad()
@@ -112,43 +157,59 @@ void FSNewsView2::viewDidLoad()
     //	CAView* listFootView = CAView::createWithColor(CAColor_green);
     //	listView->getListFooterView()->addSubview(footer);
     
-    this->addBottomView();
+ 
     
-    CAWindow* window = CAApplication::getApplication()->getRootWindow();
-    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
-    nav->setNavigationBarHidden(true, false);
+
     
     
     
     this->calcPagingRule();
-    
     this->loadData();
+    this->addBottomView();
+    CAWindow* window = CAApplication::getApplication()->getRootWindow();
+    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+    nav->setNavigationBarHidden(true, false);
+    this->refreshView();
     
 }
 
 
 void FSNewsView2::addBottomView()
 {
-
-//    m_FSNewsBottomView->init();
     CCSize size = this->getView()->getBounds().size;
     
-    //CCSize size = CCEGLView::sharedOpenGLView()->getFrameSize();
-    
-    //m_FSNewsBottomView->initWithCenter(const CrossApp::CCRect &rect, cc4(255,255,255,255);
-    
     CrossApp::CCRect rect = CCRectMake(0, size.height*10/11, size.width, size.height/11);
-    
-    
     CCLOG("***************************************,%f",size.width);
     
     m_FSNewsBottomView = FSNewsBottomView::createWithFrame(rect);
+    //m_FSNewsBottomView->setMaXPage((int)m_aryContent.size());
     m_FSNewsBottomView->setColor(ccc4(11,212,255,255));
     this->getView()->addSubview(m_FSNewsBottomView);
     m_FSNewsBottomView->initView();
     m_FSNewsBottomView->setVisible(false);
     
     m_FSNewsBottomView->openCatalog = &FSNewsView2::staticOpenCatalog;
+    
+    m_FSNewsBottomView->showPageSlider = &FSNewsView2::staticShowChangeSlider;
+    
+    
+    
+    
+    
+    CrossApp::CCRect rect2 = CCRectMake(0, size.height*10/12, size.width, size.height/6);
+    m_FSPageSliderView = FSPageSliderView::createWithFrame(rect2);
+    m_FSPageSliderView->setMaXPage((int)m_aryContent.size());
+    m_FSPageSliderView->setColor(ccc4(11,212,255,255));
+    this->getView()->addSubview(m_FSPageSliderView);
+    m_FSPageSliderView->initView();
+    m_FSPageSliderView->setVisible(false);
+    m_FSPageSliderView->changePage = &FSNewsView2::staticChangePage;
+    
+    
+    
+    
+    
+    
 }
 
 void FSNewsView2::viewDidUnload()
@@ -159,22 +220,16 @@ void FSNewsView2::viewDidUnload()
 void FSNewsView2::listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index)
 {
     static bool s = true;
-//
-//    CAWindow* window = CAApplication::getApplication()->getRootWindow();
-//
-//    CANavigationController* nav = this->getNavigationController();
-//    CATabBarController* tab = (CATabBarController*)window->getRootViewController();
-//    nav->setNavigationBarHidden(!s, true);
-//    tab->setTabBarHidden(!s, true);
-//    
-//
 
     CAWindow* window = CAApplication::getApplication()->getRootWindow();
     CANavigationController *nav = (CANavigationController*)window->getRootViewController();
     nav->setNavigationBarHidden(!s, false);
 
     this->bottomAnimation(s);
-    
+
+
+    m_FSPageSliderView->setVisible(false);
+
     s = !s;
     return;
 }
@@ -243,7 +298,9 @@ void FSNewsView2::loadData()
     int curCountByte = 0;
     const char* str = m_chapterInfo->getChapterContent().c_str();
     std::string s;
-    int index=0;
+//    int index=0;
+    
+    m_aryContent.clear();
     for ( int i = 0 , n = (int)m_chapterInfo->getChapterContent().size() ; i <= n ; i++ )
     {
         
@@ -366,16 +423,13 @@ void FSNewsView2::viewDidAppear()
 //            m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
 //        }
 //    this->setNavigationBarItem(m_NavBarItem);
-    this->refreshView();
+//    this->refreshView();
 }
 
 void FSNewsView2::refreshView()
 {
-//    if(!m_NavBarItem)
-    {
-        m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
-    
-    }
+
+    m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
     this->setNavigationBarItem(m_NavBarItem);
     //m_NavBarItem->autorelease();
 }

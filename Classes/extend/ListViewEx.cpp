@@ -125,10 +125,15 @@ void ListViewEx::ccTouchEnded(CATouch *pTouch, CAEvent *pEvent)
     }
     else
     {
-        page = MIN(page, this->isListCount() - 1);
-        page = MAX(page, 0);
-        
-        this->setCurrPage(page, true, true);
+        if (page<0) {
+            page = 0;
+        }
+//        page = MIN(page, (this->isListCount() - 1));
+//        page = MAX(page, 0);
+        else
+        {
+            this->setCurrPage(page, true, true);
+        }
     }
 
     

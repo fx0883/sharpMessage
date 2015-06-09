@@ -32,17 +32,21 @@ public:
     static FSNewsBottomView* createWithCenter(const CCRect& rect);
     
     
-
     
-
+    
+//    CC_SYNTHESIZE_IS(int,m_maxPage,MaXPage)
 
 public:
-        void initView();
+    void initView();
+//    void addSlider();
+    void setSliederShow(bool bIsShow);
 protected:
     
     bool init();
 
     void setTouchSelected(CrossApp::CAControl *control, CrossApp::CCPoint point);
+    
+    
     
 private:
     CAVector<CAImage*> m_listImage;
@@ -50,9 +54,15 @@ private:
 //    CAButton *m_CataloguesButton;
 //    CAButton *m_ProgressButton;
 //    CAButton *m_SettingButton;
+    CASlider* m_pageSlider;
+    
+protected:
+//    void pageSliderValueChange(CAControl* btn, CCPoint point);
+    
     
 public:
     FS openCatalog;
+    FS showPageSlider;
 };
 
 

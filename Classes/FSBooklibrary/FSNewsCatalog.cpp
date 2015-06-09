@@ -9,11 +9,13 @@
 #include "FSNewsCatalog.h"
 #include "FSNewsCatalogCell.h"
 #include "FSDataManager.h"
+#include "FSContext.h"
 
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
 FSNewsCatalog::FSNewsCatalog()
+:loadChapter(NULL)
 {
 
 }
@@ -42,6 +44,7 @@ void FSNewsCatalog::refreshView()
 void FSNewsCatalog::loadData()
 {
     p_AryCatalog = FSDataManager::GetInstance().getNewsManager()->getChapterInfoAry(m_NewsId);
+    
 }
 
 
@@ -74,6 +77,15 @@ void FSNewsCatalog::viewDidUnload()
 void FSNewsCatalog::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
 {
     
+    ChapterInfo *chapterInfo = (ChapterInfo*)p_AryCatalog->objectAtIndex(row);
+    
+    if (this->loadChapter) {
+        this->loadChapter(chapterInfo);
+    }
+    
+    CANavigationController *nav = FSContext::GetInstance().getMainNavController();
+//    nav->pushViewController(fsnewscatalog, true);
+    nav->popViewControllerAnimated(true);
 }
 
 void FSNewsCatalog::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)

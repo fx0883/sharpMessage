@@ -3,6 +3,7 @@
 
 #include "CrossApp.h"
 
+
 /* For demonstrating using one design resolution to match different resources,
    or one resource to match different design resolutions.
 
@@ -93,9 +94,17 @@ public: inline virtual varType& get##funName(void) { return varName; }\
 public: virtual void set##funName(varType& var){ varName = var; }
 
 
+
 //定义函数指针
+typedef void (*FSInt)(int value);
+
+typedef void (*FSFloat)(float value);
+
+typedef void (*FSBool)(bool value);
 
 typedef void (*FS)();
+
+typedef void (*FSCAObject)(CAObject *obj);
 
 //定义FSNewsView2Cell 底部进度label高度
 #define NEWSCELLBOTTOMHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)

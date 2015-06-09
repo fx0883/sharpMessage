@@ -56,7 +56,8 @@ private:
     int m_NewsId;
     CCArray *p_AryCatalog;
     
-    
+public:
+    FSCAObject loadChapter;
 };
 
 

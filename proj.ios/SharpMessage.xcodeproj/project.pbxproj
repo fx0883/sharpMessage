@@ -14,6 +14,7 @@
 		15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8B1682F8A6002FB0C5 /* CocosDenshion.m */; };
 		15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */; };
 		15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */; };
+		180237FE1B259B27008966D5 /* FSPageSliderView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180237FC1B259B27008966D5 /* FSPageSliderView.cpp */; };
 		180575B11B243A6E00FF1D67 /* FSNewsCatalog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180575AF1B243A6E00FF1D67 /* FSNewsCatalog.cpp */; };
 		180575B41B2445A700FF1D67 /* FSNewsCatalogCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */; };
 		180776ED1B1AB5240037CD28 /* ListViewEx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180776EB1B1AB5240037CD28 /* ListViewEx.cpp */; };
@@ -135,6 +136,8 @@
 		15A3DA8C1682F8A6002FB0C5 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		15A3DA8D1682F8A6002FB0C5 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		15A3DA8E1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		180237FC1B259B27008966D5 /* FSPageSliderView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPageSliderView.cpp; sourceTree = "<group>"; };
+		180237FD1B259B27008966D5 /* FSPageSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPageSliderView.h; sourceTree = "<group>"; };
 		180575AF1B243A6E00FF1D67 /* FSNewsCatalog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsCatalog.cpp; sourceTree = "<group>"; };
 		180575B01B243A6E00FF1D67 /* FSNewsCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsCatalog.h; sourceTree = "<group>"; };
 		180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsCatalogCell.cpp; sourceTree = "<group>"; };
@@ -483,6 +486,8 @@
 				180575B01B243A6E00FF1D67 /* FSNewsCatalog.h */,
 				180575B21B2445A700FF1D67 /* FSNewsCatalogCell.cpp */,
 				180575B31B2445A700FF1D67 /* FSNewsCatalogCell.h */,
+				180237FC1B259B27008966D5 /* FSPageSliderView.cpp */,
+				180237FD1B259B27008966D5 /* FSPageSliderView.h */,
 			);
 			name = FSBooklibrary;
 			path = ../Classes/FSBooklibrary;
@@ -948,6 +953,7 @@
 				180776ED1B1AB5240037CD28 /* ListViewEx.cpp in Sources */,
 				B04822BF19FA41F70019F1A7 /* CACameraController.mm in Sources */,
 				B0405FF419CC03A100947287 /* LocalStorageAndroid.cpp in Sources */,
+				180237FE1B259B27008966D5 /* FSPageSliderView.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
