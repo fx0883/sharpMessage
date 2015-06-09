@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/FSBooklibrary/FSNewsView2.cpp"
-            timestampString = "455533936.629397"
+            timestampString = "455551907.336912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "FSNewsView2::viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

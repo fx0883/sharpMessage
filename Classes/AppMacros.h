@@ -108,5 +108,7 @@ typedef void (*FSCAObject)(CAObject *obj);
 
 //定义FSNewsView2Cell 底部进度label高度
 #define NEWSCELLBOTTOMHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)
+#define NEWSCELLTOPHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 10)
+#define NEWSCELLSPACEWIDTH (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 10)
 
 #endif /* __APPMACROS_H__ */

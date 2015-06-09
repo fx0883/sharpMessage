@@ -32,7 +32,7 @@ void FSNewsView2Cell::initWithCell()
     view->setTag(99);
     this->addSubview(view);
     
-    CALabel* test = CALabel::createWithFrame(CADipRectMake(0, 0, _size.width, _size.height-NEWSCELLBOTTOMHEIGHT));
+    CALabel* test = CALabel::createWithFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, _size.width-NEWSCELLSPACEWIDTH*2, _size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
 	test->setTextAlignment(CATextAlignmentLeft);
 //	test->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
 //	test->setFontSize(_px(40));
@@ -40,7 +40,7 @@ void FSNewsView2Cell::initWithCell()
 	this->addSubview(test);
     
 
-    CALabel* bottomLabel = CALabel::createWithFrame(CADipRectMake(0, _size.height-NEWSCELLBOTTOMHEIGHT, _size.width-bottomMargin, NEWSCELLBOTTOMHEIGHT));
+    CALabel* bottomLabel = CALabel::createWithFrame(CADipRectMake(0, _size.height-NEWSCELLTOPHEIGHT-NEWSCELLBOTTOMHEIGHT, _size.width-NEWSCELLSPACEWIDTH*5, NEWSCELLBOTTOMHEIGHT));
     bottomLabel->setTag(101);
     this->addSubview(bottomLabel);
 
@@ -51,17 +51,16 @@ void FSNewsView2Cell::updateWithCell()
     
     CADipSize size = this->getBounds().size;
     CALabel *cellText = (CALabel*)this->getSubviewByTag(100);
-    if(cellText==NULL)
-    {
-//        cellText = CALabel::createWithCenter(CCRect(size.width*0.5, size.height*0.5, size.width-6, size.height));
-        cellText = CALabel::createWithFrame(CADipRectMake(0, 0, size.width, size.height-NEWSCELLBOTTOMHEIGHT));
-        this->addSubview(cellText);
-        //cellText->setColor(<#const CAColor4B &color#>)
-    }
-    else
+//    if(cellText==NULL)
+//    {
+//
+//        cellText = CALabel::createWithFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, size.width-NEWSCELLSPACEWIDTH*2, size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
+//
+//    }
+//    else
     {
         //cellText->setFrame(CCRect(0, 0, size.width, size.height));
-        cellText->setFrame(CADipRectMake(0, 0, size.width, size.height-NEWSCELLBOTTOMHEIGHT));
+        cellText->setFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, size.width-NEWSCELLSPACEWIDTH*2, size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
     }
     cellText->setTag(100);
     
@@ -75,32 +74,23 @@ void FSNewsView2Cell::updateWithCell()
     //CCLog("width2==============width2================%f",width2);
     
     
-    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
+    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 32;
     
     CCLog("curFontSize==============curFontSize================%f",curFontSize);
     CCLog("curFontSize==============getBounds().size.height================%f",this->getBounds().size.height);
     
-    
-    
-    
-//    int fontHeight = CAImage::getFontHeight(m_nfontName.c_str(), m_nfontSize);
-//    int defaultLineSpace = fontHeight / 4;
-    
-//    float curRatio = CAApplication::getApplication()->getAdaptationRatio();
-//    CCLog("curRatio==============curRatio================%f",curRatio);
-//    cellText->setFontSize(_px(curFontSize));
     cellText->setFontSize(curFontSize);
     //cellText->setColor(new CAColor4B(100,100,100,1));
     cellText->setTextAlignment(CATextAlignmentLeft);
-    cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
+    cellText->setVerticalTextAlignmet(CAVerticalTextAlignmentTop);
     
     
     CALabel *bottomLabel = (CALabel*)this->getSubviewByTag(101);
-    bottomLabel->setFrame (CADipRectMake(0, size.height-NEWSCELLBOTTOMHEIGHT, size.width-bottomMargin, NEWSCELLBOTTOMHEIGHT));
+    bottomLabel->setFrame (CADipRectMake(0, size.height-NEWSCELLTOPHEIGHT-NEWSCELLBOTTOMHEIGHT, size.width-NEWSCELLSPACEWIDTH*5, NEWSCELLBOTTOMHEIGHT));
     float percentFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 18;
     bottomLabel->setFontSize(percentFontSize);
     bottomLabel->setTextAlignment(CATextAlignmentRight);
-    bottomLabel->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
+    bottomLabel->setVerticalTextAlignmet(CAVerticalTextAlignmentTop);
     bottomLabel->setTag(101);
     
     CAView *view = (CAView*)this->getSubviewByTag(99);

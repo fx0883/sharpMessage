@@ -76,7 +76,7 @@ void FSPageSliderView::initView()
     
     
 
-    m_pageSlider=CASlider::createWithCenter(CADipRect(size.width*0.5,size.height*0.7,size.width,size.height*0.3));
+    m_pageSlider=CASlider::createWithCenter(CADipRect(size.width*0.5,size.height*0.7,size.width*0.8,size.height*0.3));
     m_pageSlider->setTag(202);
     m_pageSlider->setMaxValue(m_maxPage);
     m_pageSlider->setMinValue(0);
@@ -119,7 +119,19 @@ void FSPageSliderView::pageSliderTouchUpSide(CAControl* btn, CCPoint point)
     }
 }
 
+void FSPageSliderView::setSliderMax(float maxPage)
+{
+    if (m_pageSlider) {
+        m_pageSlider->setMaxValue(maxPage);
+        this->initSlider();
+    }
+}
+void FSPageSliderView::initSlider()
+{
+    m_pageSlider->setValue(1);
+    m_showPercent->setText("第1页");
 
+}
 
 
 

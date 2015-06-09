@@ -25,7 +25,7 @@ FSNewsView2::FSNewsView2()
 
 {
     m_PagingRule.lineNumber = 16;
-    m_PagingRule.lineTextNumber = 14;
+    m_PagingRule.lineTextNumber = 13;
     curFSNewsView2 = this;
 
 }
@@ -69,6 +69,11 @@ void FSNewsView2::loadCatalog(CAObject *chapterInfo)
     this->listView->reloadData();
     this->listView->setCurrPage(0, false);
     
+//    m_FSPageSliderView->setMaXPage()
+    float fmaxPage = (float)m_aryContent.size();
+    if(fmaxPage<1)
+        fmaxPage = 1;
+    m_FSPageSliderView->setSliderMax(fmaxPage);
 }
 
 void FSNewsView2::staticChangePage(int pageNumber)
@@ -96,17 +101,27 @@ void FSNewsView2::calcPagingRule()
     float screenHeight =  CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().height;
     CALabel *calcLabel = new CALabel();
     
-    screenHeight = screenHeight - NEWSCELLBOTTOMHEIGHT;
+    screenHeight = screenHeight - NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT;
     
-    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 34;
+    float screenWidth =  CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width;
+    
+    screenWidth = screenWidth - NEWSCELLTOPHEIGHT*2;
+
+    
+    float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 32;
     calcLabel->setFontSize(curFontSize);
     int lineFontHeihtItem = calcLabel->getLineFontHeight();
     
     m_PagingRule.lineNumber = screenHeight/lineFontHeihtItem;
     
+    
+    int fontWidthItem = calcLabel->getFontCNUTF8Width();
+    m_PagingRule.lineTextNumber = screenWidth/fontWidthItem;
+    
+    
     float preciseLineNumber = screenHeight/lineFontHeihtItem;
     
-    if(preciseLineNumber-m_PagingRule.lineNumber <= 0.6)
+    if(preciseLineNumber-m_PagingRule.lineNumber <= 0.5)
     {
         m_PagingRule.lineNumber--;
     }

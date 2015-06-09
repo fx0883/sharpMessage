@@ -37,13 +37,15 @@ public:
     void initView();
 //    void addSlider();
 //    void setSliederShow(bool bIsShow);
-
+    
+    void setSliderMax(float maxPage);
+    void initSlider();
 protected:
     
     bool init();
     
 
-    
+
     
     
 private:
