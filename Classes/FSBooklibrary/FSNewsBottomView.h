@@ -63,6 +63,7 @@ protected:
 public:
     FS openCatalog;
     FS showPageSlider;
+    FS showReadSettingView;
 };
 
 

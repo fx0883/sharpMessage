@@ -334,7 +334,6 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/model/FSDataManager.o: 
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
- jni/../../Classes/model/FSNewsManager.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/CrossAppExt.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/network/HttpRequest.h \
@@ -359,6 +358,7 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/model/FSDataManager.o: 
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
+ jni/../../Classes/model/FSNewsManager.h \
  jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h
 
 jni/../../Classes/model/FSDataManager.h:
@@ -1029,8 +1029,6 @@ jni/../../Classes/AppMacros.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
 
-jni/../../Classes/model/FSNewsManager.h:
-
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/CrossAppExt.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/ExtensionMacros.h:
@@ -1078,6 +1076,8 @@ jni/../../Classes/model/FSNewsManager.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h:
+
+jni/../../Classes/model/FSNewsManager.h:
 
 jni/../../Classes/model/ChapterInfo.h:
 

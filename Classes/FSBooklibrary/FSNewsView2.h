@@ -20,6 +20,7 @@
 #include "FSNewsBottomView.h"
 #include "FSPageSliderView.h"
 #include "BaseViewController.h"
+#include "FSReadSettingView.h"
 
 struct PagingRule
 {
@@ -64,6 +65,7 @@ private:
     FSNewsView2Cell *m_CurCell;
     FSNewsBottomView *m_FSNewsBottomView;
     FSPageSliderView *m_FSPageSliderView;
+    FSReadSettingView *m_FSReadSettingView;
 
     
     vector<std::string> m_aryContent;
@@ -73,12 +75,14 @@ private:
     void loadCatalog(CAObject *chapterInfo);
     void changePage(int pageNumber);
     void showChangeSlider();
+    void showReadSettingView();
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();
     static void staticLoadChapter(CAObject *chapterInfo);
     static void staticChangePage(int pageNumber);
     static void staticShowChangeSlider();
+    static void staticShowReadSettingView();
 };
 
 

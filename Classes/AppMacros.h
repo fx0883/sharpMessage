@@ -2,7 +2,7 @@
 #define __APPMACROS_H__
 
 #include "CrossApp.h"
-
+#include "CrossAppExt.h"
 
 /* For demonstrating using one design resolution to match different resources,
    or one resource to match different design resolutions.
@@ -110,5 +110,11 @@ typedef void (*FSCAObject)(CAObject *obj);
 #define NEWSCELLBOTTOMHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)
 #define NEWSCELLTOPHEIGHT (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 10)
 #define NEWSCELLSPACEWIDTH (CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 10)
+
+
+
+//文字颜色
+#define FontColor "fontColor"
+#define BgReadSettingImage "bgImage"
 
 #endif /* __APPMACROS_H__ */

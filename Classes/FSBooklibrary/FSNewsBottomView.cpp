@@ -78,7 +78,10 @@ void FSNewsBottomView::setTouchSelected(CrossApp::CAControl *control, CrossApp::
                 showPageSlider();
             }
             break;
-            
+        case 2:
+            if (showReadSettingView) {
+                showReadSettingView();
+            }
         default:
             break;
     }

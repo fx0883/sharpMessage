@@ -8,6 +8,8 @@
 
 #include "FSloadRes.h"
 #include "PublicHeader.h"
+#include "FSContext.h"
+#include "FSDataManager.h"
 
 
 void FSloadRes::loadNewsList()
@@ -16,6 +18,24 @@ void FSloadRes::loadNewsList()
     loadData();
 }
 
+
+void FSloadRes::loadReadSetting()
+{
+    string readSettingPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("config/readSetting.plist");
+    CCLog("fileTestPath = %s",readSettingPath.c_str());
+    
+    
+    
+    
+    CCArray *settingAry = CCArray::createWithContentsOfFile(readSettingPath.c_str());
+    settingAry->retain();
+    FSDataManager::GetInstance().setAryReadSettingList(settingAry);
+    CCLog("settingAry Count = %d",settingAry->count());
+    
+    
+    CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
+     CCLog("readSettingAry Count = %d",readSettingAry->count());
+}
 
 
 void FSloadRes::loadLanguagePath()

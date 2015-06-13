@@ -19,6 +19,7 @@ public:
     CREATE_FUNC(FSloadRes)
 public:
     void loadNewsList();
+    void loadReadSetting();
     bool init();
     ~FSloadRes();
 private:

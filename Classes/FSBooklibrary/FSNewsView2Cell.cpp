@@ -97,7 +97,7 @@ void FSNewsView2Cell::updateWithCell()
     //view->setColor(new CAColor4B(100,100,100,1));
     view->setColor(ccc4(151,212,255,255));
     
-    
+    //CCDrawNode
     
     
     int lintFontHeihtItem = cellText->getLineFontHeight();

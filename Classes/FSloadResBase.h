@@ -28,6 +28,7 @@ public:
 public:
 //    CC_SYNTHESIZE_PASS_BY_REF(string, m_dbName, DBName)
 public:
+    virtual void loadReadSetting()=0;
     virtual void loadNewsList()=0;
     virtual bool init();
 };

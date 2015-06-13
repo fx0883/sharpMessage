@@ -22,6 +22,9 @@
 		180776F31B1AEE840037CD28 /* FSNewsView2Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180776F11B1AEE840037CD28 /* FSNewsView2Cell.cpp */; };
 		180CF8C91B087C230026720D /* FSNewsView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180CF8C71B087C230026720D /* FSNewsView.cpp */; };
 		180CF8CC1B087DA30026720D /* FSNewsViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180CF8CA1B087DA30026720D /* FSNewsViewCell.cpp */; };
+		181A86941B2956E800F79C78 /* config in Resources */ = {isa = PBXBuildFile; fileRef = 181A86931B2956E800F79C78 /* config */; };
+		181A86961B295E0900F79C78 /* bkg in Resources */ = {isa = PBXBuildFile; fileRef = 181A86951B295E0900F79C78 /* bkg */; };
+		181A86991B29667100F79C78 /* FSReadSettingView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 181A86971B29667100F79C78 /* FSReadSettingView.cpp */; };
 		182F30BB1AFB5D55000A3D83 /* FSBooklibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */; };
 		182F30BE1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */; };
 		183DD9F01B2266B100763815 /* FSNewsBottomView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183DD9EF1B2266B100763815 /* FSNewsBottomView.cpp */; };
@@ -152,6 +155,10 @@
 		180CF8C81B087C230026720D /* FSNewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsView.h; sourceTree = "<group>"; };
 		180CF8CA1B087DA30026720D /* FSNewsViewCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsViewCell.cpp; sourceTree = "<group>"; };
 		180CF8CB1B087DA30026720D /* FSNewsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsViewCell.h; sourceTree = "<group>"; };
+		181A86931B2956E800F79C78 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
+		181A86951B295E0900F79C78 /* bkg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bkg; sourceTree = "<group>"; };
+		181A86971B29667100F79C78 /* FSReadSettingView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSReadSettingView.cpp; sourceTree = "<group>"; };
+		181A86981B29667100F79C78 /* FSReadSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSReadSettingView.h; sourceTree = "<group>"; };
 		182F30B91AFB5D55000A3D83 /* FSBooklibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBooklibrary.cpp; sourceTree = "<group>"; };
 		182F30BA1AFB5D55000A3D83 /* FSBooklibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBooklibrary.h; sourceTree = "<group>"; };
 		182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBooklibraryCell.cpp; sourceTree = "<group>"; };
@@ -488,6 +495,8 @@
 				180575B31B2445A700FF1D67 /* FSNewsCatalogCell.h */,
 				180237FC1B259B27008966D5 /* FSPageSliderView.cpp */,
 				180237FD1B259B27008966D5 /* FSPageSliderView.h */,
+				181A86971B29667100F79C78 /* FSReadSettingView.cpp */,
+				181A86981B29667100F79C78 /* FSReadSettingView.h */,
 			);
 			name = FSBooklibrary;
 			path = ../Classes/FSBooklibrary;
@@ -556,6 +565,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				181A86951B295E0900F79C78 /* bkg */,
+				181A86931B2956E800F79C78 /* config */,
 				18EA428A1B203F1F0099A9DC /* web */,
 				839051931AF072F300DD87A2 /* cn */,
 				839051941AF072F300DD87A2 /* en */,
@@ -863,8 +874,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181A86941B2956E800F79C78 /* config in Resources */,
 				B0621E261AC3ECEC005EBCA7 /* r in Resources */,
 				B04C0C091901207A009854FD /* json_valueiterator.inl in Resources */,
+				181A86961B295E0900F79C78 /* bkg in Resources */,
 				B01F71671951682600BA07A6 /* source_material in Resources */,
 				B0621BE51AC3B871005EBCA7 /* fonts in Resources */,
 				B04C0C051901207A009854FD /* json_internalarray.inl in Resources */,
@@ -903,6 +916,7 @@
 				B04C0C071901207A009854FD /* json_reader.cpp in Sources */,
 				B04822BE19FA41F70019F1A7 /* CABrightness_iOS.mm in Sources */,
 				180776F01B1AEDA60037CD28 /* FSNewsView2.cpp in Sources */,
+				181A86991B29667100F79C78 /* FSReadSettingView.cpp in Sources */,
 				18EA428E1B203F5C0099A9DC /* FSNewsView3.cpp in Sources */,
 				B04C0C041901207A009854FD /* DictionaryHelper.cpp in Sources */,
 				B04C0C031901207A009854FD /* CSContentJsonDictionary.cpp in Sources */,

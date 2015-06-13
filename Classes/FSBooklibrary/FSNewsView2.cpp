@@ -11,6 +11,7 @@
 #include "FSNewsCatalog.h"
 #include "FSDataManager.h"
 
+
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
 
@@ -91,9 +92,19 @@ void FSNewsView2::staticShowChangeSlider()
     curFSNewsView2->showChangeSlider();
 }
 
+void FSNewsView2::staticShowReadSettingView()
+{
+    curFSNewsView2->showReadSettingView();
+}
+
 void FSNewsView2::showChangeSlider()
 {
     m_FSPageSliderView->setVisible(true);
+}
+
+void FSNewsView2::showReadSettingView()
+{
+    m_FSReadSettingView->setVisible(true);
 }
 
 void FSNewsView2::calcPagingRule()
@@ -191,9 +202,8 @@ void FSNewsView2::viewDidLoad()
 
 void FSNewsView2::addBottomView()
 {
-    CCSize size = this->getView()->getBounds().size;
-    
-    CrossApp::CCRect rect = CCRectMake(0, size.height*10/11, size.width, size.height/11);
+    size = this->getView()->getBounds().size;
+    CrossApp::CADipRect rect = CADipRect(0, size.height*10/11, size.width, size.height/11);
     CCLOG("***************************************,%f",size.width);
     
     m_FSNewsBottomView = FSNewsBottomView::createWithFrame(rect);
@@ -207,11 +217,11 @@ void FSNewsView2::addBottomView()
     
     m_FSNewsBottomView->showPageSlider = &FSNewsView2::staticShowChangeSlider;
     
+    m_FSNewsBottomView->showReadSettingView = &FSNewsView2::staticShowReadSettingView;
     
     
     
-    
-    CrossApp::CCRect rect2 = CCRectMake(0, size.height*10/12, size.width, size.height/6);
+    CrossApp::CADipRect rect2 = CADipRect(0, size.height*10/12, size.width, size.height/6);
     m_FSPageSliderView = FSPageSliderView::createWithFrame(rect2);
     m_FSPageSliderView->setMaXPage((int)m_aryContent.size());
     m_FSPageSliderView->setColor(ccc4(11,212,255,255));
@@ -222,7 +232,14 @@ void FSNewsView2::addBottomView()
     
     
     
-    
+    CrossApp::CADipRect rect3 = CADipRect(0, size.height*9/12, size.width, size.height/4);
+    m_FSReadSettingView = FSReadSettingView::createWithFrame(rect3);
+
+    m_FSReadSettingView->setColor(ccc4(11,212,255,255));
+    this->getView()->addSubview(m_FSReadSettingView);
+    m_FSReadSettingView->initView();
+    m_FSReadSettingView->setVisible(false);
+
     
     
 }
@@ -244,7 +261,7 @@ void FSNewsView2::listViewDidSelectCellAtIndex(CAListView *listView, unsigned in
 
 
     m_FSPageSliderView->setVisible(false);
-
+    m_FSReadSettingView->setVisible(false);
     s = !s;
     return;
 }

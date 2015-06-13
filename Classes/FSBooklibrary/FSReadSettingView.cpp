@@ -1,0 +1,149 @@
+
+//
+//  FSReadSettingView.cpp
+//  SharpMessage
+//
+//  Created by apple on 6/11/15.
+//
+//
+
+#include "FSReadSettingView.h"
+#include "FSDataManager.h"
+
+#include "AppMacros.h"
+
+FSReadSettingView::FSReadSettingView()
+{
+    
+}
+
+
+FSReadSettingView::~FSReadSettingView()
+{
+    
+    
+}
+
+
+FSReadSettingView* FSReadSettingView::createWithFrame(const CCRect& rect)
+{
+    FSReadSettingView* fsreadsettingview = new FSReadSettingView();
+    if (fsreadsettingview && fsreadsettingview->initWithFrame(rect))
+    {
+        fsreadsettingview->autorelease();
+        return fsreadsettingview;
+    }
+    CC_SAFE_DELETE(fsreadsettingview);
+    return NULL;
+}
+
+FSReadSettingView* FSReadSettingView::createWithCenter(const CCRect& rect)
+{
+    FSReadSettingView* fsreadsettingview = new FSReadSettingView();
+    if (fsreadsettingview && fsreadsettingview->initWithCenter(rect))
+    {
+        fsreadsettingview->autorelease();
+        return fsreadsettingview;
+    }
+    CC_SAFE_DELETE(fsreadsettingview);
+    return NULL;
+}
+
+bool FSReadSettingView::init()
+{
+    if (!CAView::init())
+    {
+        return false;
+    }
+    //    this->initView();
+    return true;
+}
+
+
+void FSReadSettingView::initView()
+{
+    
+    size = this->getBounds().size;
+    
+    m_HighlightSlider=CASlider::createWithCenter(CADipRect(size.width*0.5,size.height*0.12,size.width*0.8,size.height*0.1));
+    m_HighlightSlider->setTag(201);
+    m_HighlightSlider->setMaxValue(100);
+    m_HighlightSlider->setMinValue(1);
+    m_HighlightSlider->addTarget(this, CAControl_selector(FSReadSettingView::highlightSliderValueChange));
+//    m_HighlightSlider->addTargetForTouchUpSide(this, CAControl_selector(FSPageSliderView::pageSliderTouchUpSide));
+    
+    this->addSubview(m_HighlightSlider);
+    
+    CAView *lineView = CAView::createWithFrame(CADipRect(0,size.height*0.3,size.width,1));
+    
+    lineView->setColor(ccc4(0,0,0,255));
+    this->addSubview(lineView);
+    
+    m_svContent = CAScrollView::createWithCenter(CADipRect(size.width*0.5,size.height*0.65,size.width*0.8,size.height*0.6));
+    
+    m_svContent->setShowsHorizontalScrollIndicator(false);
+    m_svContent->setShowsVerticalScrollIndicator(false);
+    //    m_svContent->setTouchMovedListenHorizontal(false);
+    m_svContent->setBounceVertical(false);
+    m_svContent->setTag(202);
+//    m_svContent->setColor(ccc4(11,212,255,255));
+    m_svContent->setBackGroundColor(ccc4(11,212,255,255));
+    this->addSubview(m_svContent);
+    
+    addButtons();
+}
+
+
+void FSReadSettingView::addButtons()
+{
+  //  CADipSize boundsSize = m_svContent->getBounds().size;
+    CCSize boundsSize = m_svContent->getBounds().size;
+    
+    float btnWidth = boundsSize.height*3/4;
+    float btnSpace = boundsSize.height/6;
+    CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
+    for (int i=0; i<readSettingAry->count(); i++) {
+        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeCustom);
+        itemBtn->setTag(i);
+        
+          itemBtn->addTarget(this, CAControl_selector(FSReadSettingView::bgItemBtnClick), CAControlEventTouchUpInSide);
+        
+        //m_svContent->setContentSize(contentSize);
+
+//        itemBtn->setImageAtlas(CrossApp::CAImageAtlas *var)
+
+        CCDictionary *dicItem = (CCDictionary*)readSettingAry->objectAtIndex(i);
+        //itemBtn->setImageForState(CAControlStateAll, imageItem);
+        const CCString *strImagePath = dicItem->valueForKey(BgReadSettingImage);
+    
+        CAImage *itemImage = CAImage::create("bkg/"+string( strImagePath->getCString()));
+        itemBtn->setImageForState(CAControlStateAll, itemImage);
+        m_svContent->addSubview(itemBtn);
+        
+    }
+    
+    CCSize contentSize =  CCSizeMake((btnWidth+btnSpace)*readSettingAry->count()+btnSpace,boundsSize.height);
+
+    m_svContent->setViewSize(contentSize);
+}
+
+void FSReadSettingView::bgItemBtnClick(CrossApp::CAControl *control, CrossApp::CCPoint point)
+{
+    
+}
+
+
+void FSReadSettingView::highlightSliderValueChange(CAControl* btn, CCPoint point)
+{
+    CASlider* p_Slider = (CASlider*)btn;
+    char value[50];
+    //maxValue = p_Slider->getMaxValue();
+    
+    sprintf(value, "第%.02d%页", (int)p_Slider->getValue()+1);
+//    m_showPercent->setText(value);
+    
+}
+
+
+
+

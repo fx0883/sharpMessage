@@ -12,7 +12,9 @@
 #include <stdio.h>
 #include "AppMacros.h"
 #include "CrossApp.h"
+#include <string>
 
+using namespace std;
 
 //单例模式宏
 //#define SINGLETON(_CLASS_)                  \
@@ -33,10 +35,20 @@
 //_CLASS_::_CLASS_(){}            \
 //_CLASS_::~_CLASS_(){}
 #include "FSNewsManager.h"
+
+class FSReadSetting:public CAObject
+{
+    public:
+        string bgImage;
+        string fontColor;
+};
+
 class FSDataManager:public CAObject
 {
     SINGLETON(FSDataManager)
     CC_SYNTHESIZE_PASS_BY_REF2(FSNewsManager*, m_NewsManager, NewsManager)
+    
+    CC_SYNTHESIZE_PASS_BY_REF2(CCArray*, m_aryReadSettingList, AryReadSettingList);
 };
 
 #endif /* defined(__SharpMessage__FSDataManager__) */

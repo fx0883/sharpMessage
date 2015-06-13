@@ -11,7 +11,8 @@
 
 
 
-FSDataManager::FSDataManager()
+FSDataManager::FSDataManager():
+m_aryReadSettingList(NULL)
 {
     m_NewsManager = FSNewsManager::create();
     m_NewsManager->retain();
@@ -20,5 +21,6 @@ FSDataManager::FSDataManager()
 FSDataManager::~FSDataManager()
 {
     m_NewsManager->release();
+        CC_SAFE_RELEASE(m_aryReadSettingList);
     CCLog("~FSDataManager");
 }

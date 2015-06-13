@@ -28,6 +28,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     //initialize db
     FSloadResBase *loadres = FSloadRes::create();
     loadres->loadNewsList();
+    loadres->loadReadSetting();
     DELETECLASS(loadres)
     
     //load newslist
