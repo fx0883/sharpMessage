@@ -87,14 +87,11 @@ void FSNewsView2::changePage(int pageNumber)
     this->listView->setCurrPage(pageNumber, false);
 }
 
+
+
 void FSNewsView2::staticShowChangeSlider()
 {
     curFSNewsView2->showChangeSlider();
-}
-
-void FSNewsView2::staticShowReadSettingView()
-{
-    curFSNewsView2->showReadSettingView();
 }
 
 void FSNewsView2::showChangeSlider()
@@ -102,9 +99,29 @@ void FSNewsView2::showChangeSlider()
     m_FSPageSliderView->setVisible(true);
 }
 
+
+
+
+void FSNewsView2::staticShowReadSettingView()
+{
+    curFSNewsView2->showReadSettingView();
+}
+
 void FSNewsView2::showReadSettingView()
 {
     m_FSReadSettingView->setVisible(true);
+}
+
+
+
+void FSNewsView2::staticChangeReadSetting()
+{
+    curFSNewsView2->changeReadSetting();
+}
+
+void FSNewsView2::changeReadSetting()
+{
+    listView->reloadData();
 }
 
 void FSNewsView2::calcPagingRule()
@@ -239,7 +256,7 @@ void FSNewsView2::addBottomView()
     this->getView()->addSubview(m_FSReadSettingView);
     m_FSReadSettingView->initView();
     m_FSReadSettingView->setVisible(false);
-
+    m_FSReadSettingView->changeReadSetting = &FSNewsView2::staticChangeReadSetting;
     
     
 }

@@ -325,7 +325,10 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSNewsVie
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/Json/CSContentJsonDictionary.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/sqlite3/include/sqlite3.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h \
- /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
+ jni/../../Classes/model/FSDataManager.h \
+ jni/../../Classes/model/FSNewsManager.h \
+ jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h
 
 jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h:
 
@@ -978,3 +981,11 @@ jni/../../Classes/AppMacros.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/LocalStorage/LocalStorage.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h:
+
+jni/../../Classes/model/FSDataManager.h:
+
+jni/../../Classes/model/FSNewsManager.h:
+
+jni/../../Classes/model/ChapterInfo.h:
+
+jni/../../Classes/model/NewsInfo.h:

@@ -1,5 +1,6 @@
 #include "FSNewsView2Cell.h"
 #include "AppMacros.h"
+#include "FSDataManager.h"
 
 #define bottomMargin 50
 FSNewsView2Cell::FSNewsView2Cell()
@@ -32,10 +33,14 @@ void FSNewsView2Cell::initWithCell()
     view->setTag(99);
     this->addSubview(view);
     
+    
+    CAScale9ImageView *bgImageView = CAScale9ImageView::createWithFrame(this->getBounds());
+    bgImageView->setTag(98);
+    this->addSubview(bgImageView);
+    
+    
     CALabel* test = CALabel::createWithFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, _size.width-NEWSCELLSPACEWIDTH*2, _size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
 	test->setTextAlignment(CATextAlignmentLeft);
-//	test->setVerticalTextAlignmet(CAVerticalTextAlignmentCenter);
-//	test->setFontSize(_px(40));
 	test->setTag(100);
 	this->addSubview(test);
     
@@ -92,13 +97,48 @@ void FSNewsView2Cell::updateWithCell()
     bottomLabel->setTextAlignment(CATextAlignmentRight);
     bottomLabel->setVerticalTextAlignmet(CAVerticalTextAlignmentTop);
     bottomLabel->setTag(101);
-    
+
     CAView *view = (CAView*)this->getSubviewByTag(99);
-    //view->setColor(new CAColor4B(100,100,100,1));
+
     view->setColor(ccc4(151,212,255,255));
     
     //CCDrawNode
     
+    
+//    int tag = control->getTag();
+//    CAUserDefault::sharedUserDefault()->setIntegerForKey(READSETTINGKEY, tag);
+//    
+    
+    
+    CAScale9ImageView *bgImageView = (CAScale9ImageView*)this->getSubviewByTag(98);
+    
+    int indexReadSetting = CAUserDefault::sharedUserDefault()->getIntegerForKey(READSETTINGKEY, 0);
+    CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
+
+        
+    CCDictionary *dicItem = (CCDictionary*)readSettingAry->objectAtIndex(indexReadSetting);
+    const CCString *strImagePath = dicItem->valueForKey(BgReadSettingImage);
+        
+    CAImage *itemImage = CAImage::create("bkg/"+string( strImagePath->getCString()));
+    //itemImage->autorelease();
+    bgImageView->setImage(itemImage);
+    
+    
+    CCDictionary *dicColor = (CCDictionary*)dicItem->objectForKey(FontColor);
+    const CCString *r = dicColor->valueForKey("r");
+    const CCString *g = dicColor->valueForKey("g");
+    const CCString *b = dicColor->valueForKey("b");
+    const CCString *a = dicColor->valueForKey("a");
+    
+    int rint = r->intValue();
+    int gint = g->intValue();
+    int bint = b->intValue();
+    int aint = a->intValue();
+    
+    
+    cellText->setColor(ccc4(rint,gint,bint,aint));
+    
+        //cellText->setColor(new CAColor4B(100,100,100,1));
     
     int lintFontHeihtItem = cellText->getLineFontHeight();
     CCLog("lintFontHeihtItem================%d",lintFontHeihtItem);

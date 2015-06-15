@@ -55,5 +55,8 @@ private:
     CAScrollView *m_svContent;
     
     CACollectionView *m_cvContent;
+    
+public:
+    FS changeReadSetting;
 };
 #endif /* defined(__SharpMessage__FSReadSettingView__) */

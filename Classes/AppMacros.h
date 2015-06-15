@@ -117,4 +117,7 @@ typedef void (*FSCAObject)(CAObject *obj);
 #define FontColor "fontColor"
 #define BgReadSettingImage "bgImage"
 
+
+#define READSETTINGKEY "READSETTINGKEY"
+
 #endif /* __APPMACROS_H__ */

@@ -13,6 +13,7 @@
 #include "AppMacros.h"
 
 FSReadSettingView::FSReadSettingView()
+:changeReadSetting(NULL)
 {
     
 }
@@ -67,13 +68,14 @@ void FSReadSettingView::initView()
     
     m_HighlightSlider=CASlider::createWithCenter(CADipRect(size.width*0.5,size.height*0.12,size.width*0.8,size.height*0.1));
     m_HighlightSlider->setTag(201);
-    m_HighlightSlider->setMaxValue(100);
-    m_HighlightSlider->setMinValue(1);
+//    m_HighlightSlider->setMaxValue(100);
+//    m_HighlightSlider->setMinValue(1);
+    
     m_HighlightSlider->addTarget(this, CAControl_selector(FSReadSettingView::highlightSliderValueChange));
 //    m_HighlightSlider->addTargetForTouchUpSide(this, CAControl_selector(FSPageSliderView::pageSliderTouchUpSide));
     
     this->addSubview(m_HighlightSlider);
-    
+    m_HighlightSlider->setValue(CADevice::getScreenBrightness());
     CAView *lineView = CAView::createWithFrame(CADipRect(0,size.height*0.3,size.width,1));
     
     lineView->setColor(ccc4(0,0,0,255));
@@ -103,7 +105,7 @@ void FSReadSettingView::addButtons()
     float btnSpace = boundsSize.height/6;
     CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
     for (int i=0; i<readSettingAry->count(); i++) {
-        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeCustom);
+        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeRoundedRect);
         itemBtn->setTag(i);
         
           itemBtn->addTarget(this, CAControl_selector(FSReadSettingView::bgItemBtnClick), CAControlEventTouchUpInSide);
@@ -129,6 +131,12 @@ void FSReadSettingView::addButtons()
 
 void FSReadSettingView::bgItemBtnClick(CrossApp::CAControl *control, CrossApp::CCPoint point)
 {
+    int tag = control->getTag();
+    CAUserDefault::sharedUserDefault()->setIntegerForKey(READSETTINGKEY, tag);
+    
+    if (changeReadSetting) {
+        changeReadSetting();
+    }
     
 }
 
@@ -136,11 +144,14 @@ void FSReadSettingView::bgItemBtnClick(CrossApp::CAControl *control, CrossApp::C
 void FSReadSettingView::highlightSliderValueChange(CAControl* btn, CCPoint point)
 {
     CASlider* p_Slider = (CASlider*)btn;
-    char value[50];
-    //maxValue = p_Slider->getMaxValue();
+//    char value[50];
+//    //maxValue = p_Slider->getMaxValue();
+//    
+//    sprintf(value, "第%.02f%页", p_Slider->getValue());
+////    m_showPercent->setText(value);
+//    CCLog(value);
     
-    sprintf(value, "第%.02d%页", (int)p_Slider->getValue()+1);
-//    m_showPercent->setText(value);
+    CADevice::setScreenBrightness(p_Slider->getValue());
     
 }
 

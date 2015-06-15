@@ -76,6 +76,7 @@ private:
     void changePage(int pageNumber);
     void showChangeSlider();
     void showReadSettingView();
+    void changeReadSetting();
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();
@@ -83,6 +84,7 @@ public:
     static void staticChangePage(int pageNumber);
     static void staticShowChangeSlider();
     static void staticShowReadSettingView();
+    static void staticChangeReadSetting();
 };
 
 
