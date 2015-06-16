@@ -337,6 +337,22 @@ void FSNewsView2::reshapeViewRectDidFinish()
 
 void FSNewsView2::loadData()
 {
+    //            index=0;
+//    string             stt = "“天龙八部”这名词出于佛经。许多大乘佛经叙述佛向诸菩萨、比丘等说法时，常有天龙八部参与听法。如《法华经·提婆达多品》：“天龙八部、人与非人，皆遥见彼龙女成佛”。“非人”是形貌似人而实际不是人的众生。\n　　“天龙八部”都是“非人”，包括八种神道怪物，因为以“天”及“龙”为首，所以称为“天龙八部”。八部者，一天，二龙，三夜叉，四乾达婆，五阿修罗，六迦楼罗，七紧那罗，八摩呼罗迦。\n　　“天”是指天神。在佛教中，天神的地位并非至高无上，只不过比人能享受到更大、更长久的福报而已。佛教认为一切事";
+    
+//        string             stt = "";
+            string             stt = "·";
+    //“天龙八部”这名词出于佛经。许多大乘佛经叙述佛向诸菩萨、比丘等说法时，常有天龙八部参与听法。
+    //如《法华经·
+//    “天龙八部、人与非人，皆遥见彼龙女成佛”。“非人”是形貌似人而实际不是人的众生。\n
+                int size = (int)stt.size();
+                size++;
+    
+   const char *aaa=stt.c_str();
+    
+//    “天龙八部”这名词出于佛经。许多大乘佛经叙述佛向诸菩萨、比丘等说法时，常有天龙八部参与听法。如《法华经·提婆达多品》：“天龙八部、人与非人，皆遥见彼龙女成佛”。“非人”是形貌似人而实际不是人的众生。\n　　“天龙八部”都是“非人”，包括八种神道怪物，因为以“天”及“龙”为首，所以称为“天龙八部”。八部者，一天，二龙，三夜叉，四乾达婆，五阿修罗，六迦楼罗，七紧那罗，八摩呼罗迦。\n　　“天”是指天神。在佛教中，天神的地位并非至高无上，只不过比人能享受到更大、更长久的福报而已。佛教认为一切事
+    
+    
     PagingRule curPagingRule;
     
     curPagingRule.lineNumber = 0;
@@ -345,6 +361,9 @@ void FSNewsView2::loadData()
     const int countbyte=3;
     
     int curCountByte = 0;
+    
+
+    
     const char* str = m_chapterInfo->getChapterContent().c_str();
     std::string s;
 //    int index=0;
@@ -365,16 +384,30 @@ void FSNewsView2::loadData()
             
         }
         
+//        char eChar[2];
+//        eChar[0]=str[i];
+//        eChar[1]=str[i+1];
+//        string strEChar(eChar);
         
-            
+        if (str[i]=='\302'&&str[i+1]=='\345'&&str[i+2]=='\x8d'&&str[i+3]=='\xb7') {
+            i=i+3;
+            continue;
+        }
+        
         s += str[i];
         if(str[i] == '\n')
         {
             curPagingRule.lineTextNumber = 0;
             curPagingRule.lineNumber++;
         }
-        else if(str[i] ==' ' || str[i]=='.')
+        else if(str[i] ==' '
+                || str[i]=='.'
+                || (str[i]=='\xc2'&&str[i+1]=='\xb7')
+                )
         {
+            if (str[i]=='\xc2'&&str[i+1]=='\xb7') {
+                s += str[++i];
+            }
             curCountByte = 0;
             curPagingRule.lineTextNumber++;
             
