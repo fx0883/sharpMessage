@@ -48,8 +48,13 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
         return;
     }
     CCArray* aryChapterInfo = (CCArray*)obj;
-    curChapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(chapterNubmer);
     
+//    CC_SAFE_RELEASE(curChapterInfo);
+//    CC_SAFE_RETAIN(curChapterInfo);
+
+    ChapterInfo* chapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(chapterNubmer);
+    this->setCurChapterInfo(chapterInfo);
+//    curChapterInfo->retain();
     
 }
 
@@ -191,12 +196,12 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
 {
     char strNewsID[50];
     sprintf(strNewsID, "%d", newsID);
-    CAObject *obj = dicChapterInfo.objectForKey(strNewsID);
+    CAObject *obj = dicBookMarkInfo.objectForKey(strNewsID);
     if (obj!= NULL) {
         return (CCArray*)obj;
     }
     
-    dicChapterInfo.removeAllObjects();
+    dicBookMarkInfo.removeAllObjects();
     
     int ret = 0;
     
@@ -269,8 +274,8 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     CCLog("debug 2===========>");
     
     int ok = sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getNewsID());
-    ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getChapterID());
-    ok |= sqlite3_bind_double(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getMarkProgress());
+    ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 2, bookmarkinfo->getChapterID());
+    ok |= sqlite3_bind_double(_sqlite_stmt_insertbookmark, 3, bookmarkinfo->getMarkProgress());
 
     
     ok |= sqlite3_step(_sqlite_stmt_insertbookmark);
@@ -294,7 +299,7 @@ bool FSNewsManager::addBookMarkInfo(BookMarkInfo*& bookmarkinfo)
     for (int i=0; i<aryBookMarkInfo->count(); i++) {
         
         BookMarkInfo* item = (BookMarkInfo*)aryBookMarkInfo->objectAtIndex(i);
-        if (item==bookmarkinfo) {
+        if (*item==*bookmarkinfo) {
             return bret;
         }
         

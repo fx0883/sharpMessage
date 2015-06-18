@@ -24,6 +24,7 @@ FSNewsView2* FSNewsView2::curFSNewsView2 = NULL;
 FSNewsView2::FSNewsView2()
 : m_CurCell(NULL)
 ,m_FSPageSliderView(NULL)
+,m_chapterInfo(NULL)
 
 {
     m_PagingRule.lineNumber = 16;
@@ -62,7 +63,7 @@ void FSNewsView2::loadCatalog(CAObject *chapterInfo)
     
     this->setChapterInfo(chpInfo);
     FSDataManager::GetInstance().getNewsManager()->setCurChapterInfo(chpInfo);
-    
+    m_chapterInfo=chpInfo;
     
     this->calcPagingRule();
     this->loadData();
@@ -318,7 +319,8 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
 //    CALabel* test = (CALabel*)cell->getSubviewByTag(100);
 //    test->setText(idx);
     cell->updateWithCell();
-    cell->setContent(strContent,((float)(index+1))/m_aryContent.size());
+    m_chapterPrecent = ((float)(index+1))/m_aryContent.size();
+    cell->setContent(strContent,m_chapterPrecent);
     
     m_FSPageSliderView->setSliderCurPage(index);
     
@@ -529,7 +531,19 @@ void FSNewsView2::refreshView()
 void FSNewsView2::onClickBookMark(CAControl* btn, CCPoint point)
 {
     //加入标签
+    BookMarkInfo *bookmarkinfo = new BookMarkInfo();
+    ChapterInfo *curChapterInfo =  FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
+//    int dff= this->getChapterInfo()->getNewsID();
     
+    bookmarkinfo->setChapterID(curChapterInfo->getChapterID());
+    bookmarkinfo->setNewsID(curChapterInfo->getNewsID());
+    
+    bookmarkinfo->setMarkProgress(curFSNewsView2->getChapterPrecent());
+    
+    bool flag = FSDataManager::GetInstance().getNewsManager()->addBookMarkInfo(bookmarkinfo);
+    if (!flag) {
+        //加入失败
+    }
 }
 
 //add by FX

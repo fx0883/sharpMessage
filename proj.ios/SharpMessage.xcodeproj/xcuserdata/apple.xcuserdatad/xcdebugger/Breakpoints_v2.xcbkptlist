@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/FSBooklibrary/FSNewsView2.cpp"
-            timestampString = "456227310.365134"
+            timestampString = "456300840.444045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "529"
-            endingLineNumber = "529"
-            landmarkName = "FSNewsView2::onClickBookMark(CAControl* btn, CCPoint point)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "FSNewsView2::loadCatalog(CAObject *chapterInfo)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/model/FSNewsManager.cpp"
+            timestampString = "456302051.454266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "FSNewsManager::loadBookMarkInfo(int newsID)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

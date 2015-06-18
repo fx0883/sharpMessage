@@ -27,11 +27,11 @@ public:
     ~BookMarkInfo();
     
     //比较两个对象的大小
-    bool operator == (const BookMarkInfo *bookmarkinfo) const{
+    bool operator == (const BookMarkInfo &bookmarkinfo) const{
     
-        return (m_chapterID==bookmarkinfo->getChapterID()
-                &&m_newsID==bookmarkinfo->getNewsID()
-                &&m_markProgress == bookmarkinfo->getMarkProgress());
+        return (m_chapterID==bookmarkinfo.getChapterID()
+                &&m_newsID==bookmarkinfo.getNewsID()
+                &&m_markProgress == bookmarkinfo.getMarkProgress());
     };
 };
 

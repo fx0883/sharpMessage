@@ -36,6 +36,7 @@ public:
 public:
     CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, m_chapterInfo, ChapterInfo)
     CC_SYNTHESIZE_PASS_BY_REF(int,m_lineNumber,LinNumber)
+     CC_SYNTHESIZE_PASS_BY_REF(float,m_chapterPrecent,ChapterPrecent)
     
 public:
     virtual void listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index);
