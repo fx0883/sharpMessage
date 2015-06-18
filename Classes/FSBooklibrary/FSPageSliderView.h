@@ -39,6 +39,7 @@ public:
 //    void setSliederShow(bool bIsShow);
     
     void setSliderMax(float maxPage);
+    void setSliderCurPage(int page);
     void initSlider();
 protected:
     

@@ -187,6 +187,127 @@ NewsInfo* FSNewsManager::getNewsInfoByNewsId(int newsId)
     return NULL;
 }
 
+CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
+{
+    char strNewsID[50];
+    sprintf(strNewsID, "%d", newsID);
+    CAObject *obj = dicChapterInfo.objectForKey(strNewsID);
+    if (obj!= NULL) {
+        return (CCArray*)obj;
+    }
+    
+    dicChapterInfo.removeAllObjects();
+    
+    int ret = 0;
+    
+    ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
+    
+    //查询结果
+    char **re;
+    //行、列
+    int r,c;
+    
+    char sql[256];
+    snprintf( sql , 256 , "select bookmarkID,newsID,chapterID,markProgress from bookmarklist WHERE newsID='%d' ORDER by bookmarkID" , newsID );
+    
+    //    string strSql = "select * from chapterlist WHERE newsID='%d' ORDER by chapterID desc"
+    
+    //查询数据
+    sqlite3_get_table(_sqlite3,sql,&re,&r,&c,NULL);
+    //    CCLog("row is %d,column is %d",r,c);
+    //将查询出的数据通过log输出
+    
+    CCArray *aryBookMarkInfo = CCArray::create();
+    for(int i=1;i<=r;i++)
+    {
+        BookMarkInfo *bookmarkinfo = new BookMarkInfo();
+        
+        int bookmarkID = atoi(re[i*c+0]);
+        int newsID = atoi(re[i*c+1]);
+        int chapterID= atoi(re[i*c+2]);
+        
+        
+        float markProgress = atof(re[i*c+3]);
+        bookmarkinfo->setMarkProgress(markProgress);
+        bookmarkinfo->setNewsID(newsID);
+        bookmarkinfo->setChapterID(chapterID);
+        bookmarkinfo->setBookMarkID(bookmarkID);
+        
+        aryBookMarkInfo->addObject(bookmarkinfo);
+    }
+    
+    
+    dicBookMarkInfo.setObject(aryBookMarkInfo, strNewsID);
+    
+    sqlite3_free_table(re);
+    sqlite3_close(_sqlite3);
+
+    return aryBookMarkInfo;
+}
+
+
+
+
+
+
+
+
+
+bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
+{
+    int ret = 0;
+    
+    ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
+    
+    sqlite3_stmt *_sqlite_stmt_insertbookmark;
+    // INSERT
+    
+//    bookmarkID,newsID,chapterID,markProgress
+    const char *sql_insert = "INSERT INTO bookmarklist (bookmarkID,newsID,chapterID, markProgress) VALUES (NULL,?,?,?);";
+    ret |= sqlite3_prepare_v2(_sqlite3, sql_insert, -1, &_sqlite_stmt_insertbookmark, NULL);
+    
+    CCLog("debug 2===========>");
+    
+    int ok = sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getNewsID());
+    ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getChapterID());
+    ok |= sqlite3_bind_double(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getMarkProgress());
+
+    
+    ok |= sqlite3_step(_sqlite_stmt_insertbookmark);
+    ok |= sqlite3_reset(_sqlite_stmt_insertbookmark);
+    
+    if( ok != SQLITE_OK && ok != SQLITE_DONE)
+        printf("Error in Newlist._saved()\n");
+}
+bool FSNewsManager::addBookMarkInfo(BookMarkInfo*& bookmarkinfo)
+{
+    bool bret = false;
+    
+    //查看有没有bookinfo
+    if (bookmarkinfo==NULL) {
+        return bret;
+    }
+    
+
+    CCArray *aryBookMarkInfo = this->loadBookMarkInfo(bookmarkinfo->getNewsID());
+    
+    for (int i=0; i<aryBookMarkInfo->count(); i++) {
+        
+        BookMarkInfo* item = (BookMarkInfo*)aryBookMarkInfo->objectAtIndex(i);
+        if (item==bookmarkinfo) {
+            return bret;
+        }
+        
+        
+    }
+    
+    this->insertbookmarkToDB(bookmarkinfo);
+    
+    bret = true;
+    return bret;
+
+}
+
 
 int FSNewsManager::getCurChapterID(int newsID)
 {

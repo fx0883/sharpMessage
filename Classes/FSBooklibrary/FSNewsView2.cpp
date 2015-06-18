@@ -10,6 +10,7 @@
 #include "FSContext.h"
 #include "FSNewsCatalog.h"
 #include "FSDataManager.h"
+#include "BookMarkInfo.h"
 
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
@@ -319,7 +320,7 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
     cell->updateWithCell();
     cell->setContent(strContent,((float)(index+1))/m_aryContent.size());
     
-
+    m_FSPageSliderView->setSliderCurPage(index);
     
     return cell;
 }
@@ -512,11 +513,24 @@ void FSNewsView2::refreshView()
 {
 
     m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
+    
+    CABarButtonItem* rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
+    
+    
+    rightButton->setTarget(rightButton, CAControl_selector(FSNewsView2::onClickBookMark));
+
+    
+    m_NavBarItem->addRightButtonItem(rightButton);
+//    m_NavBarItem->addRightButtonItem(CrossApp::CABarButtonItem *item)
     this->setNavigationBarItem(m_NavBarItem);
     //m_NavBarItem->autorelease();
 }
 
-
+void FSNewsView2::onClickBookMark(CAControl* btn, CCPoint point)
+{
+    //加入标签
+    
+}
 
 //add by FX
 //void FSNewsView2::loadData()

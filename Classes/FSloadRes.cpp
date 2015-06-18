@@ -144,6 +144,21 @@ void FSloadRes::loadData()
             CCLog("Error in CREATE chapterlist\n");
         }
         
+        
+        const char *sql_createBookmarksTable = "CREATE TABLE IF NOT EXISTS bookmarklist(bookmarkID INTEGER PRIMARY KEY,newsID INTEGER,chapterID INTEGER, markProgress float);";
+        stmt=NULL;
+        ok=sqlite3_prepare_v2(_sqlite3, sql_createBookmarksTable, -1, &stmt, NULL);
+        ok |= sqlite3_step(stmt);
+        ok |= sqlite3_finalize(stmt);
+        
+        if( ok != SQLITE_OK && ok != SQLITE_DONE)
+        {
+            CCLog("Error in CREATE sql_createBookmarksTable\n");
+        }
+        
+        
+        
+        
         sqlite3_stmt *_sqlite_stmt_insertnews;
         // INSERT
         const char *sql_insertnews = "INSERT INTO newslist (newsID,newsTitle, imageSrc, author, status) VALUES (NULL,?,?,?,?);";

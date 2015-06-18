@@ -15,6 +15,7 @@
 #include "AppMacros.h"
 #include "ChapterInfo.h"
 #include "NewsInfo.h"
+#include "BookMarkInfo.h"
 
 class FSNewsManager:public CAObject
 {
@@ -27,7 +28,7 @@ public:
     CC_SYNTHESIZE_PASS_BY_REF2(CCArray, arynewsList, ArynewsList);
     CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, curChapterInfo, CurChapterInfo);
     CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicChapterInfo, DicChapterInfo);
-    
+    CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicBookMarkInfo, DicBookMarkInfo);
 public:
     int getCurChapterID(int newsID);
     void setCurChapterID(int newsID,int chapterID);
@@ -37,6 +38,10 @@ public:
     void loadCurChapterInfo(int newsID,int chapterNubmer);
     void loadCurChapterInfo(int newsID);
     void loadChapterDic(int newsID);
+    
+    CCArray* loadBookMarkInfo(int newsID);
+    bool addBookMarkInfo(BookMarkInfo*& bookmarkinfo);
+    bool insertbookmarkToDB(BookMarkInfo*& bookmarkinfo);
     
 public:
     NewsInfo* getNewsInfoByNewsId(int newsId);

@@ -137,7 +137,7 @@ void FSNewsView2Cell::updateWithCell()
     
     
     cellText->setColor(ccc4(rint,gint,bint,aint));
-    
+    bottomLabel->setColor(ccc4(rint,gint,bint,aint));
         //cellText->setColor(new CAColor4B(100,100,100,1));
     
     int lintFontHeihtItem = cellText->getLineFontHeight();

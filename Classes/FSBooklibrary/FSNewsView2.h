@@ -77,6 +77,7 @@ private:
     void showChangeSlider();
     void showReadSettingView();
     void changeReadSetting();
+    void onClickBookMark(CAControl* btn, CCPoint point);
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();

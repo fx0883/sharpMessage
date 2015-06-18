@@ -133,6 +133,17 @@ void FSPageSliderView::initSlider()
 
 }
 
+void FSPageSliderView::setSliderCurPage(int page)
+{
+    m_pageSlider->setValue(page);
+    char value[50];
+    //maxValue = p_Slider->getMaxValue();
+    
+    sprintf(value, "第%.02d%页", page);
+    m_showPercent->setText(value);
+
+}
+
 
 
 
