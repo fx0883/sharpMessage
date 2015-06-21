@@ -362,7 +362,8 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSNewsCat
  jni/../../Classes/model/FSDataManager.h \
  jni/../../Classes/model/FSNewsManager.h \
  jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h \
- jni/../../Classes/FSContext.h jni/../../Classes/AppMacros.h
+ jni/../../Classes/model/BookMarkInfo.h jni/../../Classes/FSContext.h \
+ jni/../../Classes/AppMacros.h
 
 jni/../../Classes/FSBooklibrary/FSNewsCatalog.h:
 
@@ -1089,6 +1090,8 @@ jni/../../Classes/model/FSNewsManager.h:
 jni/../../Classes/model/ChapterInfo.h:
 
 jni/../../Classes/model/NewsInfo.h:
+
+jni/../../Classes/model/BookMarkInfo.h:
 
 jni/../../Classes/FSContext.h:
 

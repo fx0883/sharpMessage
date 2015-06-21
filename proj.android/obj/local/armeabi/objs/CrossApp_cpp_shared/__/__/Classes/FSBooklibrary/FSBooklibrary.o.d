@@ -329,8 +329,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../extensions/device/CADevice.h \
  jni/../../Classes/model/FSNewsManager.h \
  jni/../../Classes/model/ChapterInfo.h jni/../../Classes/model/NewsInfo.h \
- jni/../../Classes/PublicHeader.h jni/../../Classes/AppMacros.h \
- jni/../../Classes/FSContext.h jni/../../Classes/model/NewsInfo.h \
+ jni/../../Classes/model/BookMarkInfo.h jni/../../Classes/PublicHeader.h \
+ jni/../../Classes/AppMacros.h jni/../../Classes/FSContext.h \
+ jni/../../Classes/model/NewsInfo.h \
  jni/../../Classes/model/FSNewsManager.h \
  jni/../../Classes/FSBooklibrary/FSBooklibraryCell.h \
  jni/../../Classes/FSBooklibrary/FSNewsView2.h \
@@ -1002,6 +1003,8 @@ jni/../../Classes/model/FSNewsManager.h:
 jni/../../Classes/model/ChapterInfo.h:
 
 jni/../../Classes/model/NewsInfo.h:
+
+jni/../../Classes/model/BookMarkInfo.h:
 
 jni/../../Classes/PublicHeader.h:
 
