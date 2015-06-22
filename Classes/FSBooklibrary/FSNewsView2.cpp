@@ -48,6 +48,7 @@ void FSNewsView2::openCatalog()
     CANavigationController *nav = FSContext::GetInstance().getMainNavController();
     nav->pushViewController(fsnewscatalog, true);
     
+
 }
 
 //static void staticLoadChapter(CAObject *chapterInfo);
@@ -315,12 +316,12 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
     }
     char idx[10] = "";
     sprintf(idx,"list%d",index);
-    string& strContent = m_aryContent.at(index);
+    m_curContent = m_aryContent.at(index);
 //    CALabel* test = (CALabel*)cell->getSubviewByTag(100);
 //    test->setText(idx);
     cell->updateWithCell();
     m_chapterPrecent = ((float)(index+1))/m_aryContent.size();
-    cell->setContent(strContent,m_chapterPrecent);
+    cell->setContent(m_curContent,m_chapterPrecent);
     
     m_FSPageSliderView->setSliderCurPage(index);
     
@@ -337,6 +338,70 @@ void FSNewsView2::reshapeViewRectDidFinish()
 //    this->bottomAnimation(true);
 }
 
+string FSNewsView2::getDigestForMark()
+{
+    string s="";
+    int curPage =    curFSNewsView2->listView->getCurrPage();
+    string curContent = m_aryContent.at(curPage);
+    const char *str = curContent.c_str();
+    const int maxSize = 15;
+    int curCountByte=0;
+    int curTextNumber=0;
+    const int countbyte=3;
+    for (int i=0; i<m_curContent.size(); i++) {
+        if (str[i]=='\302'&&str[i+1]=='\345'&&str[i+2]=='\x8d'&&str[i+3]=='\xb7') {
+            i=i+3;
+            continue;
+        }
+        
+        
+        
+        if(str[i] == '\n'|| str[i] ==' ')
+        {
+            continue;
+        }
+        
+        s += str[i];
+        if(
+                str[i]=='.'
+                || (str[i]=='\xc2'&&str[i+1]=='\xb7')
+                )
+        {
+            if (str[i]=='\xc2'&&str[i+1]=='\xb7') {
+                s += str[++i];
+            }
+            curCountByte = 0;
+            curTextNumber++;
+            
+            if (curTextNumber == maxSize) {
+                break;
+                
+            }
+            
+        }
+        else
+        {
+            curCountByte++;
+            if(countbyte==curCountByte)
+            {
+                curCountByte = 0;
+                curTextNumber++;
+                
+                if (curTextNumber == maxSize) {
+                    break;
+                    
+                }
+
+                
+                
+            }
+            
+        }
+        
+        
+    }
+    return s;
+}
 
 void FSNewsView2::loadData()
 {
@@ -537,13 +602,44 @@ void FSNewsView2::onClickBookMark(CAControl* btn, CCPoint point)
     
     bookmarkinfo->setChapterID(curChapterInfo->getChapterID());
     bookmarkinfo->setNewsID(curChapterInfo->getNewsID());
+    string strMarkDigest;
+//    if (curFSNewsView2->getCurContent().length()>10) {
+//        strMarkDigest = curFSNewsView2->getCurContent().substr(0,10);
+//    }
+//    else
+//    {
+//        strMarkDigest = m_curContent;
+//    }
     
-    bookmarkinfo->setMarkProgress(curFSNewsView2->getChapterPrecent());
+    int curPage =    curFSNewsView2->listView->getCurrPage();
+    
+    bookmarkinfo->setMarkDigest(curFSNewsView2->getDigestForMark());
+    
+    double contentSize = (double)m_aryContent.size();
+    double curPageDouble = (double)(curPage+1);
+    
+    
+    double chapterPrecent = curPageDouble/contentSize;
+//        double chapterPrecent = 1;
+    bookmarkinfo->setMarkProgress(chapterPrecent);
     
     bool flag = FSDataManager::GetInstance().getNewsManager()->addBookMarkInfo(bookmarkinfo);
+    
+    string strTitle = "提示";
+    string strClose="关闭";
+    string strContent;
+
     if (!flag) {
         //加入失败
+        strContent = "已经有重复的标签";
     }
+    else
+    {
+        strContent = "添加标签成功";
+    }
+    
+    CAAlertView* alertView = CAAlertView::createWithText(strTitle.c_str(), strContent.c_str(), strClose.c_str(),NULL);
+    alertView->show();
 }
 
 //add by FX

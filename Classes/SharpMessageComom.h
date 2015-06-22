@@ -1,4 +1,4 @@
-//  Copyright (c) 2014 http://www.9miao.com All rights reserved.
+
 //
 //                       .::::.
 //                     .::::::::.

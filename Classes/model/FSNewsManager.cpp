@@ -201,7 +201,7 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
         return (CCArray*)obj;
     }
     
-    dicBookMarkInfo.removeAllObjects();
+    //dicBookMarkInfo.removeAllObjects();
     
     int ret = 0;
     
@@ -213,7 +213,7 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
     int r,c;
     
     char sql[256];
-    snprintf( sql , 256 , "select bookmarkID,newsID,chapterID,markProgress from bookmarklist WHERE newsID='%d' ORDER by bookmarkID" , newsID );
+    snprintf( sql , 256 , "select bookmarkID,newsID,chapterID,markProgress,markDigest from bookmarklist WHERE newsID='%d' ORDER by bookmarkID" , newsID );
     
     //    string strSql = "select * from chapterlist WHERE newsID='%d' ORDER by chapterID desc"
     
@@ -237,6 +237,8 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
         bookmarkinfo->setNewsID(newsID);
         bookmarkinfo->setChapterID(chapterID);
         bookmarkinfo->setBookMarkID(bookmarkID);
+        
+        bookmarkinfo->setMarkDigest(re[i*c+4]);
         
         aryBookMarkInfo->addObject(bookmarkinfo);
     }
@@ -268,7 +270,7 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     // INSERT
     
 //    bookmarkID,newsID,chapterID,markProgress
-    const char *sql_insert = "INSERT INTO bookmarklist (bookmarkID,newsID,chapterID, markProgress) VALUES (NULL,?,?,?);";
+    const char *sql_insert = "INSERT INTO bookmarklist (bookmarkID,newsID,chapterID, markProgress,markDigest) VALUES (NULL,?,?,?,?);";
     ret |= sqlite3_prepare_v2(_sqlite3, sql_insert, -1, &_sqlite_stmt_insertbookmark, NULL);
     
     CCLog("debug 2===========>");
@@ -276,7 +278,7 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     int ok = sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getNewsID());
     ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 2, bookmarkinfo->getChapterID());
     ok |= sqlite3_bind_double(_sqlite_stmt_insertbookmark, 3, bookmarkinfo->getMarkProgress());
-
+    ok |= sqlite3_bind_text(_sqlite_stmt_insertbookmark, 4,bookmarkinfo->getMarkDigest().c_str(), -1, SQLITE_TRANSIENT);
     
     ok |= sqlite3_step(_sqlite_stmt_insertbookmark);
     ok |= sqlite3_reset(_sqlite_stmt_insertbookmark);
@@ -307,6 +309,8 @@ bool FSNewsManager::addBookMarkInfo(BookMarkInfo*& bookmarkinfo)
     }
     
     this->insertbookmarkToDB(bookmarkinfo);
+    
+    aryBookMarkInfo->addObject(bookmarkinfo);
     
     bret = true;
     return bret;

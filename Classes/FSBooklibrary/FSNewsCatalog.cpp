@@ -10,12 +10,15 @@
 #include "FSNewsCatalogCell.h"
 #include "FSDataManager.h"
 #include "FSContext.h"
+#include "BookMarkInfo.h"
 
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
 FSNewsCatalog::FSNewsCatalog()
-:loadChapter(NULL)
+:loadChapter(NULL),
+p_AryMarkInfo(NULL),
+p_AryCatalog(NULL)
 {
 
 }
@@ -45,6 +48,9 @@ void FSNewsCatalog::loadData()
 {
     p_AryCatalog = FSDataManager::GetInstance().getNewsManager()->getChapterInfoAry(m_NewsId);
     
+    p_AryMarkInfo =FSDataManager::GetInstance().getNewsManager()->loadBookMarkInfo(m_NewsId);
+    
+    
 }
 
 
@@ -53,21 +59,86 @@ void FSNewsCatalog::viewDidLoad()
     this->refreshView();
     size = this->getView()->getBounds().size;
     
-    //p_TableView = CATableView::createWithCenter(CADipRect(size.width*0.5, size.height*0.5, size.width, size.height));
-    p_TableView = CATableView::createWithFrame(this->getView()->getBounds());
 
+    
+    vector<string> segmentTitlelist;
+    segmentTitlelist.push_back("目录");
+    segmentTitlelist.push_back("书签");
+    
+    segment = CASegmentedControl::createWithCenter(CADipRect(size.width*0.5,
+                                                             size.height*0.05,
+                                                             size.width*0.8,
+                                                             size.height*0.05), (unsigned int)segmentTitlelist.size());
+    
+
+    
+    for (int i = 0; i < segmentTitlelist.size(); i++)
+    {
+
+        segment->setTitleForSegmentAtIndex(segmentTitlelist.at(i), i);
+        //		segment->setBackgroundImage(CAImage::create(segNormal));
+    }
+
+    segment->setSelectedAtIndex(0);
+    segment->addTarget(this, CASegmentedControl_selector(FSNewsCatalog::segmentCallback));
+    this->getView()->addSubview(segment);
+    
+//    CAView *lineView = CAView::createWithFrame(CADipRect(0,size.height*0.08,size.width,1));
+//    
+//    lineView->setColor(ccc4(0,0,0,255));
+//    this->getView()->addSubview(lineView);
+    
+    p_TableView = CATableView::createWithFrame(CADipRect(0,size.height*0.1,size.width,size.height*0.9));
     p_TableView->setTableViewDataSource(this);
     p_TableView->setTableViewDelegate(this);
     p_TableView->setAllowsSelection(true);
-//    p_TableView->setAllowsMultipleSelection(true);
     p_TableView->setSeparatorColor(CAColor_gray);
     p_TableView->setSeparatorViewHeight(1);
     this->getView()->addSubview(p_TableView);
+
+    
+    
+    p_TableViewMarklist = CATableView::createWithFrame(CADipRect(0,size.height*0.1,size.width,size.height*0.9));
+    p_TableViewMarklist->setTableViewDataSource(this);
+    p_TableViewMarklist->setTableViewDelegate(this);
+    p_TableViewMarklist->setAllowsSelection(true);
+    p_TableViewMarklist->setSeparatorColor(CAColor_gray);
+    p_TableViewMarklist->setSeparatorViewHeight(1);
+    this->getView()->addSubview(p_TableViewMarklist);
+    p_TableViewMarklist->setVisible(false);
     
     this->loadData();
     
 
 }
+
+void FSNewsCatalog::segmentCallback(CASegmentedControl* btn, int index)
+{
+    switch (index)
+    {
+        case 0:
+        {
+            showMarklist(false);
+            break;
+        }
+        case 1:
+        {
+            showMarklist(true);
+            break;
+        }
+
+        default:
+            break;
+    }
+}
+
+void FSNewsCatalog::showMarklist(bool isShow)
+{
+    p_TableViewMarklist->setVisible(isShow);
+    p_TableView->setVisible(!isShow);
+}
+
+
 
 void FSNewsCatalog::viewDidUnload()
 {
@@ -76,16 +147,22 @@ void FSNewsCatalog::viewDidUnload()
 
 void FSNewsCatalog::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
 {
-    
-    ChapterInfo *chapterInfo = (ChapterInfo*)p_AryCatalog->objectAtIndex(row);
-    
-    if (this->loadChapter) {
-        this->loadChapter(chapterInfo);
+    if (table==p_TableView) {
+        ChapterInfo *chapterInfo = (ChapterInfo*)p_AryCatalog->objectAtIndex(row);
+        
+        if (this->loadChapter) {
+            this->loadChapter(chapterInfo);
+        }
+        
+        CANavigationController *nav = FSContext::GetInstance().getMainNavController();
+        nav->popViewControllerAnimated(true);
+    }
+    else
+    {
+        
     }
     
-    CANavigationController *nav = FSContext::GetInstance().getMainNavController();
-//    nav->pushViewController(fsnewscatalog, true);
-    nav->popViewControllerAnimated(true);
+
 }
 
 void FSNewsCatalog::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
@@ -96,7 +173,11 @@ void FSNewsCatalog::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsig
 CATableViewCell* FSNewsCatalog::tableCellAtIndex(CATableView* table, const CCSize& cellSize, unsigned int section, unsigned int row)
 {
     CADipSize _size = cellSize;
-    FSNewsCatalogCell* cell = dynamic_cast<FSNewsCatalogCell*>(table->dequeueReusableCellWithIdentifier("FSNewsCatalogCell"));
+    FSNewsCatalogCell* cell = NULL;
+    
+    if (table==p_TableView)
+    {
+    cell = dynamic_cast<FSNewsCatalogCell*>(table->dequeueReusableCellWithIdentifier("FSNewsCatalogCell"));
     if (cell == NULL)
     {
         cell = FSNewsCatalogCell::create("FSNewsCatalogCell", CADipRect(0, 0, _size.width, _size.height));
@@ -108,21 +189,32 @@ CATableViewCell* FSNewsCatalog::tableCellAtIndex(CATableView* table, const CCSiz
     
     ChapterInfo *curChapterInfo =  FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
     
-    bool bIsSelected = chapterInfo->getChapterID() == curChapterInfo->getChapterID();
+        bool bIsSelected = chapterInfo->getChapterID() == curChapterInfo->getChapterID();
     
-    cell->setSelectedCell(bIsSelected);
-    cell->updateCell(chapterInfo->getChapterTitle());
-    
-    
-//    char order[20] = "";
-//    sprintf(order, "Cell-%d", row);
-//    CALabel* cellText = (CALabel*)cell->getSubviewByTag(100);
-//    cellText->setText(order);
-    
-    
-    
-    
-    
+        cell->setSelectedCell(bIsSelected);
+        cell->updateCell(chapterInfo->getChapterTitle());
+    }
+    else
+    {
+        
+        cell = dynamic_cast<FSNewsCatalogCell*>(table->dequeueReusableCellWithIdentifier("FSNewsCatalogCell"));
+        if (cell == NULL)
+        {
+            cell = FSNewsCatalogCell::create("FSNewsCatalogCell", CADipRect(0, 0, _size.width, _size.height));
+            cell->initWithCell();
+        }
+        
+        BookMarkInfo *bookmarkinfo = (BookMarkInfo*)p_AryMarkInfo->objectAtIndex(row);
+        
+        
+        
+//        ChapterInfo *curChapterInfo =  FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
+        
+//        bool bIsSelected = chapterInfo->getChapterID() == curChapterInfo->getChapterID();
+//        
+//        cell->setSelectedCell(bIsSelected);
+        cell->updateCell(bookmarkinfo->getMarkDigest());
+    }
     return cell;
     
 }
@@ -156,9 +248,18 @@ CATableViewCell* FSNewsCatalog::tableCellAtIndex(CATableView* table, const CCSiz
 unsigned int FSNewsCatalog::numberOfRowsInSection(CATableView *table, unsigned int section)
 {
     int rowCount = 0;
-    if (p_AryCatalog) {
-        rowCount = p_AryCatalog->count();
+    if (table == p_TableView) {
+        if (p_AryCatalog) {
+            rowCount = p_AryCatalog->count();
+        }
     }
+    else
+    {
+        if (p_AryMarkInfo) {
+            rowCount = p_AryMarkInfo->count();
+        }
+    }
+
     return rowCount;
 }
 

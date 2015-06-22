@@ -48,13 +48,21 @@ public:
 //    virtual unsigned int tableViewHeightForHeaderInSection(CATableView* table, unsigned int section);
 //    virtual unsigned int tableViewHeightForFooterInSection(CATableView* table, unsigned int section);
     
-
+public:
+    void segmentCallback(CASegmentedControl* btn, int index);
     
 private:
     CADipSize size;
+    CATableView* p_TableViewMarklist;
+    CASegmentedControl* segment;
     CATableView* p_TableView;
     int m_NewsId;
     CCArray *p_AryCatalog;
+    CCArray *p_AryMarkInfo;
+    
+    
+private:
+    void showMarklist(bool isShow);
     
 public:
     FSCAObject loadChapter;
