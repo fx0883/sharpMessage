@@ -157,9 +157,32 @@ void FSNewsCatalog::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigne
         CANavigationController *nav = FSContext::GetInstance().getMainNavController();
         nav->popViewControllerAnimated(true);
     }
-    else
+    else if(table==p_TableViewMarklist)
     {
         
+        BookMarkInfo *bookmarkinfo = (BookMarkInfo*)p_AryMarkInfo->objectAtIndex(row);
+        const int chapterId = bookmarkinfo->getChapterID();
+        ChapterInfo *chapterInfo = NULL;
+        for (int i=0; i<p_AryCatalog->count(); i++) {
+            
+            chapterInfo = (ChapterInfo*)p_AryCatalog->objectAtIndex(i);
+            
+            if (chapterId == chapterInfo->getChapterID()) {
+                break;
+            }
+        }
+        
+        double dProgress = atof(bookmarkinfo->getMarkProgress().c_str());
+        
+        if (this->loadChapter && this->gotoChapterProgress) {
+            this->loadChapter(chapterInfo);
+            this->gotoChapterProgress(dProgress);
+            CANavigationController *nav = FSContext::GetInstance().getMainNavController();
+            nav->popViewControllerAnimated(true);
+        }
+//
+//        CANavigationController *nav = FSContext::GetInstance().getMainNavController();
+//        nav->popViewControllerAnimated(true);
     }
     
 

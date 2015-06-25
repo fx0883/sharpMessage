@@ -29,6 +29,25 @@ double Round(double dVal, short iPlaces) {
     return(dRetval);
 };
 
+
+int multiple(short iPlaces)
+{
+    int sum = 1;
+    for (int i=1; i<=iPlaces; i++) {
+        sum = sum*10;
+    }
+    return sum;
+};
+
+double roundEx(double dVal, short iPlaces) {
+    double retDouble = Round(dVal,iPlaces);
+    int sum = multiple(iPlaces);
+    int retInt = (int)sum*retDouble;
+    retDouble = (double)retInt/sum;
+    return retDouble;
+};
+
+
 //double round(double dVal, short iPlaces) //iPlaces>=0
 //{
 //    unsigned char s[20];

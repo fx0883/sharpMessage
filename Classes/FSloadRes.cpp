@@ -145,7 +145,7 @@ void FSloadRes::loadData()
         }
         
         
-        const char *sql_createBookmarksTable = "CREATE TABLE IF NOT EXISTS bookmarklist(bookmarkID INTEGER PRIMARY KEY,newsID INTEGER,chapterID INTEGER,markDigest VARCHAR(256), markProgress float);";
+        const char *sql_createBookmarksTable = "CREATE TABLE IF NOT EXISTS bookmarklist(bookmarkID INTEGER PRIMARY KEY,newsID INTEGER,chapterID INTEGER,markDigest VARCHAR(256), markProgress VARCHAR(256));";
         stmt=NULL;
         ok=sqlite3_prepare_v2(_sqlite3, sql_createBookmarksTable, -1, &stmt, NULL);
         ok |= sqlite3_step(stmt);

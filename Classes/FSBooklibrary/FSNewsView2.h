@@ -82,6 +82,7 @@ private:
     void showReadSettingView();
     void changeReadSetting();
     void onClickBookMark(CAControl* btn, CCPoint point);
+    void gotoChapterProgress(float progress);
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();
@@ -90,6 +91,7 @@ public:
     static void staticShowChangeSlider();
     static void staticShowReadSettingView();
     static void staticChangeReadSetting();
+    static void staticgotoChapterProgress(float progress);
 };
 
 

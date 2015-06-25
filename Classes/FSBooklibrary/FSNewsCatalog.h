@@ -66,6 +66,7 @@ private:
     
 public:
     FSCAObject loadChapter;
+    FSFloat gotoChapterProgress;
 };
 
 

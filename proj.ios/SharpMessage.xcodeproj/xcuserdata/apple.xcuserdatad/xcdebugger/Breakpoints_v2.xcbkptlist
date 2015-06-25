@@ -25,14 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/FSBooklibrary/FSNewsView2.cpp"
-            timestampString = "456300840.444045"
+            filePath = "../classes/Common/FSUtil.h"
+            timestampString = "456832457.603516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "FSNewsView2::loadCatalog(CAObject *chapterInfo)"
-            landmarkType = "5">
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "roundEx(double dVal, short iPlaces)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,14 +41,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/model/FSNewsManager.cpp"
-            timestampString = "456302051.454266"
+            filePath = "../classes/Common/FSUtil.h"
+            timestampString = "456832458.153767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
-            landmarkName = "FSNewsManager::loadBookMarkInfo(int newsID)"
-            landmarkType = "5">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "roundEx(double dVal, short iPlaces)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../classes/Common/FSUtil.h"
+            timestampString = "456832458.772276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "roundEx(double dVal, short iPlaces)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

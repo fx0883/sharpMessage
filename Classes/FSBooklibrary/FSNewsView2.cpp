@@ -12,6 +12,8 @@
 #include "FSDataManager.h"
 #include "BookMarkInfo.h"
 
+#include "FSUtil.h"
+
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
@@ -43,7 +45,8 @@ void FSNewsView2::openCatalog()
     int curNewsId = this->getChapterInfo()->getNewsID();
     FSNewsCatalog *fsnewscatalog = new FSNewsCatalog(curNewsId);
     
-    fsnewscatalog->loadChapter =   &FSNewsView2::staticLoadChapter;;
+    fsnewscatalog->loadChapter =   &FSNewsView2::staticLoadChapter;
+    fsnewscatalog->gotoChapterProgress = &FSNewsView2::staticgotoChapterProgress;
     
     CANavigationController *nav = FSContext::GetInstance().getMainNavController();
     nav->pushViewController(fsnewscatalog, true);
@@ -113,6 +116,25 @@ void FSNewsView2::staticShowReadSettingView()
 void FSNewsView2::showReadSettingView()
 {
     m_FSReadSettingView->setVisible(true);
+}
+
+void FSNewsView2::staticgotoChapterProgress(float progress)
+{
+    curFSNewsView2->gotoChapterProgress(progress);
+}
+
+
+void FSNewsView2::gotoChapterProgress(float progress)
+{
+    int pageCount = (int)m_aryContent.size();
+    
+    int curPage = (int)(pageCount*progress +0.5);
+    
+    curPage--;
+    if (curPage>=0) {
+        this->listView->setCurrPage(curPage, false);
+    }
+    
 }
 
 
@@ -615,13 +637,20 @@ void FSNewsView2::onClickBookMark(CAControl* btn, CCPoint point)
     
     bookmarkinfo->setMarkDigest(curFSNewsView2->getDigestForMark());
     
-    double contentSize = (double)m_aryContent.size();
+    double contentSize = (double)curFSNewsView2->m_aryContent.size();
     double curPageDouble = (double)(curPage+1);
     
     
     double chapterPrecent = curPageDouble/contentSize;
+    
+    
+    chapterPrecent = roundEx(chapterPrecent, 4);
 //        double chapterPrecent = 1;
-    bookmarkinfo->setMarkProgress(chapterPrecent);
+    
+    char chrChapterPrecent[50] = "";
+    sprintf(chrChapterPrecent,"%.4lf",chapterPrecent);
+
+    bookmarkinfo->setMarkProgress(chrChapterPrecent);
     
     bool flag = FSDataManager::GetInstance().getNewsManager()->addBookMarkInfo(bookmarkinfo);
     

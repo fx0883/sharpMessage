@@ -232,8 +232,8 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
         int chapterID= atoi(re[i*c+2]);
         
         
-        float markProgress = atof(re[i*c+3]);
-        bookmarkinfo->setMarkProgress(markProgress);
+        //float markProgress = atof(re[i*c+3]);
+        bookmarkinfo->setMarkProgress(re[i*c+3]);
         bookmarkinfo->setNewsID(newsID);
         bookmarkinfo->setChapterID(chapterID);
         bookmarkinfo->setBookMarkID(bookmarkID);
@@ -277,7 +277,7 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     
     int ok = sqlite3_bind_int(_sqlite_stmt_insertbookmark, 1, bookmarkinfo->getNewsID());
     ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 2, bookmarkinfo->getChapterID());
-    ok |= sqlite3_bind_double(_sqlite_stmt_insertbookmark, 3, bookmarkinfo->getMarkProgress());
+    ok |= sqlite3_bind_text(_sqlite_stmt_insertbookmark, 3, bookmarkinfo->getMarkProgress().c_str(), -1, SQLITE_TRANSIENT);
     ok |= sqlite3_bind_text(_sqlite_stmt_insertbookmark, 4,bookmarkinfo->getMarkDigest().c_str(), -1, SQLITE_TRANSIENT);
     
     ok |= sqlite3_step(_sqlite_stmt_insertbookmark);
