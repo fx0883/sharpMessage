@@ -27,10 +27,11 @@ FSNewsView2::FSNewsView2()
 : m_CurCell(NULL)
 ,m_FSPageSliderView(NULL)
 ,m_chapterInfo(NULL)
+,s(true)
 
 {
-    m_PagingRule.lineNumber = 16;
-    m_PagingRule.lineTextNumber = 13;
+    m_PagingRule.lineNumber = 26;
+    m_PagingRule.lineTextNumber = 24;
     curFSNewsView2 = this;
 
 }
@@ -172,7 +173,7 @@ void FSNewsView2::calcPagingRule()
     
     float screenWidth =  CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width;
     
-    screenWidth = screenWidth - NEWSCELLTOPHEIGHT*2;
+//    screenWidth = screenWidth - NEWSCELLTOPHEIGHT*2;
 
     
     float curFontSize = CrossApp::CCEGLView::sharedOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 32;
@@ -183,7 +184,7 @@ void FSNewsView2::calcPagingRule()
     
     
     int fontWidthItem = calcLabel->getFontCNUTF8Width();
-    m_PagingRule.lineTextNumber = screenWidth/fontWidthItem;
+    m_PagingRule.lineTextNumber = screenWidth/fontWidthItem -1;
     
     
     float preciseLineNumber = screenHeight/lineFontHeihtItem;
@@ -331,24 +332,33 @@ void FSNewsView2::addBottomView()
 
 void FSNewsView2::listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index)
 {
-    static bool s = true;
+    listView->setUnSelectAtIndex(index);
+    CCLOG("11111111111111111111111111111111listViewDidSelectCellAtIndexlistViewDidSelectCellAtIndexlistViewDidSelectCellAtIndex %d",11);
 
     CAWindow* window = CAApplication::getApplication()->getRootWindow();
     CANavigationController *nav = (CANavigationController*)window->getRootViewController();
     nav->setNavigationBarHidden(!s, false);
-
-    this->bottomAnimation(s);
-
-
+    
+    //    this->bottomAnimation(s);
+    
+    bottomViewRefresh(s);
     m_FSPageSliderView->setVisible(false);
     m_FSReadSettingView->setVisible(false);
     s = !s;
     return;
+
 }
 
 void FSNewsView2::listViewDidDeselectCellAtIndex(CAListView *listView, unsigned int index)
 {
-    
+//    CAWindow* window = CAApplication::getApplication()->getRootWindow();
+//    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+//    nav->setNavigationBarHidden(!s, false);
+//    bottomViewRefresh(s);
+//    m_FSPageSliderView->setVisible(false);
+//    m_FSReadSettingView->setVisible(false);
+//    s = !s;
+//    return;
 }
 
 unsigned int FSNewsView2::numberOfIndex(CAListView *listView)
@@ -385,17 +395,17 @@ CAListViewCell* FSNewsView2::listViewCellAtIndex(CAListView *listView, const CCS
     
     m_FSPageSliderView->setSliderCurPage(index);
     
+    
     return cell;
 }
 
 void FSNewsView2::reshapeViewRectDidFinish()
 {
     listView->setFrame(this->getView()->getBounds());
-//    if(m_CurCell)
-//        m_CurCell->updateWithCell();
+
     this->listView->reloadData();
     
-//    this->bottomAnimation(true);
+
 }
 
 string FSNewsView2::getDigestForMark()

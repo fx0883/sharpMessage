@@ -105,6 +105,9 @@ public:
     
     
     void saveProgress(float dt);
+    
+private:
+    bool s;
 };
 
 

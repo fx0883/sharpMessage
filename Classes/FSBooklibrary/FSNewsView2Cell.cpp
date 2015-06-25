@@ -39,13 +39,13 @@ void FSNewsView2Cell::initWithCell()
     this->addSubview(bgImageView);
     
     
-    CALabel* test = CALabel::createWithFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, _size.width-NEWSCELLSPACEWIDTH*2, _size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
+    CALabel* test = CALabel::createWithFrame(CADipRectMake(0, 0+NEWSCELLTOPHEIGHT, _size.width-NEWSCELLSPACEWIDTH+NEWSCELLSPACEWIDTH, _size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
 	test->setTextAlignment(CATextAlignmentLeft);
 	test->setTag(100);
 	this->addSubview(test);
     
 
-    CALabel* bottomLabel = CALabel::createWithFrame(CADipRectMake(0, _size.height-NEWSCELLTOPHEIGHT-NEWSCELLBOTTOMHEIGHT, _size.width-NEWSCELLSPACEWIDTH*5, NEWSCELLBOTTOMHEIGHT));
+    CALabel* bottomLabel = CALabel::createWithFrame(CADipRectMake(0, _size.height-NEWSCELLTOPHEIGHT-NEWSCELLBOTTOMHEIGHT, _size.width-NEWSCELLSPACEWIDTH*4, NEWSCELLBOTTOMHEIGHT));
     bottomLabel->setTag(101);
     this->addSubview(bottomLabel);
 
@@ -65,7 +65,7 @@ void FSNewsView2Cell::updateWithCell()
 //    else
     {
         //cellText->setFrame(CCRect(0, 0, size.width, size.height));
-        cellText->setFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, size.width-NEWSCELLSPACEWIDTH*2, size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
+        cellText->setFrame(CADipRectMake(0+NEWSCELLSPACEWIDTH, 0+NEWSCELLTOPHEIGHT, size.width-NEWSCELLSPACEWIDTH*1.5, size.height-NEWSCELLBOTTOMHEIGHT-NEWSCELLTOPHEIGHT));
     }
     cellText->setTag(100);
     
@@ -176,20 +176,20 @@ void FSNewsView2Cell::cellBtnCallback(CAControl* btn, CCPoint point)
 
 void FSNewsView2Cell::normalListViewCell()
 {
-	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/cell_bkg4.png")));
+//	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/cell_bkg4.png")));
 }
 
 void FSNewsView2Cell::highlightedListViewCell()
 {
-	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/btn_rounded3D_normal.png")));
+//	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/btn_rounded3D_normal.png")));
 }
 
 void FSNewsView2Cell::selectedListViewCell()
 {
-	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/ex4.png")));
+	//this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/ex4.png")));
 }
 
 void FSNewsView2Cell::disabledListViewCell()
 {
-	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/ex5.png")));
+//	this->setBackgroundView(CAScale9ImageView::createWithImage(CAImage::create("source_material/ex5.png")));
 }
