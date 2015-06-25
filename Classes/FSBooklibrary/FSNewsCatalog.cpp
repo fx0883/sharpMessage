@@ -15,17 +15,22 @@
 
 #define CAColor_blueStyle ccc4(51,204,255,255)
 
+
+//静态数据成员的定义和初始化
+FSNewsCatalog* FSNewsCatalog::curFSNewsCatalog = NULL;
+
 FSNewsCatalog::FSNewsCatalog()
 :loadChapter(NULL),
 p_AryMarkInfo(NULL),
 p_AryCatalog(NULL)
 {
-
+    curFSNewsCatalog = this;
 }
 
 FSNewsCatalog::FSNewsCatalog(int newsId)
 {
     m_NewsId = newsId;
+    curFSNewsCatalog = this;
 }
 
 FSNewsCatalog::~FSNewsCatalog()
@@ -34,13 +39,21 @@ FSNewsCatalog::~FSNewsCatalog()
 }
 
 
-void FSNewsCatalog::refreshView()
+void FSNewsCatalog::refreshView(bool isCatalog)
 {
     
     CANavigationBarItem *navbaritem = CANavigationBarItem::create(FSDataManager::GetInstance().getNewsManager()->getNewsInfoByNewsId(m_NewsId)->getNewsTitle());
+    if (!isCatalog) {
+        rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
         
+        rightButton->setTarget(rightButton, CAControl_selector(FSNewsCatalog::onClickBookMarkClean));
+        navbaritem->addRightButtonItem(rightButton);
+    }
     
     this->setNavigationBarItem(navbaritem);
+    
+
+
 }
 
 
@@ -56,7 +69,7 @@ void FSNewsCatalog::loadData()
 
 void FSNewsCatalog::viewDidLoad()
 {
-    this->refreshView();
+    this->refreshView(true);
     size = this->getView()->getBounds().size;
     
 
@@ -136,6 +149,45 @@ void FSNewsCatalog::showMarklist(bool isShow)
 {
     p_TableViewMarklist->setVisible(isShow);
     p_TableView->setVisible(!isShow);
+    
+//    if (rightButton) {
+////        rightButton->setVisible(!isShow);
+//    }
+    this->refreshView(!isShow);
+}
+
+
+
+
+void FSNewsCatalog::onClickBookMarkClean(CAControl* btn, CCPoint point)
+{
+    
+    CAAlertView* alertView = CAAlertView::createWithText("提示", "删除所有标签!", "确定","取消",NULL);
+    alertView->show();
+    alertView->setTarget(this, CAAlertView_selector(FSNewsCatalog::alertClickBookMarkCleanCallBack));
+    
+    
+
+    
+}
+
+void FSNewsCatalog::alertClickBookMarkCleanCallBack(int btnIndex)
+{
+    if (btnIndex==0) {
+        //清除所有标签
+        ChapterInfo *chapterInfo = FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
+        
+        bool isOK=FSDataManager::GetInstance().getNewsManager()->removeBookMarkForNewsId(chapterInfo->getNewsID());
+        if (isOK) {
+            
+            curFSNewsCatalog->loadData();
+            
+            
+            curFSNewsCatalog->p_TableViewMarklist->reloadData();
+            
+        }
+    }
+
 }
 
 

@@ -33,8 +33,16 @@ class FSNewsView2 :public BaseViewController,CAListViewDelegate,CAListViewDataSo
 public:
     FSNewsView2();
     virtual ~FSNewsView2();
+    
+
+protected:
+    ChapterInfo* m_chapterInfo;
+    
 public:
-    CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, m_chapterInfo, ChapterInfo)
+    ChapterInfo*& getChapterInfo();
+    void setChapterInfo(ChapterInfo*& chapterinfo);
+    
+    //CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, m_chapterInfo, ChapterInfo)
     CC_SYNTHESIZE_PASS_BY_REF(int,m_lineNumber,LinNumber)
      CC_SYNTHESIZE_PASS_BY_REF(float,m_chapterPrecent,ChapterPrecent)
     CC_SYNTHESIZE_PASS_BY_REF(string,m_curContent,CurContent)
@@ -46,6 +54,7 @@ public:
     virtual CAListViewCell* listViewCellAtIndex(CAListView *listView, const CCSize& cellSize, unsigned int index);
     
 protected:
+    
     void viewDidLoad();
     void viewDidUnload();
     void viewDidAppear();
@@ -74,6 +83,8 @@ private:
 public:
     string getDigestForMark();
     
+public:
+    void gotoChapterProgress(float progress);
 private:
     void openCatalog();
     void loadCatalog(CAObject *chapterInfo);
@@ -82,7 +93,6 @@ private:
     void showReadSettingView();
     void changeReadSetting();
     void onClickBookMark(CAControl* btn, CCPoint point);
-    void gotoChapterProgress(float progress);
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();
@@ -92,6 +102,9 @@ public:
     static void staticShowReadSettingView();
     static void staticChangeReadSetting();
     static void staticgotoChapterProgress(float progress);
+    
+    
+    void saveProgress(float dt);
 };
 
 

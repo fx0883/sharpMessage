@@ -96,6 +96,10 @@ void FSBooklibrary::collectionViewDidSelectCellAtIndexPath(CACollectionView *col
     CAWindow* window = CAApplication::getApplication()->getRootWindow();
     CANavigationController *nav = (CANavigationController*)window->getRootViewController();
     nav->pushViewController(fsnewsview2, true);
+
+
+    float fprogress = FSDataManager::GetInstance().getNewsManager()->getPageProgress(chapterInfo->getChapterID());
+    fsnewsview2->gotoChapterProgress(fprogress);
     
 //    this->presentModalViewController(fsnewsview2, true);
     

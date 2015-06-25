@@ -30,9 +30,12 @@ public:
     CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicChapterInfo, DicChapterInfo);
     CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicBookMarkInfo, DicBookMarkInfo);
 public:
+    bool removeBookMarkForNewsId(int newsID);
     int getCurChapterID(int newsID);
     void setCurChapterID(int newsID,int chapterID);
     CCArray* getChapterInfoAry(int newsID);
+    float getPageProgress(int chapterID);
+    void setPageProgress(int chapterID,string progress);
 public:
     void loadNewsList();
     void loadCurChapterInfo(int newsID,int chapterNubmer);
@@ -42,6 +45,8 @@ public:
     CCArray* loadBookMarkInfo(int newsID);
     bool addBookMarkInfo(BookMarkInfo*& bookmarkinfo);
     bool insertbookmarkToDB(BookMarkInfo*& bookmarkinfo);
+    
+    bool deleteBookmarkInDB(int newsID);
     
 public:
     NewsInfo* getNewsInfoByNewsId(int newsId);

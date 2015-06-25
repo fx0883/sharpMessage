@@ -54,6 +54,20 @@ void FSNewsView2::openCatalog()
 
 }
 
+ChapterInfo*& FSNewsView2::getChapterInfo()
+{
+    return m_chapterInfo;
+}
+void FSNewsView2::setChapterInfo(ChapterInfo*& chapterinfo)
+{
+    
+    m_chapterInfo = chapterinfo;
+    FSDataManager::GetInstance().getNewsManager()->setCurChapterID(chapterinfo->getNewsID(), chapterinfo->getChapterID());
+    
+}
+
+
+
 //static void staticLoadChapter(CAObject *chapterInfo);
 
 void FSNewsView2::staticLoadChapter(CAObject *chapterInfo)
@@ -239,8 +253,35 @@ void FSNewsView2::viewDidLoad()
     nav->setNavigationBarHidden(true, false);
     this->refreshView();
     
+    
+    
+    CAScheduler::schedule(schedule_selector(FSNewsView2::saveProgress),this,3,kCCRepeatForever,1,false);
+    
 }
 
+void FSNewsView2::viewDidUnload()
+{
+    CAScheduler::unschedule(schedule_selector(FSNewsView2::saveProgress), this);
+}
+
+
+
+void FSNewsView2::saveProgress(float dt)
+{
+    ChapterInfo *curChapterInfo =  FSDataManager::GetInstance().getNewsManager()->getCurChapterInfo();
+    int curPage =    curFSNewsView2->listView->getCurrPage();
+    
+    double contentSize = (double)curFSNewsView2->m_aryContent.size();
+    double curPageDouble = (double)(curPage+1);
+    
+    double chapterPrecent = curPageDouble/contentSize;
+    
+    chapterPrecent = roundEx(chapterPrecent, 4);
+    
+    char chrChapterPrecent[50] = "";
+    sprintf(chrChapterPrecent,"%.4lf",chapterPrecent);
+    FSDataManager::GetInstance().getNewsManager()->setPageProgress(curChapterInfo->getChapterID(), chrChapterPrecent);
+}
 
 void FSNewsView2::addBottomView()
 {
@@ -286,10 +327,7 @@ void FSNewsView2::addBottomView()
     
 }
 
-void FSNewsView2::viewDidUnload()
-{
-    
-}
+
 
 void FSNewsView2::listViewDidSelectCellAtIndex(CAListView *listView, unsigned int index)
 {
@@ -552,12 +590,7 @@ void FSNewsView2::bottomAnimation(bool bIsShow)
 //    CAViewAnimation::setAnimationRepeatCount(1.5);
     
     CAViewAnimation::setAnimationRepeatAutoreverses(true);
-    //    //动画开始前回调(两参数)
-    //    CAViewAnimation::setAnimationWillStartSelector(this, CAViewAnimation2_selector(FourthViewController::willStartAction));
-    //    //动画完成回调(两参数)
-    //    CAViewAnimation::setAnimationDidStopSelector(this, CAViewAnimation2_selector(FourthViewController::didStopAction));
-    
-    //    this->refreshView(true);
+
     bottomViewRefresh(bIsShow);
     //执行动画
     CAViewAnimation::commitAnimations();
@@ -590,12 +623,7 @@ void FSNewsView2::bottomViewRefresh(bool bIsShow)
 
 void FSNewsView2::viewDidAppear()
 {
-//        if(!m_NavBarItem)
-//        {
-//            m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
-//        }
-//    this->setNavigationBarItem(m_NavBarItem);
-//    this->refreshView();
+
 }
 
 void FSNewsView2::refreshView()

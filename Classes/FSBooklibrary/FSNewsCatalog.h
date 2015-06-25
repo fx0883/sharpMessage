@@ -32,9 +32,11 @@ protected:
     
 //    void viewDidAppear();
     
-private:
+public:
     void loadData();
-    void refreshView();
+private:
+    
+    void refreshView(bool isCatalog);
 public:
     virtual void tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row);
     virtual void tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row);
@@ -50,23 +52,29 @@ public:
     
 public:
     void segmentCallback(CASegmentedControl* btn, int index);
+    void alertClickBookMarkCleanCallBack(int btnIndex);
     
 private:
     CADipSize size;
-    CATableView* p_TableViewMarklist;
+//    CATableView* p_TableViewMarklist;
     CASegmentedControl* segment;
     CATableView* p_TableView;
     int m_NewsId;
     CCArray *p_AryCatalog;
     CCArray *p_AryMarkInfo;
     
-    
+    static FSNewsCatalog* curFSNewsCatalog;
 private:
     void showMarklist(bool isShow);
     
+    CABarButtonItem* rightButton;
+    
 public:
+    CATableView* p_TableViewMarklist;
     FSCAObject loadChapter;
     FSFloat gotoChapterProgress;
+public:
+    void onClickBookMarkClean(CAControl* btn, CCPoint point);
 };
 
 

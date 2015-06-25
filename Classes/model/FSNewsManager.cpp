@@ -52,7 +52,20 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 //    CC_SAFE_RELEASE(curChapterInfo);
 //    CC_SAFE_RETAIN(curChapterInfo);
 
-    ChapterInfo* chapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(chapterNubmer);
+    ChapterInfo* chapterInfo = NULL;
+    for (int i=0; i<aryChapterInfo->count(); i++) {
+        chapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(i);
+        if (chapterInfo->getChapterID() == chapterNubmer) {
+            break;
+        }
+    }
+    
+    if (chapterInfo==NULL) {
+        chapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(chapterNubmer);
+    }
+
+    
+    
     this->setCurChapterInfo(chapterInfo);
 //    curChapterInfo->retain();
     
@@ -119,16 +132,6 @@ void FSNewsManager::loadChapterDic(int newsID)
         chapterinfo->setChapterContent(re[i*c+4]);
         chapterinfo->setHref(re[i*c+5]);
         
-        
-//        newsInfo->setNewsID(newsId);
-//        newsInfo->setNewsTitle(re[i*c+1]);
-//        newsInfo->setImageSrc(re[i*c+2]);
-//        newsInfo->setAuthor(re[i*c+3]);
-//        
-//        int status = atoi(re[i*c+3]);
-//        newsInfo->setStatus(status);
-//        
-//        arynewsList.addObject(newsInfo);
         
         aryChapterInfo->addObject(chapterinfo);
     }
@@ -256,7 +259,36 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
 
 
 
+bool FSNewsManager::deleteBookmarkInDB(int newsID)
+{
+    int ret = 0;
+    
+    ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
+    
+    sqlite3_stmt *_sqlite_stmt_deletebookmark;
+    // INSERT
+    
+    //    bookmarkID,newsID,chapterID,markProgress
+    const char *sql_delete = "delete from bookmarklist where newsID = ?;";
+    ret |= sqlite3_prepare_v2(_sqlite3, sql_delete, -1, &_sqlite_stmt_deletebookmark, NULL);
+    
+    CCLog("debug 2===========>");
+    
+    int ok = sqlite3_bind_int(_sqlite_stmt_deletebookmark, 1,newsID);
 
+    
+    ok |= sqlite3_step(_sqlite_stmt_deletebookmark);
+    ok |= sqlite3_reset(_sqlite_stmt_deletebookmark);
+    
+    if( ok != SQLITE_OK && ok != SQLITE_DONE)
+    {
+        printf("Error in Newlist._saved()\n");
+        return false;
+    }
+    
+    return true;
+
+}
 
 
 
@@ -284,8 +316,37 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     ok |= sqlite3_reset(_sqlite_stmt_insertbookmark);
     
     if( ok != SQLITE_OK && ok != SQLITE_DONE)
+    {
         printf("Error in Newlist._saved()\n");
+        return false;
+    }
+    
+    return true;
 }
+
+bool FSNewsManager::removeBookMarkForNewsId(int newsID)
+{
+    char strNewsID[50];
+    sprintf(strNewsID, "%d", newsID);
+    CAObject *obj = dicBookMarkInfo.objectForKey(strNewsID);
+    if (obj) {
+        
+        CCArray *ary = (CCArray*)obj;
+        ary->removeAllObjects();
+        dicBookMarkInfo.removeObjectForKey(strNewsID);
+        
+        //删除数据库
+        
+        return deleteBookmarkInDB(newsID);
+    }
+    return true;
+}
+
+
+
+
+
+
 bool FSNewsManager::addBookMarkInfo(BookMarkInfo*& bookmarkinfo)
 {
     bool bret = false;
@@ -335,6 +396,27 @@ void FSNewsManager::setCurChapterID(int newsID,int chapterID)
     
     CAUserDefault::sharedUserDefault()->setIntegerForKey(strNewsID,chapterID);
 
+}
+
+
+void FSNewsManager::setPageProgress(int chapterID,string progress)
+{
+    char strChapterID[50];
+    sprintf(strChapterID, "%d", chapterID);
+    
+    CAUserDefault::sharedUserDefault()->setStringForKey(strChapterID, progress);
+}
+
+float FSNewsManager::getPageProgress(int chapterID)
+{
+    char strChapterID[50];
+    sprintf(strChapterID, "%d", chapterID);
+    string strProgress = CAUserDefault::sharedUserDefault()->getStringForKey(strChapterID);
+    float progress = 0;
+    if (strProgress.length()>0) {
+        progress = atof(strProgress.c_str());
+    }
+    return progress;
 }
 
 
