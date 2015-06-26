@@ -265,11 +265,14 @@ bool FSNewsManager::deleteBookmarkInDB(int newsID)
     
     ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
     
+    
+
+    
     sqlite3_stmt *_sqlite_stmt_deletebookmark;
     // INSERT
     
     //    bookmarkID,newsID,chapterID,markProgress
-    const char *sql_delete = "delete from bookmarklist where newsID = ?;";
+    const char *sql_delete = "delete from bookmarklist where newsID = ?";
     ret |= sqlite3_prepare_v2(_sqlite3, sql_delete, -1, &_sqlite_stmt_deletebookmark, NULL);
     
     CCLog("debug 2===========>");
@@ -282,14 +285,36 @@ bool FSNewsManager::deleteBookmarkInDB(int newsID)
     
     if( ok != SQLITE_OK && ok != SQLITE_DONE)
     {
+        ok |= sqlite3_finalize(_sqlite_stmt_deletebookmark);
+        sqlite3_close(_sqlite3);
         printf("Error in Newlist._saved()\n");
         return false;
     }
+    ok |= sqlite3_finalize(_sqlite_stmt_deletebookmark);
+    sqlite3_close(_sqlite3);
     
     return true;
 
 }
 
+
+SqliteCursor *FSNewsManager::SqliteQurey( sqlite3 *pSql , std::string sql )
+{
+    char *errMsg = NULL;
+    SqliteCursor *pCursor = new SqliteCursor();
+    int result = sqlite3_exec( pSql, sql.c_str() , QueryResult, pCursor , &errMsg );
+    if ( result != SQLITE_OK && errMsg != NULL )
+    {
+        delete pCursor;
+        return NULL;
+    }
+    if ( pCursor->GetRowCount() == 0 )
+    {
+        delete pCursor;
+        return NULL;
+    }
+    return pCursor;
+}
 
 
 bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
@@ -317,10 +342,13 @@ bool FSNewsManager::insertbookmarkToDB(BookMarkInfo*& bookmarkinfo)
     
     if( ok != SQLITE_OK && ok != SQLITE_DONE)
     {
+        ok |= sqlite3_finalize(_sqlite_stmt_insertbookmark);
+        sqlite3_close(_sqlite3);
         printf("Error in Newlist._saved()\n");
         return false;
     }
-    
+    ok |= sqlite3_finalize(_sqlite_stmt_insertbookmark);
+    sqlite3_close(_sqlite3);
     return true;
 }
 
@@ -331,13 +359,18 @@ bool FSNewsManager::removeBookMarkForNewsId(int newsID)
     CAObject *obj = dicBookMarkInfo.objectForKey(strNewsID);
     if (obj) {
         
-        CCArray *ary = (CCArray*)obj;
-        ary->removeAllObjects();
-        dicBookMarkInfo.removeObjectForKey(strNewsID);
+        if(deleteBookmarkInDB(newsID))
+        {
+            CCArray *ary = (CCArray*)obj;
+            ary->removeAllObjects();
+            dicBookMarkInfo.removeObjectForKey(strNewsID);
+        }
         
-        //删除数据库
+        else
+        {
+            return false;
+        }
         
-        return deleteBookmarkInDB(newsID);
     }
     return true;
 }

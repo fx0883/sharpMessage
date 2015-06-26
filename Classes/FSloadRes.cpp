@@ -63,43 +63,8 @@ void FSloadRes::loadLanguagePath()
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPath);
 }
 
-//DMDownloadInfoManager::DMDownloadInfoManager()
-//{
-//    int ret = 0;
-//    
-//    std::string fullPath = CCFileUtils::sharedFileUtils()->getWritablePath() + "brief.db";
-//    
-//    ret = sqlite3_open(fullPath.c_str(), &_sqlite3);
-//    
-//    
-//    const char *sql_createtable = "CREATE TABLE IF NOT EXISTS downloadInfo(bookID VARCHAR(64) PRIMARY KEY, bookTitle VARCHAR(256), imageUrl VARCHAR(256), alreadyCache VARCHAR(128), notCache VARCHAR(128), sizeExplain VARCHAR(128));";
-//    sqlite3_stmt *stmt;
-//    int ok=sqlite3_prepare_v2(_sqlite3, sql_createtable, -1, &stmt, NULL);
-//    ok |= sqlite3_step(stmt);
-//    ok |= sqlite3_finalize(stmt);
-//    
-//    if( ok != SQLITE_OK && ok != SQLITE_DONE)
-//    {
-//        CCLog("Error in CREATE downloadInfo\n");
-//    }
-//    
-//    
-//    // INSERT
-//    const char *sql_insert = "INSERT INTO downloadInfo (bookID, bookTitle, imageUrl, alreadyCache, notCache, sizeExplain) VALUES (?,?,?,?,?,?);";
-//    ret |= sqlite3_prepare_v2(_sqlite3, sql_insert, -1, &_sqlite_stmt_insert, NULL);
-//    
-//    // DELETE
-//    const char *sql_remove = "DELETE FROM downloadInfo WHERE bookID=?;";
-//    ret |= sqlite3_prepare_v2(_sqlite3, sql_remove, -1, &_sqlite_stmt_remove, NULL);
-//    
-//    // SELECT
-//    const char *sql_select = "SELECT bookTitle, imageUrl, alreadyCache, notCache, sizeExplain FROM downloadInfo WHERE bookID=?;";
-//    ret |= sqlite3_prepare_v2(_sqlite3, sql_select, -1, &_sqlite_stmt_select, NULL);
-//    
-//    // UPDATE
-//    const char *sql_update = "UPDATE downloadInfo set alreadyCache=?, notCache=?, sizeExplain=? where bookID=?;";
-//    ret |= sqlite3_prepare_v2(_sqlite3, sql_update, -1, &_sqlite_stmt_update, NULL);
-//}
+
+
 
 
 
@@ -112,15 +77,10 @@ void FSloadRes::loadData()
  
         int ret = 0;
         
-        //std::string fullPath = CCFileUtils::sharedFileUtils()->getWritablePath() + getDBName();
-        
-        
-        //CCLog("fullPath = %s",);
-        
-    //    ret = sqlite3_open(fullPath.c_str(), &_sqlite3);
+
         ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
         
-        CCLog("sqlite3_open 1===========>");
+
         
         const char *sql_createNewslistTable = "CREATE TABLE IF NOT EXISTS newslist(newsID INTEGER PRIMARY KEY, newsTitle VARCHAR(256), imageSrc VARCHAR(256), author VARCHAR(128), status INTEGER);";
         sqlite3_stmt *stmt;
@@ -208,10 +168,14 @@ void FSloadRes::loadData()
             }
             
         }
+        ok |= sqlite3_finalize(_sqlite_stmt_insertnews);
+        ok |= sqlite3_finalize(_sqlite_stmt_insertchapter);
+        sqlite3_close(_sqlite3);
         CCLog("debug 6===========>");
         
     }
     CAUserDefault::sharedUserDefault()->setBoolForKey("bIsFirst", false);
+
 }
 
 
