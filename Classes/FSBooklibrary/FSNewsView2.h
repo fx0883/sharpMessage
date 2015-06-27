@@ -28,7 +28,7 @@ struct PagingRule
     int lineTextNumber;
 };
 
-class FSNewsView2 :public BaseViewController,CAListViewDelegate,CAListViewDataSource
+class FSNewsView2 :public BaseViewController,CAListViewDelegate,CAListViewDataSource,CAScrollViewDelegate
 {
 public:
     FSNewsView2();
@@ -52,6 +52,10 @@ public:
     virtual unsigned int numberOfIndex(CAListView *listView);
     virtual unsigned int listViewHeightForIndex(CAListView *listView, unsigned int index);
     virtual CAListViewCell* listViewCellAtIndex(CAListView *listView, const CCSize& cellSize, unsigned int index);
+    
+    
+    virtual void scrollViewHeaderBeginRefreshing(CAScrollView* view);
+    virtual void scrollViewFooterBeginRefreshing(CAScrollView* view);
     
 protected:
     
@@ -80,6 +84,9 @@ private:
     
     vector<std::string> m_aryContent;
     
+    CAPullToRefreshView* headerRefreshView;
+    CAPullToRefreshView* footerRefreshView;
+    
 public:
     string getDigestForMark();
     
@@ -93,6 +100,9 @@ private:
     void showReadSettingView();
     void changeReadSetting();
     void onClickBookMark(CAControl* btn, CCPoint point);
+
+private:
+    void initIndicatorView();
 public:
     static FSNewsView2* curFSNewsView2;
     static void staticOpenCatalog();
@@ -104,8 +114,9 @@ public:
     static void staticgotoChapterProgress(float progress);
     
     
+    CAActivityIndicatorView* indicatorview;
     void saveProgress(float dt);
-    
+    void stopIndicatorView(float dt);
 private:
     bool s;
 };

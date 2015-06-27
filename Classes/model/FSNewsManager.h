@@ -127,6 +127,9 @@ public:
     
     bool deleteBookmarkInDB(int newsID);
     
+    ChapterInfo* getChapterInfoOrientation(ChapterInfo* chapterinfo,bool bIsNext);
+    ChapterInfo* getNextChapterInfo(ChapterInfo* chapterinfo);
+    ChapterInfo* getPreChapterInfo(ChapterInfo* chapterinfo);
 public:
     NewsInfo* getNewsInfoByNewsId(int newsId);
     

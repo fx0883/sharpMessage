@@ -28,12 +28,25 @@ FSNewsView2::FSNewsView2()
 ,m_FSPageSliderView(NULL)
 ,m_chapterInfo(NULL)
 ,s(true)
+,indicatorview(NULL)
 
 {
     m_PagingRule.lineNumber = 26;
     m_PagingRule.lineTextNumber = 24;
     curFSNewsView2 = this;
 
+}
+
+void FSNewsView2::initIndicatorView()
+{
+    indicatorview = CAActivityIndicatorView::createWithCenter(CADipRect(size.width*0.5, size.height*0.5,
+                                                                size.width*0.2,size.width*0.2));
+    indicatorview->setStyle(CAActivityIndicatorViewStyleWhiteLarge);
+    this->getView()->addSubview(indicatorview);
+//    indicatorview->startAnimating();
+//    
+//    indicatorview->stopAnimating();
+    indicatorview->stopAnimating();
 }
 
 void FSNewsView2::staticOpenCatalog()
@@ -215,6 +228,40 @@ void FSNewsView2::viewDidLoad()
     listView->setSeparatorColor(CAColor_magenta);
     listView->setSeparatorViewHeight(0);
     
+    
+//    listView->setListHeaderHeight(100);
+//    listView->setListFooterHeight(100);
+    
+    headerRefreshView = CAPullToRefreshView::create(CAPullToRefreshView::CAPullToRefreshTypeCustom);
+    footerRefreshView = CAPullToRefreshView::create(CAPullToRefreshView::CAPullToRefreshTypeCustom);
+    
+    
+    headerRefreshView->setPullToImage(CAImage::create("bkg/bkg12.png"));
+//    CC_SYNTHESIZE_PASS_BY_REF(std::string, m_sPullToRefreshText, PullToRefreshText);
+//    
+//    CC_SYNTHESIZE_PASS_BY_REF(std::string, m_sReleaseToRefreshText, ReleaseToRefreshText);
+//    
+//    CC_SYNTHESIZE_PASS_BY_REF(std::string, m_sRefreshingText, RefreshingText);
+    
+    headerRefreshView->setPullToRefreshText("加载上一章");
+    headerRefreshView->setReleaseToRefreshText("释放加载.");
+    headerRefreshView->setRefreshingText("加载中...");
+    CAActivityIndicatorView* activityView = CAActivityIndicatorView::create();
+    activityView->setStyle(CAActivityIndicatorViewStyleGray);
+    headerRefreshView->setLoadingView(activityView);
+    
+
+    footerRefreshView->setPullToRefreshText("加载下一");
+    footerRefreshView->setReleaseToRefreshText("释放加载.");
+    footerRefreshView->setRefreshingText("加载中...");
+    CAActivityIndicatorView* activityView2 = CAActivityIndicatorView::create();
+    activityView2->setStyle(CAActivityIndicatorViewStyleGray);
+    footerRefreshView->setLoadingView(activityView2);
+    
+    listView->setScrollViewDelegate(this);
+    listView->setHeaderRefreshView(headerRefreshView);
+    listView->setFooterRefreshView(footerRefreshView);
+    
     //listView->setColor(ccc4(151,212,255,255));
     
     //	listView->setListHeaderHeight(_px(100));
@@ -242,7 +289,7 @@ void FSNewsView2::viewDidLoad()
     
  
     
-
+    
     
     
     
@@ -258,7 +305,47 @@ void FSNewsView2::viewDidLoad()
     
     CAScheduler::schedule(schedule_selector(FSNewsView2::saveProgress),this,3,kCCRepeatForever,1,false);
     
+    
+    
+    
+    //加入指示器
+    initIndicatorView();
 }
+
+
+void FSNewsView2::scrollViewHeaderBeginRefreshing(CAScrollView* view)
+{
+    ChapterInfo* chapterinfo = FSDataManager::GetInstance().getNewsManager()->getPreChapterInfo(m_chapterInfo);
+    if (chapterinfo) {
+        CAScheduler::schedule(schedule_selector(FSNewsView2::stopIndicatorView),this,3,0,1,false);
+        indicatorview->startAnimating();
+        
+        
+        this->loadCatalog(chapterinfo);
+        //indicatorview->stopAnimating();
+
+    }
+}
+
+void FSNewsView2::stopIndicatorView(float dt)
+{
+    curFSNewsView2->indicatorview->stopAnimating();
+}
+
+
+void FSNewsView2::scrollViewFooterBeginRefreshing(CAScrollView* view)
+{
+    ChapterInfo* chapterinfo = FSDataManager::GetInstance().getNewsManager()->getNextChapterInfo(m_chapterInfo);
+    if (chapterinfo) {
+        CAScheduler::schedule(schedule_selector(FSNewsView2::stopIndicatorView),this,3,1,1,false);
+        indicatorview->startAnimating();
+
+        this->loadCatalog(chapterinfo);
+
+    }
+}
+
+
 
 void FSNewsView2::viewDidUnload()
 {

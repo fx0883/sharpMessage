@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/model/FSNewsManager.cpp"
-            timestampString = "456979602.526753"
+            timestampString = "457003544.720519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "FSNewsManager::deleteBookmarkInDB(int newsID)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/model/FSNewsManager.cpp"
-            timestampString = "456979699.703292"
+            timestampString = "457003544.720519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "FSNewsManager::deleteBookmarkInDB(int newsID)"
             landmarkType = "5">
          </BreakpointContent>

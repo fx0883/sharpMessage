@@ -255,7 +255,48 @@ CCArray* FSNewsManager::loadBookMarkInfo(int newsID)
     return aryBookMarkInfo;
 }
 
+ChapterInfo* FSNewsManager::getChapterInfoOrientation(ChapterInfo* chapterinfo,bool bIsNext)
+{
+    CCArray* ary = getChapterInfoAry(chapterinfo->getNewsID());
+    
+    int index=0;
+    for (int i=0; i<ary->count(); i++) {
+        
+        ChapterInfo *itemChapterinfo = (ChapterInfo*)ary->objectAtIndex(i);
+        
+        if (chapterinfo->getChapterID() == itemChapterinfo->getChapterID()) {
+            index = i;
+            break;
+        }
+    }
+    
+    ChapterInfo *retChapterInfo=NULL;
+    if (bIsNext)
+    {
+        index++;
+        if (index<ary->count()) {
+            retChapterInfo = (ChapterInfo*)ary->objectAtIndex(index);
+        }
+    }
+    else
+    {
+        index--;
+        if (index>=0) {
+            retChapterInfo = (ChapterInfo*)ary->objectAtIndex(index);
+        }
 
+    }
+    return retChapterInfo;
+    
+}
+ChapterInfo* FSNewsManager::getNextChapterInfo(ChapterInfo* chapterinfo)
+{
+    return getChapterInfoOrientation(chapterinfo, true);
+}
+ChapterInfo* FSNewsManager::getPreChapterInfo(ChapterInfo* chapterinfo)
+{
+    return getChapterInfoOrientation(chapterinfo, false);
+}
 
 
 
