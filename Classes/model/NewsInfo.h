@@ -23,7 +23,7 @@ public:
     CC_SYNTHESIZE_PASS_BY_REF(string, m_imageSrc, ImageSrc)
     CC_SYNTHESIZE_PASS_BY_REF(string, m_author, Author)
     CC_SYNTHESIZE_PASS_BY_REF(int, m_status, Status)
-    
+    CC_SYNTHESIZE_PASS_BY_REF(int, m_readtimes, ReadTimes)
 public:
     NewsInfo();
     ~NewsInfo();

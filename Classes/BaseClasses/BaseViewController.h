@@ -39,8 +39,8 @@ public:
     
     virtual ~BaseViewController();
     
-protected:
-    CANavigationBarItem* m_NavBarItem;
+//protected:
+//    CANavigationBarItem* m_NavBarItem;
     
     
 };

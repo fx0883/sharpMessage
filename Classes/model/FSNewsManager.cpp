@@ -11,11 +11,14 @@
 #include "PublicHeader.h"
 #include "ChapterInfo.h"
 
+#define MaxGreatNews 6
+
 bool FSNewsManager::init()
 {
     
     bool bRet = true;
     loadNewsList();
+    //loadNewsListOrderbyReadTimes();
     return bRet;
 }
 
@@ -70,6 +73,61 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 //    curChapterInfo->retain();
     
 }
+
+void FSNewsManager::updateNewsReadTimes()
+{
+    for (int i=0; i<arynewsList.count(); i++) {
+        NewsInfo* itemNewsInfo = (NewsInfo*)arynewsList.objectAtIndex(i);
+        updateNewsInfo(itemNewsInfo);
+    }
+    
+}
+
+
+bool FSNewsManager::updateNewsInfo(NewsInfo *newsinfo)
+{
+    int ret = 0;
+    
+    ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
+    
+    sqlite3_stmt *_sqlite_stmt_updatenewsinfo;
+    // INSERT
+    
+    //    bookmarkID,newsID,chapterID,markProgress
+    const char *sql_update = "update newslist SET readTimes = ? where newsID = ?;";
+    ret |= sqlite3_prepare_v2(_sqlite3, sql_update, -1, &_sqlite_stmt_updatenewsinfo, NULL);
+    
+    CCLog("debug 2===========>");
+    
+    int ok = sqlite3_bind_int(_sqlite_stmt_updatenewsinfo, 1, newsinfo->getReadTimes());
+    ok = sqlite3_bind_int(_sqlite_stmt_updatenewsinfo, 2, newsinfo->getNewsID());
+//    ok |= sqlite3_bind_int(_sqlite_stmt_insertbookmark, 2, bookmarkinfo->getChapterID());
+//    ok |= sqlite3_bind_text(_sqlite_stmt_insertbookmark, 3, bookmarkinfo->getMarkProgress().c_str(), -1, SQLITE_TRANSIENT);
+//    ok |= sqlite3_bind_text(_sqlite_stmt_insertbookmark, 4,bookmarkinfo->getMarkDigest().c_str(), -1, SQLITE_TRANSIENT);
+    
+    ok |= sqlite3_step(_sqlite_stmt_updatenewsinfo);
+    ok |= sqlite3_reset(_sqlite_stmt_updatenewsinfo);
+    
+    if( ok != SQLITE_OK && ok != SQLITE_DONE)
+    {
+        ok |= sqlite3_finalize(_sqlite_stmt_updatenewsinfo);
+        sqlite3_close(_sqlite3);
+        printf("Error in Newlist._saved()\n");
+        return false;
+    }
+    ok |= sqlite3_finalize(_sqlite_stmt_updatenewsinfo);
+    sqlite3_close(_sqlite3);
+    return true;
+    
+}
+
+
+
+
+
+
+
+
 
 CCArray* FSNewsManager::getChapterInfoAry(int newsID)
 {
@@ -144,6 +202,86 @@ void FSNewsManager::loadChapterDic(int newsID)
 
 }
 
+CCArray* FSNewsManager::loadNewsListOrderbyReadTimes2()
+{
+//    aryNewsListOrderbyReadTimes.removeAllObjects();
+//    for (int i=0; i<arynewsList.count(); i++) {
+//        aryNewsListOrderbyReadTimes.addObject(arynewsList.objectAtIndex(i));
+//    }
+    
+    vector<NewsInfo*> vec;
+    aryNewsListOrderbyReadTimes.removeAllObjects();
+    for (int i=0; i<arynewsList.count(); i++) {
+        //aryNewsListOrderbyReadTimes.addObject(arynewsList.objectAtIndex(i));
+        
+        vec.push_back((NewsInfo*)arynewsList.objectAtIndex(i));
+    }
+    
+    sort(vec.begin(), vec.end(),greaterNews)   ;   //降序排序
+    
+    aryNewsListOrderbyReadTimes.removeAllObjects();
+    
+    
+    int count = MIN((int)vec.size(), MaxGreatNews);
+    
+    
+    for (int i=0; i<count; i++) {
+        aryNewsListOrderbyReadTimes.addObject(vec[i]);
+    }
+    
+    return &aryNewsListOrderbyReadTimes;
+}
+
+
+bool   FSNewsManager::greaterNews( NewsInfo*  const s1, NewsInfo*  const s2)
+{
+    return   s1->getReadTimes()   >   s2->getReadTimes();
+}
+
+CCArray* FSNewsManager::loadNewsListOrderbyReadTimes()
+{
+    int ret = 0;
+    //    CCLog("fullPath = %s",DBPATH);
+    
+    ret = sqlite3_open(FSContext::GetInstance().getFullDbPath().c_str(), &_sqlite3);
+    
+    //查询结果
+    char **re;
+    //行、列
+    int r,c;
+    //查询数据
+    sqlite3_get_table(_sqlite3,"select * from newslist order by readTimes desc limit 0,6;",&re,&r,&c,NULL);
+
+    //将查询出的数据通过log输出
+    //CCArray *aryNewsList = CCArray::create();
+    for(int i=1;i<=r;i++)
+    {
+        NewsInfo *newsInfo = new NewsInfo();
+        
+        int newsId = atoi(re[i*c+0]);
+        newsInfo->setNewsID(newsId);
+        newsInfo->setNewsTitle(re[i*c+1]);
+        newsInfo->setImageSrc(re[i*c+2]);
+        newsInfo->setAuthor(re[i*c+3]);
+        
+        int status = atoi(re[i*c+4]);
+        newsInfo->setStatus(status);
+        int readTimes = atoi(re[i*c+5]);
+        newsInfo->setReadTimes(readTimes);
+        
+        aryNewsListOrderbyReadTimes.addObject(newsInfo);
+    }
+    
+    
+    sqlite3_free_table(re);
+    sqlite3_close(_sqlite3);
+    
+    return &aryNewsListOrderbyReadTimes;
+}
+
+
+
+
 void FSNewsManager::loadNewsList()
 {
     
@@ -172,6 +310,8 @@ void FSNewsManager::loadNewsList()
         
         int status = atoi(re[i*c+4]);
         newsInfo->setStatus(status);
+        int readTimes = atoi(re[i*c+5]);
+        newsInfo->setReadTimes(readTimes);
         
         arynewsList.addObject(newsInfo);
     }
@@ -180,6 +320,8 @@ void FSNewsManager::loadNewsList()
     sqlite3_free_table(re);
     sqlite3_close(_sqlite3);
 }
+
+
 
 NewsInfo* FSNewsManager::getNewsInfoByNewsId(int newsId)
 {

@@ -726,7 +726,7 @@ void FSNewsView2::viewDidAppear()
 void FSNewsView2::refreshView()
 {
 
-    m_NavBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
+    CANavigationBarItem *navBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
     
     CABarButtonItem* rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
     
@@ -734,9 +734,9 @@ void FSNewsView2::refreshView()
     rightButton->setTarget(rightButton, CAControl_selector(FSNewsView2::onClickBookMark));
 
     
-    m_NavBarItem->addRightButtonItem(rightButton);
+    navBarItem->addRightButtonItem(rightButton);
 //    m_NavBarItem->addRightButtonItem(CrossApp::CABarButtonItem *item)
-    this->setNavigationBarItem(m_NavBarItem);
+    this->setNavigationBarItem(navBarItem);
     //m_NavBarItem->autorelease();
 }
 

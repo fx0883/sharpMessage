@@ -102,6 +102,7 @@ void AppDelegate::applicationDidEnterBackground()
 {
     CAApplication::getApplication()->stopAnimation();
 
+    FSDataManager::GetInstance().getNewsManager()->updateNewsReadTimes();
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }

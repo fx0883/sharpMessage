@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/model/FSNewsManager.cpp"
-            timestampString = "457003544.720519"
+            timestampString = "457607181.300133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
-            landmarkName = "FSNewsManager::deleteBookmarkInDB(int newsID)"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "FSNewsManager::loadBookMarkInfo(int newsID)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,28 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/model/FSNewsManager.cpp"
-            timestampString = "457003544.720519"
+            timestampString = "457607181.300133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
-            landmarkName = "FSNewsManager::deleteBookmarkInDB(int newsID)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/FSloadRes.cpp"
-            timestampString = "456980038.096993"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "FSloadRes::loadData()"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
+            landmarkName = "FSNewsManager::loadBookMarkInfo(int newsID)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -29,6 +29,10 @@
 		182F30BE1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182F30BC1AFB5EA3000A3D83 /* FSBooklibraryCell.cpp */; };
 		183DD9F01B2266B100763815 /* FSNewsBottomView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183DD9EF1B2266B100763815 /* FSNewsBottomView.cpp */; };
 		1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1851A6141B01831800BEDFD8 /* ChapterInfo.cpp */; };
+		1880A5421B466C62008F9F8B /* FSBookReadTimes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1880A5401B466C62008F9F8B /* FSBookReadTimes.cpp */; };
+		1880A5451B466C77008F9F8B /* FSBookReadTimesCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1880A5431B466C77008F9F8B /* FSBookReadTimesCell.cpp */; };
+		18B642FF1B48140000122D8F /* FSNewsAboutController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B642FD1B48140000122D8F /* FSNewsAboutController.cpp */; };
+		18B643011B48183800122D8F /* image in Resources */ = {isa = PBXBuildFile; fileRef = 18B643001B48183800122D8F /* image */; };
 		18E124CA1B317AE700EB5CF0 /* BookMarkInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18E124C81B317AE700EB5CF0 /* BookMarkInfo.cpp */; };
 		18EA428B1B203F1F0099A9DC /* web in Resources */ = {isa = PBXBuildFile; fileRef = 18EA428A1B203F1F0099A9DC /* web */; };
 		18EA428E1B203F5C0099A9DC /* FSNewsView3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18EA428C1B203F5C0099A9DC /* FSNewsView3.cpp */; };
@@ -169,8 +173,16 @@
 		1851A6151B01831800BEDFD8 /* ChapterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterInfo.h; sourceTree = "<group>"; };
 		18544BE41B3A97EE00D6D5F4 /* FSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUtil.h; path = ../../Classes/Common/FSUtil.h; sourceTree = "<group>"; };
 		186200D71B214A4A00AD450B /* FSNewsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsBottomView.h; sourceTree = "<group>"; };
+		1880A5401B466C62008F9F8B /* FSBookReadTimes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBookReadTimes.cpp; path = ../../Classes/FSBookReadTimes/FSBookReadTimes.cpp; sourceTree = "<group>"; };
+		1880A5411B466C62008F9F8B /* FSBookReadTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSBookReadTimes.h; path = ../../Classes/FSBookReadTimes/FSBookReadTimes.h; sourceTree = "<group>"; };
+		1880A5431B466C77008F9F8B /* FSBookReadTimesCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBookReadTimesCell.cpp; path = ../../Classes/FSBookReadTimes/FSBookReadTimesCell.cpp; sourceTree = "<group>"; };
+		1880A5441B466C77008F9F8B /* FSBookReadTimesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSBookReadTimesCell.h; path = ../../Classes/FSBookReadTimes/FSBookReadTimesCell.h; sourceTree = "<group>"; };
 		18810B241B0C6E8E00B87FD8 /* TestCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18810B381B0C6E8E00B87FD8 /* TestCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B642FB1B4813CF00122D8F /* FSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSData.h; path = ../FSData.h; sourceTree = "<group>"; };
+		18B642FD1B48140000122D8F /* FSNewsAboutController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsAboutController.cpp; sourceTree = "<group>"; };
+		18B642FE1B48140000122D8F /* FSNewsAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsAboutController.h; sourceTree = "<group>"; };
+		18B643001B48183800122D8F /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 		18E124C81B317AE700EB5CF0 /* BookMarkInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BookMarkInfo.cpp; sourceTree = "<group>"; };
 		18E124C91B317AE700EB5CF0 /* BookMarkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkInfo.h; sourceTree = "<group>"; };
 		18EA428A1B203F1F0099A9DC /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
@@ -433,6 +445,8 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18B642FC1B48140000122D8F /* FSNewsAbout */,
+				1880A53F1B466C3C008F9F8B /* FSBookReadTimes */,
 				18544BE21B3A974500D6D5F4 /* Common */,
 				18EC3E3D1B23EB9900C9308A /* BaseClasses */,
 				180776EA1B1AB50C0037CD28 /* extend */,
@@ -515,6 +529,27 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1880A53F1B466C3C008F9F8B /* FSBookReadTimes */ = {
+			isa = PBXGroup;
+			children = (
+				1880A5401B466C62008F9F8B /* FSBookReadTimes.cpp */,
+				1880A5411B466C62008F9F8B /* FSBookReadTimes.h */,
+				1880A5431B466C77008F9F8B /* FSBookReadTimesCell.cpp */,
+				1880A5441B466C77008F9F8B /* FSBookReadTimesCell.h */,
+			);
+			path = FSBookReadTimes;
+			sourceTree = "<group>";
+		};
+		18B642FC1B48140000122D8F /* FSNewsAbout */ = {
+			isa = PBXGroup;
+			children = (
+				18B642FD1B48140000122D8F /* FSNewsAboutController.cpp */,
+				18B642FE1B48140000122D8F /* FSNewsAboutController.h */,
+			);
+			name = FSNewsAbout;
+			path = ../Classes/FSNewsAbout;
+			sourceTree = "<group>";
+		};
 		18EC3E3D1B23EB9900C9308A /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +613,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18B643001B48183800122D8F /* image */,
 				181A86951B295E0900F79C78 /* bkg */,
 				181A86931B2956E800F79C78 /* config */,
 				18EA428A1B203F1F0099A9DC /* web */,
@@ -596,6 +632,7 @@
 		837449851AF4CBAC00CE34F5 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				18B642FB1B4813CF00122D8F /* FSData.h */,
 				837449861AF4CC3900CE34F5 /* NewsInfo.cpp */,
 				837449871AF4CC3900CE34F5 /* NewsInfo.h */,
 				837449891AF4CF2200CE34F5 /* FSDataManager.cpp */,
@@ -895,6 +932,7 @@
 				181A86961B295E0900F79C78 /* bkg in Resources */,
 				B01F71671951682600BA07A6 /* source_material in Resources */,
 				B0621BE51AC3B871005EBCA7 /* fonts in Resources */,
+				18B643011B48183800122D8F /* image in Resources */,
 				B04C0C051901207A009854FD /* json_internalarray.inl in Resources */,
 				8386BE401AE3D7C7003D78C8 /* tabbar_function in Resources */,
 				B04C0C0B1901207A009854FD /* sconscript in Resources */,
@@ -969,13 +1007,16 @@
 				83C643CE1AEF757C004C7DC1 /* FSUtilCPlus.cpp in Sources */,
 				18EC3E401B23EBB300C9308A /* BaseViewController.cpp in Sources */,
 				8390519C1AF07ABF00DD87A2 /* FSloadRes.cpp in Sources */,
+				1880A5451B466C77008F9F8B /* FSBookReadTimesCell.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
 				839051991AF0799100DD87A2 /* FSloadResBase.cpp in Sources */,
 				1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */,
+				1880A5421B466C62008F9F8B /* FSBookReadTimes.cpp in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				180575B11B243A6E00FF1D67 /* FSNewsCatalog.cpp in Sources */,
 				B047B92319E91CFA00F24BE6 /* DownloadManager.cpp in Sources */,
+				18B642FF1B48140000122D8F /* FSNewsAboutController.cpp in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				B0621E221AC3ECB0005EBCA7 /* RootWindow.cpp in Sources */,
 				8366F2C41AF500D4006C9BB5 /* FSContext.cpp in Sources */,

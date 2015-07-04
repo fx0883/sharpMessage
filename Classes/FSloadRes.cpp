@@ -82,7 +82,7 @@ void FSloadRes::loadData()
         
 
         
-        const char *sql_createNewslistTable = "CREATE TABLE IF NOT EXISTS newslist(newsID INTEGER PRIMARY KEY, newsTitle VARCHAR(256), imageSrc VARCHAR(256), author VARCHAR(128), status INTEGER);";
+        const char *sql_createNewslistTable = "CREATE TABLE IF NOT EXISTS newslist(newsID INTEGER PRIMARY KEY, newsTitle VARCHAR(256), imageSrc VARCHAR(256), author VARCHAR(128), status INTEGER,readTimes INTEGER);";
         sqlite3_stmt *stmt;
         int ok=sqlite3_prepare_v2(_sqlite3, sql_createNewslistTable, -1, &stmt, NULL);
         ok |= sqlite3_step(stmt);
@@ -121,7 +121,7 @@ void FSloadRes::loadData()
         
         sqlite3_stmt *_sqlite_stmt_insertnews;
         // INSERT
-        const char *sql_insertnews = "INSERT INTO newslist (newsID,newsTitle, imageSrc, author, status) VALUES (NULL,?,?,?,?);";
+        const char *sql_insertnews = "INSERT INTO newslist (newsID,newsTitle, imageSrc, author, status,readTimes) VALUES (NULL,?,?,?,?,0);";
         ret |= sqlite3_prepare_v2(_sqlite3, sql_insertnews, -1, &_sqlite_stmt_insertnews, NULL);
         
 

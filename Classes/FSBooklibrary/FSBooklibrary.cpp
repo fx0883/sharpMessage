@@ -49,22 +49,14 @@ void FSBooklibrary::viewDidLoad()
 
 void FSBooklibrary::viewDidAppear()
 {
-    if(!m_NavBarItem)
+//    if(!m_NavBarItem)
     {
-        m_NavBarItem = CANavigationBarItem::create("金庸小说");
-        this->getTabBarController()->setNavigationBarItem(m_NavBarItem);
+        CANavigationBarItem *navItem = CANavigationBarItem::create("金庸小说");
+        this->getTabBarController()->setNavigationBarItem(navItem);
         
         
         
     }
-
-//    this->getTabBarController()->getNavigationBarItem()->setTitle("小说");
-//    
-//    CAWindow* window = CAApplication::getApplication()->getRootWindow();
-//    CANavigationController *nav = (CANavigationController*)window->getRootViewController();
-////    nav->setNavigationBarHidden(true, false);
-//    nav->updateItem(this->getTabBarController());
-    
 }
 
 
@@ -84,6 +76,7 @@ void FSBooklibrary::collectionViewDidSelectCellAtIndexPath(CACollectionView *col
     int index =row * 3 + item;
     CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getArynewsList();
     NewsInfo *newsinfo = (NewsInfo*)ary.objectAtIndex(index);
+    newsinfo->setReadTimes(newsinfo->getReadTimes()+1);
     FSNewsView2 *fsnewsview2 = new FSNewsView2();
     fsnewsview2->init();
     FSDataManager::GetInstance().getNewsManager()->loadChapterDic(newsinfo->getNewsID());

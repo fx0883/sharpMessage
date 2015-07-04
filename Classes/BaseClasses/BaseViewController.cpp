@@ -9,11 +9,12 @@
 #include "BaseViewController.h"
 
 
-BaseViewController::BaseViewController():m_NavBarItem(NULL)
+BaseViewController::BaseViewController()
+//:m_NavBarItem(NULL)
 {
     
 }
 BaseViewController::~BaseViewController()
 {
-    CC_SAFE_RELEASE_NULL(m_NavBarItem);
+//    CC_SAFE_RELEASE_NULL(m_NavBarItem);
 }

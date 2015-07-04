@@ -104,6 +104,7 @@ public:
     bool init();
     ~FSNewsManager();
 public:
+    CC_SYNTHESIZE_PASS_BY_REF2(CCArray, aryNewsListOrderbyReadTimes, AryNewsListOrderbyReadTimes);
     CC_SYNTHESIZE_PASS_BY_REF2(CCArray, arynewsList, ArynewsList);
     CC_SYNTHESIZE_PASS_BY_REF2(ChapterInfo*, curChapterInfo, CurChapterInfo);
     CC_SYNTHESIZE_PASS_BY_REF2(CCDictionary, dicChapterInfo, DicChapterInfo);
@@ -115,8 +116,15 @@ public:
     CCArray* getChapterInfoAry(int newsID);
     float getPageProgress(int chapterID);
     void setPageProgress(int chapterID,string progress);
+    void updateNewsReadTimes();
+    bool updateNewsInfo(NewsInfo *newsinfo);
+    
+public:
+    static bool greaterNews( NewsInfo*  const s1, NewsInfo* const  s2);
 public:
     void loadNewsList();
+    CCArray* loadNewsListOrderbyReadTimes();
+    CCArray* loadNewsListOrderbyReadTimes2();
     void loadCurChapterInfo(int newsID,int chapterNubmer);
     void loadCurChapterInfo(int newsID);
     void loadChapterDic(int newsID);

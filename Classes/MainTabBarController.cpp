@@ -9,9 +9,11 @@
 #include "MainTabBarController.h"
 #include "FSBooklibrary/FSBooklibrary.h"
 #include "FSBookRankingList.h"
+#include "FSBookReadTimes/FSBookReadTimes.h"
 #include "FSUserCenter.h"
 #include "CrossApp.h"
 #include "FSContext.h"
+#include "FSNewsAbout/FSNewsAboutController.h"
 
 MainTabBarController::MainTabBarController()
 {
@@ -41,26 +43,39 @@ CAWindow* MainTabBarController::createWindow()
                                                        CAImage::create("tabbar_function/booklibrary_1.png"),
                                                        CAImage::create("tabbar_function/booklibrary_2.png")));
     
-    FSBookRankingList* fsbookrankinglist = new FSBookRankingList();
-    fsbookrankinglist->init();
-    fsbookrankinglist->setTabBarItem(CATabBarItem::create("Ranking",
-                                                        CAImage::create("tabbar_function/bookRankingList_1.png"),
-                                                        CAImage::create("tabbar_function/bookRankingList_2.png")));
+//    FSBookRankingList* fsbookrankinglist = new FSBookRankingList();
+//    fsbookrankinglist->init();
+//    fsbookrankinglist->setTabBarItem(CATabBarItem::create("Ranking",
+//                                                        CAImage::create("tabbar_function/bookRankingList_1.png"),
+//                                                        CAImage::create("tabbar_function/bookRankingList_2.png")));
     
     
-    FSUserCenter* fsusercenter = new FSUserCenter();
-    fsusercenter->init();
-    fsusercenter->setTabBarItem(CATabBarItem::create("User",
-                                                        CAImage::create("tabbar_function/userCenter_1.png"),
-                                                        CAImage::create("tabbar_function/userCenter_2.png")));
+    FSBookReadTimes* fsbookreadtimes = new FSBookReadTimes();
+    fsbookreadtimes->init();
+    fsbookreadtimes->setTabBarItem(CATabBarItem::create("ReadTimes",
+                                                          CAImage::create("tabbar_function/bookRankingList_1.png"),
+                                                          CAImage::create("tabbar_function/bookRankingList_2.png")));
     
     
-
+    
+//    FSUserCenter* fsusercenter = new FSUserCenter();
+//    fsusercenter->init();
+//    fsusercenter->setTabBarItem(CATabBarItem::create("User",
+//                                                        CAImage::create("tabbar_function/userCenter_1.png"),
+//                                                        CAImage::create("tabbar_function/userCenter_2.png")));
+    
+    FSNewsAboutController* fsnewsaboutcontroller = new FSNewsAboutController();
+    fsnewsaboutcontroller->init();
+    fsnewsaboutcontroller->setTabBarItem(CATabBarItem::create("User",
+                                                            CAImage::create("tabbar_function/userCenter_1.png"),
+                                                            CAImage::create("tabbar_function/userCenter_2.png")));
+    
+    
     
     std::vector<CAViewController*> controllerItem;
     controllerItem.push_back(fsbooklibrary);
-    controllerItem.push_back(fsbookrankinglist);
-    controllerItem.push_back(fsusercenter);
+    controllerItem.push_back(fsbookreadtimes);
+    controllerItem.push_back(fsnewsaboutcontroller);
     
     CATabBarController* p_Funtion = new MainTabBarController();
     p_Funtion->initWithViewControllers(controllerItem);
@@ -85,8 +100,8 @@ CAWindow* MainTabBarController::createWindow()
     FSContext::GetInstance().setMainTabBarController(p_Funtion);
     
     fsbooklibrary->release();
-    fsbookrankinglist->release();
-    fsusercenter->release();
+    fsbookreadtimes->release();
+    fsnewsaboutcontroller->release();
 
     
     p_Funtion->release();
