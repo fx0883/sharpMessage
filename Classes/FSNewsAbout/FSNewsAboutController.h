@@ -10,6 +10,8 @@
 #define __Test__FSNewsAboutController__
 
 #include "RootWindow.h"
+#include "CrossApp.h"
+#include "CrossAppExt.h"
 
 class FSNewsAboutTableCell : public CATableViewCell
 {
@@ -48,6 +50,9 @@ public:
     virtual unsigned int tableViewHeightForRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row);
     virtual unsigned int tableViewHeightForHeaderInSection(CATableView* table, unsigned int section);
     virtual unsigned int tableViewHeightForFooterInSection(CATableView* table, unsigned int section);
+    
+    
+
 public:
     CADipSize winSize;
     CATableView* p_TableView;

@@ -8,6 +8,7 @@
 
 #include "FSNewsAboutController.h"
 #include "FSData.h"
+#include "FSNewsAboutDetailController.h"
 
 FSNewsAboutTableCell::FSNewsAboutTableCell()
 {
@@ -73,6 +74,8 @@ FSNewsAboutController::~FSNewsAboutController()
     
 }
 
+
+
 void FSNewsAboutController::viewDidAppear()
 {
     
@@ -109,24 +112,24 @@ void FSNewsAboutController::viewDidLoad()
     head->setImage(CAImage::create("image/avatar_bg_70.png"));
     view->addSubview(head);
     
-    CAButton* btn1 = CAButton::create(CAButtonTypeSquareRect);
-    btn1->setCenter(CADipRect(winSize.width/6, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
-    btn1->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn1_up.png")));
-    btn1->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn1_down.png")));
-    view->addSubview(btn1);
-    
-    CAButton* btn2 = CAButton::create(CAButtonTypeSquareRect);
-    btn2->setCenter(CADipRect(winSize.width/2, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
-    btn2->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn2_up.png")));
-    btn2->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn2_down.png")));
-    view->addSubview(btn2);
-    
-    CAButton* btn3 = CAButton::create(CAButtonTypeSquareRect);
-    btn3->setTag(100);
-    btn3->setCenter(CADipRect(winSize.width/6*5, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
-    btn3->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn3_up.png")));
-    btn3->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn3_down.png")));
-    view->addSubview(btn3);
+//    CAButton* btn1 = CAButton::create(CAButtonTypeSquareRect);
+//    btn1->setCenter(CADipRect(winSize.width/6, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
+//    btn1->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn1_up.png")));
+//    btn1->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn1_down.png")));
+//    view->addSubview(btn1);
+//    
+//    CAButton* btn2 = CAButton::create(CAButtonTypeSquareRect);
+//    btn2->setCenter(CADipRect(winSize.width/2, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
+//    btn2->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn2_up.png")));
+//    btn2->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn2_down.png")));
+//    view->addSubview(btn2);
+//    
+//    CAButton* btn3 = CAButton::create(CAButtonTypeSquareRect);
+//    btn3->setTag(100);
+//    btn3->setCenter(CADipRect(winSize.width/6*5, 600-(winSize.width/3)/9*5/2, winSize.width/3-1, (winSize.width/3)/9*5));
+//    btn3->setBackGroundViewForState(CAControlStateNormal, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn3_up.png")));
+//    btn3->setBackGroundViewForState(CAControlStateHighlighted, CAScale9ImageView::createWithImage(CAImage::create("image/about_btn3_down.png")));
+//    view->addSubview(btn3);
     
     p_TableView->setTableHeaderView(view);
 }
@@ -135,6 +138,40 @@ void FSNewsAboutController::viewDidUnload()
 {
     
 }
+
+
+void FSNewsAboutController::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row){
+//       string strTitle = unicode_to_utf8(aboutMenuTag[row];
+    switch (row) {
+        case 0:
+        {
+            FSNewsAboutDetailController *fsnewsaboutdetailcontroller = FSNewsAboutDetailController::create();
+            CAWindow* window = CAApplication::getApplication()->getRootWindow();
+            CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+            nav->pushViewController(fsnewsaboutdetailcontroller, true);
+            break;
+        }
+        case 1:
+        {
+            FSNewsAboutDetailController *fsnewsaboutdetailcontroller = FSNewsAboutDetailController::create();
+            CAWindow* window = CAApplication::getApplication()->getRootWindow();
+            CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+            nav->pushViewController(fsnewsaboutdetailcontroller, true);
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+}
+
+void FSNewsAboutController::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
+{
+
+    
+}
+
 
 CAView* FSNewsAboutController::tableViewSectionViewForHeaderInSection(CATableView* table, const CCSize& viewSize, unsigned int section)
 {
@@ -150,43 +187,45 @@ CAView* FSNewsAboutController::tableViewSectionViewForFooterInSection(CATableVie
     return view;
 }
 
-void FSNewsAboutController::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
-{
+//void FSNewsAboutController::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
+//{
+//
+//}
 
-}
-
-void FSNewsAboutController::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
-{
-    
-}
+//void FSNewsAboutController::tableViewDidDeselectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
+//{
+//    
+//}
 
 CATableViewCell* FSNewsAboutController::tableCellAtIndex(CATableView* table, const CCSize& cellSize, unsigned int section, unsigned int row)
 {
     CADipSize _size = cellSize;
-    FSNewsAboutTableCell* cell = dynamic_cast<FSNewsAboutTableCell*>(table->dequeueReusableCellWithIdentifier("CrossApp"));
+    FSNewsAboutTableCell* cell = dynamic_cast<FSNewsAboutTableCell*>(table->dequeueReusableCellWithIdentifier("NewsAboutCell"));
     if (cell == NULL)
     {
-        cell = FSNewsAboutTableCell::create("CrossApp", CADipRect(0, 0, _size.width, _size.height));
+        cell = FSNewsAboutTableCell::create("NewsAboutCell", CADipRect(0, 0, _size.width, _size.height));
         cell->initWithCell();
     }
     
     CALabel* cellText = (CALabel*)cell->getSubviewByTag(100);
-    CASwitch* cellBtn = (CASwitch*)cell->getSubviewByTag(103);
-    cellBtn->setVisible(false);
-    switch (section) {
-        case 0:
-			cellText->setText(unicode_to_utf8(aboutMenuTag[row]));
-            break;
-        case 1:
-			cellText->setText(unicode_to_utf8(aboutMenuTag[row + 2]));
-            if (row==2||row==3||row==4) {
-                cellBtn->setVisible(true);
-            };
-            break;
-        case 2:
-			cellText->setText(unicode_to_utf8(aboutMenuTag[row + 8]));
-            break;
-    }
+//    CASwitch* cellBtn = (CASwitch*)cell->getSubviewByTag(103);
+//    cellBtn->setVisible(false);
+    
+//    switch (section) {
+//        case 0:
+//			cellText->setText(unicode_to_utf8(aboutMenuTag[row]));
+//            break;
+//        case 1:
+//			cellText->setText(unicode_to_utf8(aboutMenuTag[row + 2]));
+//            if (row==2||row==3||row==4) {
+//                cellBtn->setVisible(true);
+//            };
+//            break;
+//        case 2:
+//			cellText->setText(unicode_to_utf8(aboutMenuTag[row + 8]));
+//            break;
+//    }
+    cellText->setText(unicode_to_utf8(aboutMenuTag[row]));
     return cell;
     
 }
@@ -196,18 +235,19 @@ unsigned int FSNewsAboutController::numberOfRowsInSection(CATableView *table, un
     int cellnum = 0;
     if (section==0) {
         cellnum = 2;
-    }else if (section==1){
-        cellnum = 6;
     }
-    else if (section==2){
-        cellnum = 4;
-    }
+//    else if (section==1){
+//        cellnum = 6;
+//    }
+//    else if (section==2){
+//        cellnum = 4;
+//    }
     return cellnum;
 }
 
 unsigned int FSNewsAboutController::numberOfSections(CATableView *table)
 {
-    return 3;
+    return 1;
 }
 unsigned int FSNewsAboutController::tableViewHeightForRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
 {
