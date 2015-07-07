@@ -1,6 +1,7 @@
 #import "AppController.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "AdmobManager.h"
 
 @implementation AppController
 
@@ -41,6 +42,9 @@ static AppDelegate s_sharedApplication;
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     CrossApp::CCApplication::sharedApplication()->run();
+    
+    //载入广告
+    [AdmobManager sharedInstance];
 
     return YES;
 }
@@ -58,6 +62,7 @@ static AppDelegate s_sharedApplication;
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    [[AdmobManager sharedInstance] startInterstitialView];
     CrossApp::CAApplication::getApplication()->resume();
 }
 
