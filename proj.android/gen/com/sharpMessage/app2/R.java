@@ -527,6 +527,7 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f040005;
         public static final int create_calendar_title=0x7f040004;
         public static final int decline=0x7f040003;
+        public static final int exit_hint=0x7f040024;
         public static final int store_picture_message=0x7f040001;
         public static final int store_picture_title=0x7f040000;
         /**  Text on a placeholder buy button when Google Play services is not

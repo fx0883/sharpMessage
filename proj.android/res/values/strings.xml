@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SharpMessage</string>
-
+    <string name="exit_hint">再按一次退出程序</string>
+	
     
 </resources>

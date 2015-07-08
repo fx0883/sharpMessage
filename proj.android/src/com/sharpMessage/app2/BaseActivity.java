@@ -1,12 +1,15 @@
 package com.sharpMessage.app2;
 
 
-
+import android.view.KeyEvent;
+import android.widget.Toast;
 import android.R.integer;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 import org.CrossApp.lib.Cocos2dxActivity;
 import org.CrossApp.lib.Cocos2dxGLSurfaceView;
@@ -115,5 +118,6 @@ public class BaseActivity extends Cocos2dxActivity{
 		
 	}
 	
+
 }
 
