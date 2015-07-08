@@ -9,6 +9,7 @@
 #include "FSNewsAboutController.h"
 #include "FSData.h"
 #include "FSNewsAboutDetailController.h"
+#include "FSWebViewController.h"
 
 FSNewsAboutTableCell::FSNewsAboutTableCell()
 {
@@ -145,18 +146,32 @@ void FSNewsAboutController::tableViewDidSelectRowAtIndexPath(CATableView* table,
     switch (row) {
         case 0:
         {
+//            FSNewsAboutDetailController *fsnewsaboutdetailcontroller = FSNewsAboutDetailController::create();
+//            CAWindow* window = CAApplication::getApplication()->getRootWindow();
+//            CANavigationController *nav = (CANavigationController*)window->getRootViewController();
+//            nav->pushViewController(fsnewsaboutdetailcontroller, true);
+//            break;
+            
             FSNewsAboutDetailController *fsnewsaboutdetailcontroller = FSNewsAboutDetailController::create();
             CAWindow* window = CAApplication::getApplication()->getRootWindow();
             CANavigationController *nav = (CANavigationController*)window->getRootViewController();
             nav->pushViewController(fsnewsaboutdetailcontroller, true);
             break;
+
         }
         case 1:
         {
-            FSNewsAboutDetailController *fsnewsaboutdetailcontroller = FSNewsAboutDetailController::create();
-            CAWindow* window = CAApplication::getApplication()->getRootWindow();
+            FSWebViewController *fswebviewcontroller = FSWebViewController::create();
+            string strTitle="金庸";
+            string fileName = "web2/jinyong.html";
+            
+             string fileTestPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("web2/jinyong.html");
+                        fswebviewcontroller->setTitleAndFileName(strTitle, fileTestPath);
+                        CAWindow* window = CAApplication::getApplication()->getRootWindow();
             CANavigationController *nav = (CANavigationController*)window->getRootViewController();
-            nav->pushViewController(fsnewsaboutdetailcontroller, true);
+            nav->pushViewController(fswebviewcontroller, true);
+
+
             break;
         }
             

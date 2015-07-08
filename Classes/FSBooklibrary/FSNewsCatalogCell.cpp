@@ -59,7 +59,7 @@ void FSNewsCatalogCell::setSelectedCell(bool bIsSelected)
 {
     CALabel* cell = (CALabel*)this->getSubviewByTag(100);
     if (bIsSelected) {
-        cell->setColor(ccc4(100,234,234,132));
+        cell->setColor(ccc4(15,112,2,132));
     }
     else
     {

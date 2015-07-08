@@ -119,7 +119,7 @@ void FSNewsView2Cell::updateWithCell()
     CCDictionary *dicItem = (CCDictionary*)readSettingAry->objectAtIndex(indexReadSetting);
     const CCString *strImagePath = dicItem->valueForKey(BgReadSettingImage);
         
-    CAImage *itemImage = CAImage::create("bkg/"+string( strImagePath->getCString()));
+    CAImage *itemImage = CAImage::create("bg/"+string( strImagePath->getCString()));
     //itemImage->autorelease();
     bgImageView->setImage(itemImage);
     

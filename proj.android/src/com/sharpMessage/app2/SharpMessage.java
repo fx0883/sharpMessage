@@ -6,9 +6,9 @@ import org.CrossApp.lib.Cocos2dxGLSurfaceView;
 
 import android.os.Bundle;
 
-public class SharpMessage extends Cocos2dxActivity{
+public class SharpMessage extends BaseActivity{
 	
-    protected void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
 	}
 

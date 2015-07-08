@@ -118,7 +118,7 @@ void FSReadSettingView::addButtons()
         //itemBtn->setImageForState(CAControlStateAll, imageItem);
         const CCString *strImagePath = dicItem->valueForKey(BgReadSettingImage);
     
-        CAImage *itemImage = CAImage::create("bkg/"+string( strImagePath->getCString()));
+        CAImage *itemImage = CAImage::create("bg/"+string( strImagePath->getCString()));
         itemBtn->setImageForState(CAControlStateAll, itemImage);
         m_svContent->addSubview(itemBtn);
         
