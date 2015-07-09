@@ -57,7 +57,7 @@
 			<key>b</key>
 			<integer>0</integer>
 			<key>a</key>
-			<integer>0</integer>
+			<integer>255</integer>
 		</dict>
 		<key>bgImage</key>
 		<string>bg3.png</string>

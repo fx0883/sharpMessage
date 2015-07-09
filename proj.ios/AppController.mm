@@ -2,6 +2,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "AdmobManager.h"
+#import "Appirater.h"
 
 @implementation AppController
 
@@ -45,7 +46,8 @@ static AppDelegate s_sharedApplication;
     
     //载入广告
     [AdmobManager sharedInstance];
-
+    //载入评论
+    [self giveMeRate];
     return YES;
 }
 
@@ -79,6 +81,7 @@ static AppDelegate s_sharedApplication;
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
     CrossApp::CCApplication::sharedApplication()->applicationWillEnterForeground();
+     [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -104,5 +107,16 @@ static AppDelegate s_sharedApplication;
     [super dealloc];
 }
 
+
+- (void)giveMeRate
+{
+    [Appirater setAppId:@"987187522"];
+    [Appirater setDaysUntilPrompt:5];
+    [Appirater setUsesUntilPrompt:7];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:NO];
+    [Appirater appLaunched:YES];
+}
 
 @end
