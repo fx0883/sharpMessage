@@ -24,7 +24,7 @@ using namespace std;
 USING_NS_CC;
 using namespace cn::sharesdk;
 
-#define SHARESDKREDIRECT_URI "http://www.511book.cn"
+#define SHARESDKREDIRECT_URI "http://fx0883.github.io/MySite/SharpMessage.html"
 FSBooklibrary::FSBooklibrary()
 {
 //    BaseViewController::BaseViewController();
