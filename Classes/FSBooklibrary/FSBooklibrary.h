@@ -47,8 +47,30 @@ private:
     CADipSize size;
     CACollectionView* p_Conllection;
 //    CANavigationBarItem* navBarItem;
+    CABarButtonItem *rightButton;
+    
+public:
+    void onClickShareSdk(CAControl* btn, CCPoint point);
     
     
+    
+public:
+    void menuCloseCallback(CAObject* pSender);
+    
+    void authMenuItemClick(CAObject* pSender);
+    
+    void cancelAuthMenuItemClick(CAObject* pSender);
+    
+    void hasAuthMenuItemClick(CAObject* pSender);
+    
+    void getUserInfoMenuItemClick(CAObject* pSender);
+    
+    void shareMenuItemClick(CAObject* pSender);
+    void shareMenuItemClick();
+    
+    void checkClientItemClick(CAObject* pSender);
+    
+    std::string getShareImagePath();
 };
 
 #endif /* defined(__SharpMessage__FSBooklibrary__) */

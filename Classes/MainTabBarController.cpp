@@ -79,11 +79,22 @@ CAWindow* MainTabBarController::createWindow()
     
     CATabBarController* p_Funtion = new MainTabBarController();
     p_Funtion->initWithViewControllers(controllerItem);
-    p_Funtion->showTabBarSelectedIndicator();
+    //p_Funtion->showTabBarSelectedIndicator();
+    p_Funtion->setTabBarBackGroundColor(ccc4(100,100,100,255));
+    p_Funtion->setTabBarSelectedBackGroundColor(ccc4(100,100,100,255));
     
     CANavigationController* navigationController = new CANavigationController();
     navigationController->initWithRootViewController(p_Funtion);
     navigationController->getView()->setColor(CAColor_clear);
+    navigationController->setNavigationBarBackGroundColor(ccc4(100,100,100,255));
+    
+    
+    
+//    CC_PROPERTY_PASS_BY_REF(CAColor4B, m_sNavigationBarBackGroundColor, NavigationBarBackGroundColor);
+//    
+//    CC_PROPERTY_PASS_BY_REF(CAColor4B, m_sNavigationBarTitleColor, NavigationBarTitleColor);
+//    
+//    CC_PROPERTY_PASS_BY_REF(CAColor4B, m_sNavigationBarButtonColor, NavigationBarButtonColor);
     
     CAWindow* p_Window = CAWindow::create();
 //    float winWidth = p_Window->getBounds().size.width;

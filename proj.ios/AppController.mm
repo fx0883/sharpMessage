@@ -4,6 +4,13 @@
 #import "AdmobManager.h"
 #import "Appirater.h"
 
+
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import "WeiboApi.h"
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+
 @implementation AppController
 
 #pragma mark -
@@ -12,9 +19,34 @@
 // CrossApp application instance
 static AppDelegate s_sharedApplication;
 
+
+-(void)importShareSDK
+{
+    //导入微信类型
+    [ShareSDK importWeChatClass:[WXApi class]];
+    
+    //导入腾讯微博类型
+    [ShareSDK importTencentWeiboClass:[WeiboApi class]];
+    
+    //导入QQ类型
+    [ShareSDK importQQClass:[QQApiInterface class] tencentOAuthCls:[TencentOAuth class]];
+    
+    //    //导入人人网类型
+    //    [ShareSDK importRenRenClass:[RennClient class]];
+    //
+    //    //导入Pinterest类型
+    //    [ShareSDK importPinterestClass:[Pinterest class]];
+    //
+    //    //导入Google+类型
+    //    [ShareSDK importGooglePlusClass:[GPPSignIn class] shareClass:[GPPShare class]];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+    // Override point for customization after application launch.
+    
+    [self importShareSDK];
 
     // Add the view controller's view to the window and display.
     

@@ -163,9 +163,9 @@ void FSNewsAboutController::tableViewDidSelectRowAtIndexPath(CATableView* table,
         {
             FSWebViewController *fswebviewcontroller = FSWebViewController::create();
             string strTitle="金庸";
-            string fileName = "web2/jinyong.html";
+            string fileName = "web2/index.html";
             
-             string fileTestPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("web2/jinyong.html");
+             string fileTestPath = CCFileUtils::sharedFileUtils()->fullPathForFilename("web2/index.html");
                         fswebviewcontroller->setTitleAndFileName(strTitle, fileTestPath);
                         CAWindow* window = CAApplication::getApplication()->getRootWindow();
             CANavigationController *nav = (CANavigationController*)window->getRootViewController();
