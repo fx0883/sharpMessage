@@ -13,7 +13,7 @@
 #include "BookMarkInfo.h"
 
 
-#define CAColor_blueStyle ccc4(51,204,255,255)
+//#define CAColor_blueStyle ccc4(51,204,255,255)
 
 
 //静态数据成员的定义和初始化
@@ -144,6 +144,8 @@ void FSNewsCatalog::segmentCallback(CASegmentedControl* btn, int index)
             break;
     }
 }
+
+
 
 void FSNewsCatalog::showMarklist(bool isShow)
 {

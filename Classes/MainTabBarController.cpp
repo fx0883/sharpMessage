@@ -80,13 +80,13 @@ CAWindow* MainTabBarController::createWindow()
     CATabBarController* p_Funtion = new MainTabBarController();
     p_Funtion->initWithViewControllers(controllerItem);
     //p_Funtion->showTabBarSelectedIndicator();
-    p_Funtion->setTabBarBackGroundColor(ccc4(100,100,100,255));
-    p_Funtion->setTabBarSelectedBackGroundColor(ccc4(100,100,100,255));
+    p_Funtion->setTabBarBackGroundColor(MainColor);
+    p_Funtion->setTabBarSelectedBackGroundColor(MainColor);
     
     CANavigationController* navigationController = new CANavigationController();
     navigationController->initWithRootViewController(p_Funtion);
     navigationController->getView()->setColor(CAColor_clear);
-    navigationController->setNavigationBarBackGroundColor(ccc4(100,100,100,255));
+    navigationController->setNavigationBarBackGroundColor(MainColor);
     
     
     

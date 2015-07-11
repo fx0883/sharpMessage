@@ -89,7 +89,7 @@ void FSReadSettingView::initView()
     m_svContent->setBounceVertical(false);
     m_svContent->setTag(202);
 //    m_svContent->setColor(ccc4(11,212,255,255));
-    m_svContent->setBackGroundColor(ccc4(11,212,255,255));
+    m_svContent->setBackGroundColor(MainColor);
     this->addSubview(m_svContent);
     
     addButtons();

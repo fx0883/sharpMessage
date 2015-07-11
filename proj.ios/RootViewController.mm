@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:61.0/255.0 green:65.0/255.0 blue:69.0/255.0 alpha:1.0]];
     
     CGRect rect = [[UIScreen mainScreen] bounds];
     //CGFloat scale = [[UIScreen mainScreen] scale];
@@ -49,6 +49,10 @@
                                  numberOfSamples: 0];
     [__glView setMultipleTouchEnabled:YES];
     [self.view addSubview:__glView];
+    
+//        [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 }
 
 

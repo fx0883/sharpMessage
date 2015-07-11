@@ -41,11 +41,32 @@ static AppDelegate s_sharedApplication;
     //    [ShareSDK importGooglePlusClass:[GPPSignIn class] shareClass:[GPPShare class]];
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+
+-(void)configGlobalStyle{
+//    UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+//    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+    
+    
+//    #define MainColor ccc4(61,65,69,255)
+    
+//    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:61 green:65 blue:69 alpha:255];
+    
+    [UINavigationBar appearance].barTintColor = [UIColor blackColor];
+    
+    
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    
+//    [self.navigationBar setTranslucent:NO];
+  //  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+//    [UINavigationBar appearance].titleTextAttributes = [NSForegroundColorAttributeName:[UIColor colorWithRed:61 green:65 blue:69 alpha:255]];
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
     // Override point for customization after application launch.
-    
+//    [self configGlobalStyle];
     [self importShareSDK];
 
     // Add the view controller's view to the window and display.
@@ -80,6 +101,8 @@ static AppDelegate s_sharedApplication;
     [AdmobManager sharedInstance];
     //载入评论
     [self giveMeRate];
+    
+     //   [self configGlobalStyle];
     return YES;
 }
 

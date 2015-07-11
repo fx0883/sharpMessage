@@ -120,4 +120,8 @@ typedef void (*FSCAObject)(CAObject *obj);
 
 #define READSETTINGKEY "READSETTINGKEY"
 
+
+//主色调
+#define MainColor ccc4(61,65,69,255)
+
 #endif /* __APPMACROS_H__ */

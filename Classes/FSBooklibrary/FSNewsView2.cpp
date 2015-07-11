@@ -15,7 +15,7 @@
 #include "FSUtil.h"
 
 
-#define CAColor_blueStyle ccc4(51,204,255,255)
+//#define CAColor_blueStyle ccc4(51,204,255,255)
 
 
 
@@ -379,7 +379,7 @@ void FSNewsView2::addBottomView()
     
     m_FSNewsBottomView = FSNewsBottomView::createWithFrame(rect);
     //m_FSNewsBottomView->setMaXPage((int)m_aryContent.size());
-    m_FSNewsBottomView->setColor(ccc4(11,212,255,255));
+    m_FSNewsBottomView->setColor(MainColor);
     this->getView()->addSubview(m_FSNewsBottomView);
     m_FSNewsBottomView->initView();
     m_FSNewsBottomView->setVisible(false);
@@ -395,7 +395,7 @@ void FSNewsView2::addBottomView()
     CrossApp::CADipRect rect2 = CADipRect(0, size.height*10/12, size.width, size.height/6);
     m_FSPageSliderView = FSPageSliderView::createWithFrame(rect2);
     m_FSPageSliderView->setMaXPage((int)m_aryContent.size());
-    m_FSPageSliderView->setColor(ccc4(11,212,255,255));
+    m_FSPageSliderView->setColor(MainColor);
     this->getView()->addSubview(m_FSPageSliderView);
     m_FSPageSliderView->initView();
     m_FSPageSliderView->setVisible(false);
@@ -406,7 +406,7 @@ void FSNewsView2::addBottomView()
     CrossApp::CADipRect rect3 = CADipRect(0, size.height*9/12, size.width, size.height/4);
     m_FSReadSettingView = FSReadSettingView::createWithFrame(rect3);
 
-    m_FSReadSettingView->setColor(ccc4(11,212,255,255));
+    m_FSReadSettingView->setColor(MainColor);
     this->getView()->addSubview(m_FSReadSettingView);
     m_FSReadSettingView->initView();
     m_FSReadSettingView->setVisible(false);
