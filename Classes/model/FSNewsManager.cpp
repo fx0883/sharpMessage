@@ -57,10 +57,12 @@ void FSNewsManager::loadCurChapterInfo(int newsID,int chapterNubmer)
 
     ChapterInfo* chapterInfo = NULL;
     for (int i=0; i<aryChapterInfo->count(); i++) {
+        
         chapterInfo=(ChapterInfo*)aryChapterInfo->objectAtIndex(i);
         if (chapterInfo->getChapterID() == chapterNubmer) {
             break;
         }
+        chapterInfo = NULL;
     }
     
     if (chapterInfo==NULL) {
