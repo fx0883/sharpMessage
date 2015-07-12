@@ -4,6 +4,7 @@ package com.sharpMessage.app2;
 import org.CrossApp.lib.Cocos2dxActivity;
 import org.CrossApp.lib.Cocos2dxGLSurfaceView;
 
+import cn.sharesdk.ShareSDKUtils;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Toast;
@@ -11,7 +12,9 @@ import android.widget.Toast;
 public class SharpMessage extends BaseActivity{
 	
     public void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);	
+
+		super.onCreate(savedInstanceState);
+    	ShareSDKUtils.prepare();
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {

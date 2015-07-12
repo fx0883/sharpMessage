@@ -288,6 +288,9 @@ obj/local/armeabi/objs/cocosdenshion_static/SimpleAudioEngine.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCString.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCNS.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CACalendar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCDouble.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCInteger.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCEventType.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/kazmath/include/kazmath/kazmath.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/kazmath/include/kazmath/GL/matrix.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/kazmath/include/kazmath/GL/../mat4.h \
@@ -910,6 +913,12 @@ obj/local/armeabi/objs/cocosdenshion_static/SimpleAudioEngine.o: \
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCNS.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CACalendar.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCDouble.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCInteger.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/cocoa/CCEventType.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CocosDenshion/android/../../CrossApp/kazmath/include/kazmath/kazmath.h:
 

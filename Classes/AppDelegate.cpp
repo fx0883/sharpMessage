@@ -107,7 +107,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 //    }
 //}
 
-
+#define SHARESDKREDIRECT_URI "https://itunes.apple.com/us/app/bandits-coming/id961013700?l=zh&ls=1&mt=8"
 void AppDelegate::initPlatformConfig()
 {
     //新浪微博
@@ -117,11 +117,13 @@ void AppDelegate::initPlatformConfig()
     sinaConfigDict -> setObject(CCString::create(REDIRECT_URI), "redirect_uri");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeSinaWeibo, sinaConfigDict);
     
+    
+
     //腾讯微博
     CCDictionary *tcConfigDict = CCDictionary::create();
     tcConfigDict -> setObject(CCString::create("801559571"), "app_key");
     tcConfigDict -> setObject(CCString::create("67e245cad8fbecf940da896b2cfcddc3"), "app_secret");
-    tcConfigDict -> setObject(CCString::create(REDIRECT_URI), "redirect_uri");
+    tcConfigDict -> setObject(CCString::create(SHARESDKREDIRECT_URI), "redirect_uri");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeTencentWeibo, tcConfigDict);
     
     //短信
@@ -129,8 +131,8 @@ void AppDelegate::initPlatformConfig()
     
     //QQ空间
     CCDictionary *qzConfigDict = CCDictionary::create();
-    qzConfigDict -> setObject(CCString::create("1104763154"), "app_id");
-    qzConfigDict -> setObject(CCString::create("WGAb2DWc7E4VI7Fs"), "app_key");
+    qzConfigDict -> setObject(CCString::create("1104764492"), "app_id");
+    qzConfigDict -> setObject(CCString::create("j0VYSkwDvE1SVwnF"), "app_key");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeQZone, qzConfigDict);
     
     //微信
@@ -142,7 +144,7 @@ void AppDelegate::initPlatformConfig()
     
     //QQ
     CCDictionary *qqConfigDict = CCDictionary::create();
-    qqConfigDict -> setObject(CCString::create("1104763154"), "app_id");
+    qqConfigDict -> setObject(CCString::create("1104764492"), "app_id");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeQQ, qqConfigDict);
     
     //Facebook

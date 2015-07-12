@@ -286,6 +286,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/AppDelegate.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCNS.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDouble.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCInteger.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCEventType.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../mat4.h \
@@ -332,6 +335,8 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/AppDelegate.o: \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/CCEGLViewProtocol.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h \
  jni/../../Classes/RootWindow.h jni/../../Classes/MainTabBarController.h \
  jni/../../Classes/FSUtilCPlus.h \
  /Library/Android/android-ndk-r9d/platforms/android-18/arch-arm/usr/include/dirent.h \
@@ -945,6 +950,12 @@ jni/../../Classes/AppDelegate.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDouble.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCInteger.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCEventType.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h:
@@ -1036,6 +1047,10 @@ jni/../../Classes/AppDelegate.h:
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCGL.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/platform/android/CCStdC.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h:
 
 jni/../../Classes/RootWindow.h:
 

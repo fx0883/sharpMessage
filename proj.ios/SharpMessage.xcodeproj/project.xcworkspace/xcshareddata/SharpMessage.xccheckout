@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A06FE79A-0BF6-4490-9C4F-E25366B23443</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SharpMessage</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E53169099E46709BB9B3245137E7AFF8D047592C</key>
 		<string>https://github.com/fx0883/sharpMessage.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>proj.ios/SharpMessage.xcodeproj</string>
+	<string>proj.ios/SharpMessage.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E53169099E46709BB9B3245137E7AFF8D047592C</key>

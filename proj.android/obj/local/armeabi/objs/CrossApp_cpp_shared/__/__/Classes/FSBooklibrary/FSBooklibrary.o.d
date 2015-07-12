@@ -255,6 +255,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCString.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCNS.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDouble.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCInteger.h \
+ /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCEventType.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h \
  /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/../mat4.h \
@@ -340,7 +343,9 @@ obj/local/armeabi/objs/CrossApp_cpp_shared/__/__/Classes/FSBooklibrary/FSBooklib
  jni/../../Classes/FSBooklibrary/FSNewsView2Cell.h \
  jni/../../Classes/FSBooklibrary/FSNewsBottomView.h \
  jni/../../Classes/FSBooklibrary/FSPageSliderView.h \
- jni/../../Classes/FSBooklibrary/FSReadSettingView.h
+ jni/../../Classes/FSBooklibrary/FSReadSettingView.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h \
+ jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h
 
 jni/../../Classes/FSBooklibrary/FSBooklibrary.h:
 
@@ -852,6 +857,12 @@ jni/../../Classes/FSBooklibrary/FSBooklibrary.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CACalendar.h:
 
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCDouble.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCInteger.h:
+
+/workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/cocoa/CCEventType.h:
+
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/kazmath.h:
 
 /workCode/CrossApp-1.1.2/projects/sharpMessage/proj.android/../../../CrossApp/kazmath/include/kazmath/GL/matrix.h:
@@ -1031,3 +1042,7 @@ jni/../../Classes/FSBooklibrary/FSNewsBottomView.h:
 jni/../../Classes/FSBooklibrary/FSPageSliderView.h:
 
 jni/../../Classes/FSBooklibrary/FSReadSettingView.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDK.h:
+
+jni/../../Classes/C2DXShareSDK/C2DXShareSDKTypeDef.h:

@@ -26,7 +26,7 @@ public class BaseActivity extends Cocos2dxActivity{
 	private Boolean isFirstInterstitial = true;
 	
 	private int times=0;
-	private int canShowTimes=0;
+	private int canShowTimes=10;
 	private String startUpTime="startUpTime";
     /** Called when the activity is first created. */
     @Override

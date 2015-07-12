@@ -105,10 +105,13 @@ void FSReadSettingView::addButtons()
     float btnSpace = boundsSize.height/6;
     CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
     for (int i=0; i<readSettingAry->count(); i++) {
-        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeRoundedRect);
+        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeCustom);
         itemBtn->setTag(i);
+        itemBtn->setColor(ccc4(255, 255, 255, 255));
         
           itemBtn->addTarget(this, CAControl_selector(FSReadSettingView::bgItemBtnClick), CAControlEventTouchUpInSide);
+        
+         itemBtn->setTitleColorForState(CAControlStateNormal, ccc4(51,204,255,255));
         
         //m_svContent->setContentSize(contentSize);
 
@@ -120,6 +123,10 @@ void FSReadSettingView::addButtons()
     
         CAImage *itemImage = CAImage::create("bg/"+string( strImagePath->getCString()));
         itemBtn->setImageForState(CAControlStateAll, itemImage);
+//        itemBtn->setImageColorForState(CAControlStateAll, ccc4(255, 255, 255, 255));
+//        
+//        CAView *btnView = itemBtn->getBackGroundViewForState(CAControlStateNormal);
+//        btnView->setColor(ccc4(255, 255, 255, 255));
         m_svContent->addSubview(itemBtn);
         
     }

@@ -728,7 +728,7 @@ void FSNewsView2::refreshView()
 
     CANavigationBarItem *navBarItem = CANavigationBarItem::create(m_chapterInfo->getChapterTitle());
     
-    CABarButtonItem* rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
+    CABarButtonItem* rightButton = CABarButtonItem::create("",  CAImage::create("image/label.png"),  CAImage::create("image/labelSelected.png"));
     
     
     rightButton->setTarget(rightButton, CAControl_selector(FSNewsView2::onClickBookMark));

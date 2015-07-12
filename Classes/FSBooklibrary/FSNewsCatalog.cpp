@@ -44,7 +44,7 @@ void FSNewsCatalog::refreshView(bool isCatalog)
     
     CANavigationBarItem *navbaritem = CANavigationBarItem::create(FSDataManager::GetInstance().getNewsManager()->getNewsInfoByNewsId(m_NewsId)->getNewsTitle());
     if (!isCatalog) {
-        rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
+        rightButton = CABarButtonItem::create("",  CAImage::create("image/trash.png"),  CAImage::create("image/trashSelected.png"));
         
         rightButton->setTarget(rightButton, CAControl_selector(FSNewsCatalog::onClickBookMarkClean));
         navbaritem->addRightButtonItem(rightButton);

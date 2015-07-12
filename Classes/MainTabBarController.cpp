@@ -39,9 +39,9 @@ CAWindow* MainTabBarController::createWindow()
 //    navBooklibrary->initWithRootViewController(fsbooklibrary);
 //    navBooklibrary->getView()->setColor(CAColor_clear);
     fsbooklibrary->init();
-    fsbooklibrary->setTabBarItem(CATabBarItem::create("library",
-                                                       CAImage::create("tabbar_function/booklibrary_1.png"),
-                                                       CAImage::create("tabbar_function/booklibrary_2.png")));
+    fsbooklibrary->setTabBarItem(CATabBarItem::create("书 库",
+                                                       CAImage::create("image/library.png"),
+                                                       CAImage::create("image/librarySelected.png")));
     
 //    FSBookRankingList* fsbookrankinglist = new FSBookRankingList();
 //    fsbookrankinglist->init();
@@ -52,9 +52,9 @@ CAWindow* MainTabBarController::createWindow()
     
     FSBookReadTimes* fsbookreadtimes = new FSBookReadTimes();
     fsbookreadtimes->init();
-    fsbookreadtimes->setTabBarItem(CATabBarItem::create("ReadTimes",
-                                                          CAImage::create("tabbar_function/bookRankingList_1.png"),
-                                                          CAImage::create("tabbar_function/bookRankingList_2.png")));
+    fsbookreadtimes->setTabBarItem(CATabBarItem::create("最 爱",
+                                                          CAImage::create("image/myLover.png"),
+                                                          CAImage::create("image/myLoverSelected.png")));
     
     
     
@@ -66,9 +66,9 @@ CAWindow* MainTabBarController::createWindow()
     
     FSNewsAboutController* fsnewsaboutcontroller = new FSNewsAboutController();
     fsnewsaboutcontroller->init();
-    fsnewsaboutcontroller->setTabBarItem(CATabBarItem::create("User",
-                                                            CAImage::create("tabbar_function/userCenter_1.png"),
-                                                            CAImage::create("tabbar_function/userCenter_2.png")));
+    fsnewsaboutcontroller->setTabBarItem(CATabBarItem::create("关 于",
+                                                            CAImage::create("image/about.png"),
+                                                            CAImage::create("image/aboutSelected.png")));
     
     
     
@@ -82,6 +82,8 @@ CAWindow* MainTabBarController::createWindow()
     //p_Funtion->showTabBarSelectedIndicator();
     p_Funtion->setTabBarBackGroundColor(MainColor);
     p_Funtion->setTabBarSelectedBackGroundColor(MainColor);
+    p_Funtion->setTabBarTitleColorForNormal(ccc4(153, 153, 153, 255));
+    p_Funtion->setTabBarTitleColorForSelected(ccc4(255, 255, 255, 255));
     
     CANavigationController* navigationController = new CANavigationController();
     navigationController->initWithRootViewController(p_Funtion);

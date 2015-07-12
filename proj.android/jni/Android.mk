@@ -9,7 +9,8 @@ LOCAL_MODULE_FILENAME := libCrossApp_cpp
 MY_FILES_PATH := $(LOCAL_PATH) \
                  $(LOCAL_PATH)/../../Classes
 
-MY_FILES_SUFFIX := %.cpp
+MY_FILES_SUFFIX := %.cpp \
+                   %.c
 
 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
 
@@ -37,7 +38,8 @@ LOCAL_WHOLE_STATIC_LIBRARIES += CrossApp_extension_static
 
 include $(BUILD_SHARED_LIBRARY)
 
-#$(call import-add-path, $(LOCAL_PATH)/../../../..)#$(call import-add-path, $(LOCAL_PATH)/../../../../CrossApp/the_third_party/)
+#$(call import-add-path, $(LOCAL_PATH)/../../../..)
+#$(call import-add-path, $(LOCAL_PATH)/../../../../CrossApp/the_third_party/)
 $(call import-module, CrossApp)
 $(call import-module, CocosDenshion/android)
 $(call import-module, extensions)
