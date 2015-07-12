@@ -85,6 +85,12 @@ void FSNewsCatalog::viewDidLoad()
     
 
     
+    segment->setBackgroundImage( CAImage::create("image/btn_rounded_normal.png") );
+    
+
+    segment->setSegmentItemBackgroundImage(CAImage::create("image/btn_rounded_highlighted.png"));
+    
+    
     for (int i = 0; i < segmentTitlelist.size(); i++)
     {
 

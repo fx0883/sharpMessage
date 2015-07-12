@@ -71,6 +71,8 @@ void FSReadSettingView::initView()
 //    m_HighlightSlider->setMaxValue(100);
 //    m_HighlightSlider->setMinValue(1);
     
+    //m_HighlightSlider->setColor(ccc4(255, 255, 255, 255));
+    
     m_HighlightSlider->addTarget(this, CAControl_selector(FSReadSettingView::highlightSliderValueChange));
 //    m_HighlightSlider->addTargetForTouchUpSide(this, CAControl_selector(FSPageSliderView::pageSliderTouchUpSide));
     
@@ -105,9 +107,9 @@ void FSReadSettingView::addButtons()
     float btnSpace = boundsSize.height/6;
     CCArray *readSettingAry = FSDataManager::GetInstance().getAryReadSettingList();
     for (int i=0; i<readSettingAry->count(); i++) {
-        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeCustom);
+        CAButton* itemBtn = CAButton::createWithFrame(CCRectMake((btnWidth+btnSpace)*i,boundsSize.height/8,btnWidth,btnWidth), CAButtonTypeRoundedRect);
         itemBtn->setTag(i);
-        itemBtn->setColor(ccc4(255, 255, 255, 255));
+//        itemBtn->setColor(ccc4(255, 255, 255, 255));
         
           itemBtn->addTarget(this, CAControl_selector(FSReadSettingView::bgItemBtnClick), CAControlEventTouchUpInSide);
         

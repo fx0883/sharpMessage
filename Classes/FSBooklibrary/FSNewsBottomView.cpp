@@ -125,9 +125,9 @@ void FSNewsBottomView::initView()
 
     CCLog("width===============================rectItemSizeWidth============================%f",rectItemSize.width);
     
-    m_listImage.pushBack(CAImage::create("tabbar_function/booklibrary_1.png"));
-    m_listImage.pushBack(CAImage::create("tabbar_function/booklibrary_1.png"));
-    m_listImage.pushBack(CAImage::create("tabbar_function/booklibrary_1.png"));
+    m_listImage.pushBack(CAImage::create("image/index.png"));
+    m_listImage.pushBack(CAImage::create("image/progress.png"));
+    m_listImage.pushBack(CAImage::create("image/setting.png"));
     
 //    m_listText.pushBack("目录");
 //    m_listText.pushBack("进度");

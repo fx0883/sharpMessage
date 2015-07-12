@@ -58,7 +58,10 @@ void FSBookReadTimes::viewDidUnload()
 void FSBookReadTimes::tableViewDidSelectRowAtIndexPath(CATableView* table, unsigned int section, unsigned int row)
 {
     int index =row;
-    CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getArynewsList();
+    
+        CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getAryNewsListOrderbyReadTimes();
+    
+//    CCArray& ary = FSDataManager::GetInstance().getNewsManager()->getArynewsList();
     NewsInfo *newsinfo = (NewsInfo*)ary.objectAtIndex(index);
     newsinfo->setReadTimes(newsinfo->getReadTimes()+1);
     FSNewsView2 *fsnewsview2 = new FSNewsView2();

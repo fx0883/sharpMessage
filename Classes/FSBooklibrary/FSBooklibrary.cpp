@@ -60,7 +60,7 @@ void FSBooklibrary::viewDidAppear()
     {
         CANavigationBarItem *navItem = CANavigationBarItem::create("金庸小说");
         
-        rightButton = CABarButtonItem::create("",  CAImage::create("tabbar_function/userCenter_1.png"),  CAImage::create("tabbar_function/userCenter_1.png"));
+        rightButton = CABarButtonItem::create("",  CAImage::create("image/share.png"),  CAImage::create("image/shareSelected.png"));
         
         rightButton->setTarget(rightButton, CAControl_selector(FSBooklibrary::onClickShareSdk));
         navItem->addRightButtonItem(rightButton);
@@ -134,7 +134,7 @@ CACollectionViewCell* FSBooklibrary::collectionCellAtIndex(CACollectionView *col
     {
         p_Cell = (FSBooklibraryCell*)FSBooklibraryCell::create(strCellIndentifier);
         p_Cell->initWithSize(_size);
-        
+        p_Cell->setAllowsSelected(false);
 //                CAView* itemImage = CAView::createWithFrame(CADipRect(0, 0, _size.width, _size.height));
 //                itemImage->setTag(99);
 //                p_Cell->addSubview(itemImage);
