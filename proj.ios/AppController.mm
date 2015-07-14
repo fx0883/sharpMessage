@@ -11,6 +11,8 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 
+
+
 @implementation AppController
 
 #pragma mark -
@@ -18,6 +20,136 @@
 
 // CrossApp application instance
 static AppDelegate s_sharedApplication;
+
+
+
+
+
+
+
+-(void)checkNetworkContect
+{
+    //Change the host name here to change the server you want to monitor.
+    NSString *remoteHostName = @"www.baidu.com";
+    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+//    self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
+    
+    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+    [self.hostReachability startNotifier];
+    [self updateInterfaceWithReachability:self.hostReachability];
+    
+    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    [self.internetReachability startNotifier];
+    [self updateInterfaceWithReachability:self.internetReachability];
+    
+    self.wifiReachability = [Reachability reachabilityForLocalWiFi];
+    [self.wifiReachability startNotifier];
+    [self updateInterfaceWithReachability:self.wifiReachability];
+}
+
+-(BOOL) connectedToNetwork
+{
+    // Create zero addy
+    struct sockaddr_in zeroAddress;
+    bzero(&zeroAddress, sizeof(zeroAddress));
+    zeroAddress.sin_len = sizeof(zeroAddress);
+    zeroAddress.sin_family = AF_INET;
+    
+    // Recover reachability flags
+    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    
+    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    CFRelease(defaultRouteReachability);
+    
+    if (!didRetrieveFlags)
+    {
+        printf("Error. Could not recover network reachability flags\n");
+        return NO;
+    }
+    
+    BOOL isReachable = ((flags & kSCNetworkFlagsReachable) != 0);
+    BOOL needsConnection = ((flags & kSCNetworkFlagsConnectionRequired) != 0);
+    return (isReachable && !needsConnection) ? YES : NO;
+}
+
+-(BOOL) isConnectionAvailable{
+    
+    BOOL isExistenceNetwork = YES;
+    Reachability *reach = [Reachability reachabilityWithHostname:@"www.apple.com"];
+    switch ([reach currentReachabilityStatus]) {
+        case NotReachable:
+            isExistenceNetwork = NO;
+            //NSLog(@"notReachable");
+            break;
+        case ReachableViaWiFi:
+            isExistenceNetwork = YES;
+            //NSLog(@"WIFI");
+            break;
+        case ReachableViaWWAN:
+            isExistenceNetwork = YES;
+            //NSLog(@"3G");
+            break;
+    }
+    
+    if (!isExistenceNetwork) {
+//        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];//<span style="font-family: Arial, Helvetica, sans-serif;">MBProgressHUD为第三方库，不需要可以省略或使用AlertView</span>
+//        hud.removeFromSuperViewOnHide =YES;
+//        hud.mode = MBProgressHUDModeText;
+//        hud.labelText = NSLocalizedString(INFO_NetNoReachable, nil);
+//        hud.minSize = CGSizeMake(132.f, 108.0f);
+//        [hud hide:YES afterDelay:3];
+//        return NO;
+    }
+    
+    return isExistenceNetwork;
+}
+
+
+/*!
+ * Called by Reachability whenever status changes.
+ */
+- (void) reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    if (reachability == self.hostReachability)
+    {
+
+        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        BOOL connectionRequired = [reachability connectionRequired];
+        
+
+        NSString* baseLabelText = @"";
+        
+        if (connectionRequired)
+        {
+            baseLabelText = NSLocalizedString(@"Cellular data network is available.\nInternet traffic will be routed through it after a connection is established.", @"Reachability text if a connection is required");
+        }
+        else
+        {
+            baseLabelText = NSLocalizedString(@"Cellular data network is active.\nInternet traffic will be routed through it.", @"Reachability text if a connection is not required");
+        }
+//        self.summaryLabel.text = baseLabelText;
+    }
+    
+    if (reachability == self.internetReachability)
+    {
+//        [self configureTextField:self.internetConnectionStatusField imageView:self.internetConnectionImageView reachability:reachability];
+    }
+    
+    if (reachability == self.wifiReachability)
+    {
+//        [self configureTextField:self.localWiFiConnectionStatusField imageView:self.localWiFiConnectionImageView reachability:reachability];
+    }
+}
+
 
 
 -(void)importShareSDK
@@ -97,7 +229,12 @@ static AppDelegate s_sharedApplication;
     
     CrossApp::CCApplication::sharedApplication()->run();
     
+    //isConnect = [self isConnectionAvailable];
     //载入广告
+//    if(isConnect)
+//    {
+//        [AdmobManager sharedInstance];
+//    }
     [AdmobManager sharedInstance];
     //载入评论
     [self giveMeRate];
@@ -119,7 +256,11 @@ static AppDelegate s_sharedApplication;
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-    [[AdmobManager sharedInstance] startInterstitialView];
+//    if (isConnect)
+    {
+        [[AdmobManager sharedInstance] startInterstitialView];
+    }
+
     CrossApp::CAApplication::getApplication()->resume();
 }
 

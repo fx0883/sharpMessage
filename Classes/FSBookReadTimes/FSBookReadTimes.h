@@ -16,6 +16,10 @@ USING_NS_CC;
 
 class FSBookReadTimes :public CAViewController,public CATableViewDelegate ,public CATableViewDataSource
 {
+    
+public:
+    CREATE_FUNC(FSBookReadTimes);
+    
 public:
     FSBookReadTimes();
     virtual ~FSBookReadTimes();

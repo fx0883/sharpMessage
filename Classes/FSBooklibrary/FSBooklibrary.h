@@ -19,6 +19,9 @@ class FSBooklibrary: public BaseViewController, CACollectionViewDelegate, CAColl
 {
     
 public:
+    CREATE_FUNC(FSBooklibrary);
+    
+public:
     
     FSBooklibrary();
     

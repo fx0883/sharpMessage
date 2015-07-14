@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ShareSDK</string>
+    <string name="app_name">Jinyong Free</string>
+    <string name="exit_hint">Tap again will exit the program</string>
 </resources>

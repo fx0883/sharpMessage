@@ -34,7 +34,8 @@ public:
     FSNewsView2();
     virtual ~FSNewsView2();
     
-
+public:
+        CREATE_FUNC(FSNewsView2);
 protected:
     ChapterInfo* m_chapterInfo;
     

@@ -29,16 +29,12 @@ CAWindow* MainTabBarController::createWindow()
 {
     
     
+    //FSBooklibrary* fsbooklibrary  = FSBooklibrary::create();
     
     FSBooklibrary* fsbooklibrary = new FSBooklibrary();
-
-    
-//    CANavigationController *navBooklibrary = CANavigationController.initWithRootViewController
-    
-//    CANavigationController* navBooklibrary = new CANavigationController();
-//    navBooklibrary->initWithRootViewController(fsbooklibrary);
-//    navBooklibrary->getView()->setColor(CAColor_clear);
     fsbooklibrary->init();
+    
+
     fsbooklibrary->setTabBarItem(CATabBarItem::create("书 库",
                                                        CAImage::create("image/library.png"),
                                                        CAImage::create("image/librarySelected.png")));
@@ -49,9 +45,10 @@ CAWindow* MainTabBarController::createWindow()
 //                                                        CAImage::create("tabbar_function/bookRankingList_1.png"),
 //                                                        CAImage::create("tabbar_function/bookRankingList_2.png")));
     
-    
+//    FSBookReadTimes* fsbookreadtimes = FSBookReadTimes::create();    
     FSBookReadTimes* fsbookreadtimes = new FSBookReadTimes();
     fsbookreadtimes->init();
+
     fsbookreadtimes->setTabBarItem(CATabBarItem::create("最 爱",
                                                           CAImage::create("image/myLover.png"),
                                                           CAImage::create("image/myLoverSelected.png")));
@@ -64,6 +61,7 @@ CAWindow* MainTabBarController::createWindow()
 //                                                        CAImage::create("tabbar_function/userCenter_1.png"),
 //                                                        CAImage::create("tabbar_function/userCenter_2.png")));
     
+//    FSNewsAboutController* fsnewsaboutcontroller = FSNewsAboutController::create();
     FSNewsAboutController* fsnewsaboutcontroller = new FSNewsAboutController();
     fsnewsaboutcontroller->init();
     fsnewsaboutcontroller->setTabBarItem(CATabBarItem::create("关 于",

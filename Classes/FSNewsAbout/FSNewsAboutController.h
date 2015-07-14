@@ -15,6 +15,8 @@
 
 class FSNewsAboutTableCell : public CATableViewCell
 {
+
+
 public:
     FSNewsAboutTableCell();
     virtual ~FSNewsAboutTableCell();

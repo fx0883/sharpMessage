@@ -192,7 +192,7 @@ DEF_SINGLETON(AdmobManager)
 /// show. This is common since interstitials are shown sparingly to users.
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error
 {
-    [self loadInterstitial];
+    //[self loadInterstitial];
 }
 
 #pragma mark Display-Time Lifecycle Notifications

@@ -15,6 +15,8 @@
 
 class FSNewsAboutDetailController : public CAViewController
 {
+    
+
 public:
     FSNewsAboutDetailController();
     virtual ~FSNewsAboutDetailController();

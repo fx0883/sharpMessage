@@ -29,17 +29,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     //初始化社交平台信息
     this -> initPlatformConfig();
     
-    
-    
-    
-    
-    
-    
     // initialize director
     CAApplication* pDirector = CAApplication::getApplication();
     
-//    loadData();
-    //initialize db
     FSloadResBase *loadres = FSloadRes::create();
     loadres->loadNewsList();
     loadres->loadReadSetting();
@@ -51,13 +43,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCEGLView* pEGLView = CCEGLView::sharedOpenGLView();
 
     pDirector->setOpenGLView(pEGLView);
-
     // run
-//    pDirector->runWindow(RootWindow::create());
-
     pDirector->runWindow(MainTabBarController::createWindow());
-   //
-    
+
     CCLog("runWindow");
     return true;
 }
