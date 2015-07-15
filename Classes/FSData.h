@@ -67,8 +67,15 @@ static const CHAR* aboutMenuTag[2] =
 //    _T("清除缓存"),
 //    _T("检查更新"),
 //    _T("评分"),
-    _T("反馈"),
+    _T("金庸介绍"),
     _T("关于")
+};
+
+static const CHAR* aboutDetail[2] =
+{
+
+    _T("金庸全集Free"),
+    _T("版本号 : 1.0.0")
 };
 
 static const char* iconTag[20] =

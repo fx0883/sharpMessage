@@ -348,7 +348,7 @@
 		1AFCDA8016D4A25900906EA6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = SOURCE_ROOT; };
 		1AFCDA8116D4A25900906EA6 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* SharpMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharpMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* 金庸全集Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金庸全集Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		831C011D1AEA4DCD00F5F291 /* SharpMessageComom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharpMessageComom.h; sourceTree = "<group>"; };
@@ -901,7 +901,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* SharpMessage.app */,
+				1D6058910D05DD3D006BFB54 /* 金庸全集Free.app */,
 				18810B241B0C6E8E00B87FD8 /* TestCollectionView.app */,
 				18810B381B0C6E8E00B87FD8 /* TestCollectionViewTests.xctest */,
 			);
@@ -1202,7 +1202,7 @@
 			);
 			name = SharpMessage;
 			productName = iphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* SharpMessage.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* 金庸全集Free.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1729,7 +1729,7 @@
 					"\"$(SRCROOT)/../../../extensions/libwebsockets/ios/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../extensions/libwebsockets/ios/lib\"",
 					"\"$(SRCROOT)/../../../CrossApp/the_third_party/curl/prebuilt/ios\"",
@@ -1743,7 +1743,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = SharpMessage;
+				PRODUCT_NAME = "金庸全集Free";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -1801,7 +1801,7 @@
 					"\"$(SRCROOT)/../../../extensions/libwebsockets/ios/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../extensions/libwebsockets/ios/lib\"",
 					"\"$(SRCROOT)/../../../CrossApp/the_third_party/curl/prebuilt/ios\"",
@@ -1813,7 +1813,7 @@
 					"$(PROJECT_DIR)/ShareSDK2.10.6/Extend/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = SharpMessage;
+				PRODUCT_NAME = "金庸全集Free";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
