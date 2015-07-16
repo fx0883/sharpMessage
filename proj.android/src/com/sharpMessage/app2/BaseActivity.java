@@ -24,8 +24,9 @@ public class BaseActivity extends Cocos2dxActivity{
 	private InterstitialAd mInterstitial;
 	private Boolean isFirstInterstitial = true;
 	
-	private int times=0;
-	private int canShowTimes=0;
+	private int times = 0;
+	private int canShowTimes = 0;
+	private int tryLoadAd = 0;
 	private String startUpTime="startUpTime";
     /** Called when the activity is first created. */
     @Override
@@ -33,7 +34,7 @@ public class BaseActivity extends Cocos2dxActivity{
         super.onCreate(savedInstanceState);
         mInterstitial = new InterstitialAd(this);
 //        mInterstitial.setAdUnitId(getResources().getString(R.string.ad_unit_id));
-        mInterstitial.setAdUnitId("ca-app-pub-5934917937656240/7917750418");
+        mInterstitial.setAdUnitId("ca-app-pub-5934917937656240/8743902411");
         // Set an AdListener.
         mInterstitial.setAdListener(new AdListener() {
             @Override
@@ -53,8 +54,10 @@ public class BaseActivity extends Cocos2dxActivity{
             @Override
             public void onAdFailedToLoad(int errorCode) 
             {
-            	
-            	//mInterstitial.loadAd(new AdRequest.Builder().build());
+            	if(tryLoadAd++ < 130 )
+            	{
+            		mInterstitial.loadAd(new AdRequest.Builder().build());
+            	}
             };
         });
 
@@ -67,6 +70,7 @@ public class BaseActivity extends Cocos2dxActivity{
         if (mInterstitial.isLoaded()&&bIsCanShowAd()) {
             mInterstitial.show();
             mInterstitial.loadAd(new AdRequest.Builder().build());
+            saveAdTime();
         }	
         
     }
@@ -90,7 +94,7 @@ public class BaseActivity extends Cocos2dxActivity{
     {
     	SharedPreferences adSettings = getSharedPreferences("AdSetting", 0);
     	times = adSettings.getInt(startUpTime, 0);
-		return times;
+		return ++times;
     	
     }
    
@@ -100,7 +104,7 @@ public class BaseActivity extends Cocos2dxActivity{
     	if (times==0) {
 			getAdTime();
 		};
-    	flag = times>canShowTimes;
+    	flag = times>=canShowTimes;
     	//Log.d(tag, msg)(times); 
     	
     	Log.w(startUpTime,times+"");
@@ -112,7 +116,7 @@ public class BaseActivity extends Cocos2dxActivity{
 	{
 		SharedPreferences adSettings = getSharedPreferences("AdSetting", 0);
 		SharedPreferences.Editor editor = adSettings.edit();
-		editor.putInt(startUpTime, ++times);
+		editor.putInt(startUpTime, times);
 		editor.commit();
 		
 	}

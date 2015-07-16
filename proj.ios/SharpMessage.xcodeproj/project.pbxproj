@@ -60,7 +60,6 @@
 		183DD9F01B2266B100763815 /* FSNewsBottomView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183DD9EF1B2266B100763815 /* FSNewsBottomView.cpp */; };
 		1851A6161B01831800BEDFD8 /* ChapterInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1851A6141B01831800BEDFD8 /* ChapterInfo.cpp */; };
 		1855003F1B4A2EC200242E4A /* FSNewsAboutDetailController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1855003D1B4A2EC200242E4A /* FSNewsAboutDetailController.cpp */; };
-		1863E0841B5298A50006173E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1863E0831B5298A50006173E /* Images.xcassets */; };
 		186771EC1B4D09C300F59F5D /* bg in Resources */ = {isa = PBXBuildFile; fileRef = 186771EB1B4D09C300F59F5D /* bg */; };
 		186CC99D1B50FA0300277703 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186CC99C1B50FA0300277703 /* CoreMedia.framework */; };
 		1880A5421B466C62008F9F8B /* FSBookReadTimes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1880A5401B466C62008F9F8B /* FSBookReadTimes.cpp */; };
@@ -88,6 +87,7 @@
 		18F6C5B31B4B54AD0012293E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F6C5B21B4B54AD0012293E /* EventKitUI.framework */; };
 		18F6C5B51B4B54B30012293E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F6C5B41B4B54B30012293E /* MessageUI.framework */; };
 		18F6C5B71B4B54BB0012293E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F6C5B61B4B54BB0012293E /* StoreKit.framework */; };
+		18FA56B91B57F01000CFBF48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FA56B81B57F01000CFBF48 /* Images.xcassets */; };
 		1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624316D4A1E8000847F2 /* AppController.mm */; };
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
@@ -294,7 +294,6 @@
 		1855003D1B4A2EC200242E4A /* FSNewsAboutDetailController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsAboutDetailController.cpp; sourceTree = "<group>"; };
 		1855003E1B4A2EC200242E4A /* FSNewsAboutDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsAboutDetailController.h; sourceTree = "<group>"; };
 		186200D71B214A4A00AD450B /* FSNewsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsBottomView.h; sourceTree = "<group>"; };
-		1863E0831B5298A50006173E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SharpMessage/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		186771EB1B4D09C300F59F5D /* bg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bg; sourceTree = "<group>"; };
 		186CC99C1B50FA0300277703 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1880A5401B466C62008F9F8B /* FSBookReadTimes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FSBookReadTimes.cpp; path = ../../Classes/FSBookReadTimes/FSBookReadTimes.cpp; sourceTree = "<group>"; };
@@ -334,6 +333,7 @@
 		18F6C5B21B4B54AD0012293E /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		18F6C5B41B4B54B30012293E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18F6C5B61B4B54BB0012293E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		18FA56B81B57F01000CFBF48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		1AB87033175E0A84005D39BF /* WebSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebSocket.cpp; sourceTree = "<group>"; };
 		1AB87034175E0A84005D39BF /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
 		1AC3624216D4A1E8000847F2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = SOURCE_ROOT; };
@@ -531,6 +531,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				18FA56B81B57F01000CFBF48 /* Images.xcassets */,
 				180104691B52087500283DCC /* ShareSDKv2.11.0 */,
 				182CE42C1B4E73DF00F73618 /* appirater */,
 				18F6C59D1B4B541D0012293E /* Google-Mobile-Ads-SDK */,
@@ -964,7 +965,6 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1863E0831B5298A50006173E /* Images.xcassets */,
 				186771EB1B4D09C300F59F5D /* bg */,
 				181DD76E1B4C066300D60771 /* web2 */,
 				18B643001B48183800122D8F /* image */,
@@ -1312,13 +1312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				180104A01B52087500283DCC /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				18FA56B91B57F01000CFBF48 /* Images.xcassets in Resources */,
 				181A86941B2956E800F79C78 /* config in Resources */,
 				B0621E261AC3ECEC005EBCA7 /* r in Resources */,
 				B04C0C091901207A009854FD /* json_valueiterator.inl in Resources */,
 				B01F71671951682600BA07A6 /* source_material in Resources */,
 				181DD76F1B4C066300D60771 /* web2 in Resources */,
 				B0621BE51AC3B871005EBCA7 /* fonts in Resources */,
-				1863E0841B5298A50006173E /* Images.xcassets in Resources */,
 				1801049C1B52087500283DCC /* ShareSDKLocalizable.strings in Resources */,
 				1801049D1B52087500283DCC /* Resource.bundle in Resources */,
 				18B643011B48183800122D8F /* image in Resources */,
