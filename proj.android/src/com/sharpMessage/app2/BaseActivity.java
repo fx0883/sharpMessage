@@ -3,7 +3,6 @@ package com.sharpMessage.app2;
 
 import android.view.KeyEvent;
 import android.widget.Toast;
-import android.R.integer;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -55,7 +54,7 @@ public class BaseActivity extends Cocos2dxActivity{
             public void onAdFailedToLoad(int errorCode) 
             {
             	
-            	mInterstitial.loadAd(new AdRequest.Builder().build());
+            	//mInterstitial.loadAd(new AdRequest.Builder().build());
             };
         });
 

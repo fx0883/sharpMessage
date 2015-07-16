@@ -47,7 +47,6 @@
 		180CF8C91B087C230026720D /* FSNewsView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180CF8C71B087C230026720D /* FSNewsView.cpp */; };
 		180CF8CC1B087DA30026720D /* FSNewsViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180CF8CA1B087DA30026720D /* FSNewsViewCell.cpp */; };
 		181A86941B2956E800F79C78 /* config in Resources */ = {isa = PBXBuildFile; fileRef = 181A86931B2956E800F79C78 /* config */; };
-		181A86961B295E0900F79C78 /* bkg in Resources */ = {isa = PBXBuildFile; fileRef = 181A86951B295E0900F79C78 /* bkg */; };
 		181A86991B29667100F79C78 /* FSReadSettingView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 181A86971B29667100F79C78 /* FSReadSettingView.cpp */; };
 		181DD76D1B4C012900D60771 /* FSWebViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 181DD76B1B4C012900D60771 /* FSWebViewController.cpp */; };
 		181DD76F1B4C066300D60771 /* web2 in Resources */ = {isa = PBXBuildFile; fileRef = 181DD76E1B4C066300D60771 /* web2 */; };
@@ -241,7 +240,6 @@
 		180CF8CA1B087DA30026720D /* FSNewsViewCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSNewsViewCell.cpp; sourceTree = "<group>"; };
 		180CF8CB1B087DA30026720D /* FSNewsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewsViewCell.h; sourceTree = "<group>"; };
 		181A86931B2956E800F79C78 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
-		181A86951B295E0900F79C78 /* bkg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bkg; sourceTree = "<group>"; };
 		181A86971B29667100F79C78 /* FSReadSettingView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSReadSettingView.cpp; sourceTree = "<group>"; };
 		181A86981B29667100F79C78 /* FSReadSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSReadSettingView.h; sourceTree = "<group>"; };
 		181DD76B1B4C012900D60771 /* FSWebViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSWebViewController.cpp; sourceTree = "<group>"; };
@@ -970,7 +968,6 @@
 				186771EB1B4D09C300F59F5D /* bg */,
 				181DD76E1B4C066300D60771 /* web2 */,
 				18B643001B48183800122D8F /* image */,
-				181A86951B295E0900F79C78 /* bkg */,
 				181A86931B2956E800F79C78 /* config */,
 				18EA428A1B203F1F0099A9DC /* web */,
 				839051931AF072F300DD87A2 /* cn */,
@@ -1318,7 +1315,6 @@
 				181A86941B2956E800F79C78 /* config in Resources */,
 				B0621E261AC3ECEC005EBCA7 /* r in Resources */,
 				B04C0C091901207A009854FD /* json_valueiterator.inl in Resources */,
-				181A86961B295E0900F79C78 /* bkg in Resources */,
 				B01F71671951682600BA07A6 /* source_material in Resources */,
 				181DD76F1B4C066300D60771 /* web2 in Resources */,
 				B0621BE51AC3B871005EBCA7 /* fonts in Resources */,

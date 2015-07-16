@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "SharpMessage.app"
+               BuildableName = "&#x91d1;&#x5eb8;&#x5168;&#x96c6;Free.app"
                BlueprintName = "SharpMessage"
                ReferencedContainer = "container:SharpMessage.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SharpMessage.app"
+            BuildableName = "&#x91d1;&#x5eb8;&#x5168;&#x96c6;Free.app"
             BlueprintName = "SharpMessage"
             ReferencedContainer = "container:SharpMessage.xcodeproj">
          </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SharpMessage.app"
+            BuildableName = "&#x91d1;&#x5eb8;&#x5168;&#x96c6;Free.app"
             BlueprintName = "SharpMessage"
             ReferencedContainer = "container:SharpMessage.xcodeproj">
          </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SharpMessage.app"
+            BuildableName = "&#x91d1;&#x5eb8;&#x5168;&#x96c6;Free.app"
             BlueprintName = "SharpMessage"
             ReferencedContainer = "container:SharpMessage.xcodeproj">
          </BuildableReference>

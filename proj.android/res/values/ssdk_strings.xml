@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="weibo_oauth_regiseter">应用授权</string>
+	<string name="weibo_oauth_regiseter">应用授权</string>
     <string name="website">http://www.mob.com</string>
     <string name="weibo_upload_content">分享图片</string>
     <string name="wechat_client_inavailable">目前您的微信版本过低或未安装微信，需要安装微信才能使用</string>

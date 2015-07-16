@@ -5,9 +5,9 @@
 //  Created by fx on 14/10/27.
 //  Copyright (c) 2014年 FS. All rights reserved.
 //
-#define MY_BANNER_UNIT_ID @"ca-app-pub-5934917937656240/6752496410" //@"a1531d79701df01"
+#define MY_BANNER_UNIT_ID @"ca-app-pub-5934917937656240/7267169215" //@"a1531d79701df01"
 
-#define MY_BANNER_INTERSTITIAL_ID @"ca-app-pub-5934917937656240/8229229611" //
+#define MY_BANNER_INTERSTITIAL_ID @"ca-app-pub-5934917937656240/8743902411" //
 #import "AdmobManager.h"
 //#import "HMIAPHelper.h"
 
