@@ -48,13 +48,14 @@ public class BaseActivity extends Cocos2dxActivity{
 
             @Override
             public void onAdClosed() {
+            	 tryLoadAd = 0;
             	 mInterstitial.loadAd(new AdRequest.Builder().build());
             }
             
             @Override
             public void onAdFailedToLoad(int errorCode) 
             {
-            	if(tryLoadAd++ < 130 )
+            	if(tryLoadAd++ < 100 )
             	{
             		mInterstitial.loadAd(new AdRequest.Builder().build());
             	}
